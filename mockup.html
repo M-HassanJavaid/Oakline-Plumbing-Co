@@ -1,0 +1,2475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Residential Plumbing in Charlotte | Oakline Plumbing Co. (Concept)</title>
+<meta name="description" content="Oakline Plumbing Co. is a fictional residential plumbing website concept for Charlotte, NC, created by PlumbNexo as a portfolio demonstration.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23153B4A'/%3E%3Cpath d='M9 22V14a5 5 0 0 1 5-5h9' fill='none' stroke='%23E8A35D' stroke-width='3.2' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='3.4' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          teal: { DEFAULT: '#153B4A', 600: '#1C4C5E', 700: '#0F2E3A', 800: '#0B2430' },
+          soft: '#F6F8F7',
+          aqua: { DEFAULT: '#DCEFEB', 200: '#C5E4DE', 50: '#EDF7F5' },
+          copper: { DEFAULT: '#E8A35D', 600: '#B8732F', 700: '#94591F', 100: '#FBEBDA' },
+          charcoal: { DEFAULT: '#26383F', 70: '#4A5C63', 50: '#6B7C82' },
+          danger: '#B42318',
+          success: '#1E6B4F'
+        },
+        fontFamily: {
+          display: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
+        },
+        maxWidth: { site: '1200px' },
+        borderRadius: { card: '16px', panel: '20px' },
+        boxShadow: {
+          card: '0 1px 2px rgba(21,59,74,.06), 0 8px 24px -12px rgba(21,59,74,.18)',
+          lift: '0 2px 4px rgba(21,59,74,.06), 0 18px 40px -18px rgba(21,59,74,.35)'
+        }
+      }
+    }
+  };
+</script>
+<style>
+  :root { --teal:#153B4A; --soft:#F6F8F7; --aqua:#DCEFEB; --copper:#E8A35D; --charcoal:#26383F; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { background: var(--soft); color: var(--charcoal); font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 17px; line-height: 1.65; }
+  h1, h2, h3, h4 { font-family: Manrope, ui-sans-serif, system-ui, sans-serif; color: var(--teal); letter-spacing: -0.015em; line-height: 1.15; }
+  .h1-hero { font-size: clamp(2.125rem, 1.4rem + 3.2vw, 3.6rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.06; }
+  .h1-page { font-size: clamp(2rem, 1.5rem + 2.2vw, 3.1rem); font-weight: 800; letter-spacing: -0.022em; line-height: 1.08; }
+  .h2 { font-size: clamp(1.6rem, 1.25rem + 1.4vw, 2.35rem); font-weight: 800; }
+  .h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.3; }
+  .lede { font-size: 1.125rem; line-height: 1.7; color: #3A4C53; }
+  .measure { max-width: 64ch; }
+  .section { padding-top: 56px; padding-bottom: 56px; }
+  @media (min-width: 768px) { .section { padding-top: 88px; padding-bottom: 88px; } }
+  @media (min-width: 1024px) { .section { padding-top: 104px; padding-bottom: 104px; } }
+  .wrap { width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+  @media (min-width: 640px) { .wrap { padding-left: 28px; padding-right: 28px; } }
+
+  /* Focus: visible, consistent, not color-only (thick outline + offset) */
+  :focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; border-radius: 6px; }
+  .on-dark :focus-visible { outline-color: #fff; }
+  [tabindex="-1"]:focus { outline: none; }
+  .on-dark .on-light :focus-visible { outline-color: var(--copper); }
+  .on-dark .on-light .text-link { color: var(--teal); }
+
+  /* Buttons */
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.55rem; min-height:50px; padding: 0 1.4rem; border-radius: 12px; font-weight: 600; font-size: 1rem; line-height: 1.2; transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; text-decoration: none; cursor: pointer; white-space: nowrap; }
+  .btn:active { transform: translateY(1px); }
+  .btn[disabled], .btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; transform: none; }
+  .btn.btn-primary { background: var(--teal); color: #fff; box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 6px 16px -8px rgba(21,59,74,.6); }
+  .btn.btn-primary:hover:not([disabled]) { background: #0F2E3A; }
+  .btn.btn-secondary { background: #fff; color: var(--teal); border: 1.5px solid #B9D3D0; }
+  .btn.btn-secondary:hover:not([disabled]) { border-color: var(--teal); background: #F9FCFB; }
+  .btn.btn-copper { background: var(--copper); color: #10262F; }
+  .btn.btn-copper:hover:not([disabled]) { background: #DD924A; }
+  .btn.btn-ghost-light { color:#fff; border:1.5px solid rgba(255,255,255,.35); background: transparent; }
+  .btn.btn-ghost-light:hover { border-color:#fff; background: rgba(255,255,255,.06); }
+  .btn-sm { min-height: 44px; padding: 0 1rem; font-size: .95rem; border-radius: 10px; }
+  .text-link { color: var(--teal); font-weight: 600; text-decoration: underline; text-decoration-color: rgba(232,163,93,.8); text-decoration-thickness: 2px; text-underline-offset: 4px; transition: text-decoration-color .15s; }
+  .text-link:hover { text-decoration-color: var(--teal); }
+  .on-dark .text-link { color: #fff; }
+
+  /* Nav */
+  .nav-link { position: relative; display:inline-flex; align-items:center; gap:.3rem; height: 44px; padding: 0 .7rem; border-radius: 10px; font-weight: 500; font-size: .96rem; color: var(--charcoal); }
+  .nav-link:hover { color: var(--teal); background: rgba(220,239,235,.6); }
+  .nav-link[aria-current="page"] { color: var(--teal); font-weight: 600; }
+  .nav-link[aria-current="page"]::after { content:""; position:absolute; left:.7rem; right:.7rem; bottom:4px; height:2.5px; border-radius:2px; background: var(--copper); }
+  .dropdown-panel { transform-origin: top left; transition: opacity .16s ease, transform .16s ease, visibility .16s; }
+  .dropdown-panel[data-open="false"] { opacity:0; transform: translateY(-4px) scale(.98); visibility:hidden; pointer-events:none; }
+  .dropdown-panel[data-open="true"] { opacity:1; transform:none; visibility:visible; }
+
+  /* Mobile menu */
+  .mobile-menu { transition: opacity .2s ease, visibility .2s; }
+  .mobile-menu[data-open="false"] { opacity:0; visibility:hidden; pointer-events:none; }
+  .mobile-menu .sheet { transition: transform .26s cubic-bezier(.2,.8,.2,1); }
+  .mobile-menu[data-open="false"] .sheet { transform: translateX(100%); }
+
+  /* Accordion */
+  .acc-panel { display:grid; grid-template-rows: 0fr; transition: grid-template-rows .24s ease; }
+  .acc-panel > div { overflow:hidden; }
+  .acc-item[data-open="true"] .acc-panel { grid-template-rows: 1fr; }
+  .acc-item[data-open="true"] .acc-icon { transform: rotate(45deg); }
+  .acc-icon { transition: transform .2s ease; }
+
+  /* Form */
+  .field-label { display:block; font-weight:600; font-size:.95rem; color: var(--teal); margin-bottom: .4rem; }
+  .field-hint { font-size: .85rem; color: #56686E; margin-top: .3rem; }
+  .field-input { width:100%; min-height: 50px; border-radius: 12px; border: 1.5px solid #B7C9C7; background:#fff; padding: .7rem .95rem; font-size: 1rem; color: var(--charcoal); transition: border-color .15s, box-shadow .15s; }
+  .field-input::placeholder { color: #87979B; }
+  .field-input:hover { border-color: #7FA3A6; }
+  .field-input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 4px rgba(232,163,93,.45); }
+  .field-input[aria-invalid="true"] { border-color: #B42318; background: #FFFBFA; }
+  .field-input:disabled { background:#EEF2F1; color:#7B8B90; cursor:not-allowed; }
+  textarea.field-input { min-height: 120px; resize: vertical; }
+  select.field-input { appearance:none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23153B4A' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position: right .85rem center; padding-right: 2.6rem; }
+  .field-error { display:flex; gap:.4rem; align-items:flex-start; color:#B42318; font-size:.88rem; font-weight:500; margin-top:.4rem; }
+  .req-mark { color:#B42318; font-weight:700; }
+  .radio-pill input { position:absolute; opacity:0; width:1px; height:1px; }
+  .radio-pill span { display:flex; align-items:center; gap:.5rem; min-height:48px; padding: .55rem .9rem; border-radius: 12px; border:1.5px solid #B7C9C7; background:#fff; cursor:pointer; font-size:.95rem; transition: border-color .15s, background-color .15s; }
+  .radio-pill input:checked + span { border-color: var(--teal); background: #EDF7F5; font-weight:600; color: var(--teal); }
+  .radio-pill input:checked + span .dot { background: var(--teal); box-shadow: inset 0 0 0 3px #EDF7F5; }
+  .radio-pill input:focus-visible + span { outline: 3px solid var(--copper); outline-offset: 2px; }
+  .radio-pill .dot { width:16px; height:16px; border-radius:50%; border:2px solid var(--teal); flex:none; }
+  .spinner { width:18px; height:18px; border-radius:50%; border:2.5px solid rgba(255,255,255,.35); border-top-color:#fff; animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Chips */
+  .chip.chip { display:inline-flex; align-items:center; gap:.45rem; min-height:44px; padding: .45rem 1rem; border-radius: 999px; border: 1.5px solid #B9D3D0; background:#fff; font-weight:500; font-size:.95rem; color: var(--charcoal); cursor:pointer; transition: all .15s; }
+  .chip.chip:hover { border-color: var(--teal); }
+  .chip.chip[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color:#fff; }
+  .chip-static { cursor: default; }
+  .chip.chip-static:hover { border-color:#B9D3D0; }
+
+  /* Placeholder / proof modules */
+  .proof-slot { border: 2px dashed #9DBFBB; background: repeating-linear-gradient(135deg, rgba(220,239,235,.35) 0 12px, rgba(255,255,255,.35) 12px 24px); border-radius: 16px; }
+  .demo-tag { display:inline-flex; align-items:center; gap:.35rem; font-size:.78rem; font-weight:600; padding:.25rem .6rem; border-radius: 8px; background:#FBEBDA; color:#7A4716; border:1px solid #F1CFA8; }
+  .img-tag { position:absolute; left:12px; bottom:12px; font-size:.75rem; font-weight:600; padding:.3rem .6rem; border-radius:8px; background: rgba(15,46,58,.82); color:#fff; backdrop-filter: blur(4px); }
+
+  /* Image frame with resilient fallback */
+  .img-frame { position:relative; overflow:hidden; background: linear-gradient(160deg, #DCEFEB, #C5E4DE); }
+  .img-frame img { width:100%; height:100%; object-fit:cover; display:block; }
+  .img-frame img[hidden], .img-fallback[hidden] { display:none !important; }
+  .img-fallback { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.6rem; text-align:center; padding: 1.25rem; color: var(--teal); }
+
+  /* Pipe motif — the signature element */
+  .pipe-track { position:absolute; left:0; right:0; top: 34px; height: 10px; border-radius: 6px; background: #C9DEDA; box-shadow: inset 0 2px 3px rgba(21,59,74,.15); overflow:hidden; }
+  .pipe-flow { position:absolute; inset:0; transform-origin:left; transform: scaleX(0); background: linear-gradient(90deg, #E8A35D, #F0BC86); border-radius: 6px; transition: transform 1.6s cubic-bezier(.45,.05,.2,1); }
+  .pipe-on .pipe-flow { transform: scaleX(1); }
+  .pipe-joint { width: 68px; height: 68px; border-radius: 50%; display:grid; place-items:center; background:#fff; border: 3px solid #C9DEDA; position:relative; z-index:1; transition: border-color .4s ease, background-color .4s ease; font-family: Manrope, sans-serif; font-weight: 800; font-size: 1.35rem; color: var(--teal); }
+  .pipe-on .pipe-joint { border-color: var(--copper); }
+  .pipe-on .pipe-step:nth-child(1) .pipe-joint { transition-delay: .05s; }
+  .pipe-on .pipe-step:nth-child(2) .pipe-joint { transition-delay: .5s; }
+  .pipe-on .pipe-step:nth-child(3) .pipe-joint { transition-delay: .95s; }
+  .pipe-on .pipe-step:nth-child(4) .pipe-joint { transition-delay: 1.4s; }
+  .pipe-vert { position:absolute; left: 33px; top: 34px; bottom: 34px; width: 10px; border-radius:6px; background:#C9DEDA; overflow:hidden; }
+  .pipe-vert .pipe-flow { transform-origin: top; transform: scaleY(0); }
+  .pipe-on .pipe-vert .pipe-flow { transform: scaleY(1); }
+
+  /* Hero load sequence (the one orchestrated moment) */
+  .hero-in > * { opacity: 0; transform: translateY(10px); animation: heroIn .7s cubic-bezier(.2,.7,.2,1) forwards; }
+  .hero-in > *:nth-child(2) { animation-delay: .08s; } .hero-in > *:nth-child(3) { animation-delay: .16s; }
+  .hero-in > *:nth-child(4) { animation-delay: .24s; } .hero-in > *:nth-child(5) { animation-delay: .32s; }
+  @keyframes heroIn { to { opacity:1; transform:none; } }
+  .page-enter { animation: pageIn .32s ease both; }
+  @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+  /* Card hover only where the card is a link */
+  .card-link { transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease; }
+  .card-link:hover { box-shadow: 0 2px 4px rgba(21,59,74,.06), 0 18px 40px -18px rgba(21,59,74,.35); border-color: #9DBFBB; }
+
+  /* Mobile call bar */
+  .mobile-bar { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+  @media (max-width: 1023px) { body.has-mobile-bar { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } }
+
+  /* Dialog */
+  .modal { transition: opacity .18s ease, visibility .18s; }
+  .modal[data-open="false"] { opacity:0; visibility:hidden; pointer-events:none; }
+  .modal .modal-card { transition: transform .2s ease; }
+  .modal[data-open="false"] .modal-card { transform: translateY(10px) scale(.98); }
+
+  .skip-link { position:absolute; left:12px; top:-60px; z-index:100; background:#fff; color:var(--teal); padding:.7rem 1rem; border-radius:10px; font-weight:600; box-shadow: 0 6px 20px rgba(0,0,0,.15); }
+  .skip-link:focus { top: 12px; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+  .prose-legal h2 { font-size: 1.35rem; font-weight: 800; margin-top: 2.2rem; margin-bottom: .6rem; }
+  .prose-legal p, .prose-legal li { color: #3A4C53; }
+  .prose-legal ul { list-style: disc; padding-left: 1.25rem; margin-top: .5rem; }
+  .prose-legal li { margin-top: .35rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+    .hero-in > * { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body class="has-mobile-bar antialiased">
+<a href="#main" class="skip-link" id="skipLink">Skip to main content</a>
+
+<div id="concept-banner"></div>
+<header id="site-header" class="sticky top-0 z-40"></header>
+<main id="main" tabindex="-1" class="outline-none"></main>
+<footer id="site-footer"></footer>
+<div id="mobile-bar"></div>
+<div id="mobile-menu-root"></div>
+<div id="modal-root"></div>
+<div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+<script>
+/* =========================================================================
+   OAKLINE PLUMBING CO. — CONCEPT SITE
+   Architecture (each block maps to a future React/Next.js module):
+   1. CONTENT   → content/*.js  (centralized, page-agnostic data)
+   2. ICONS     → components/Icon.jsx
+   3. UI        → components/ui/*  (Button, Card, Accordion, Image, ...)
+   4. SECTIONS  → components/sections/*  (Hero, Steps, CTA, Form, ...)
+   5. LAYOUT    → components/layout/*  (Header, Footer, MobileBar, Menu)
+   6. PAGES     → app/[route]/page.jsx
+   7. ROUTER    → hash-based so the file runs from disk with no server
+   8. BEHAVIOR  → hooks / event handlers (forms, menus, accordions)
+   ========================================================================= */
+
+/* ============================ 1. CONTENT ================================= */
+const SITE = {
+  name: 'Oakline Plumbing Co.',
+  shortName: 'Oakline Plumbing',
+  tagline: 'Plumbing help, without the guesswork.',
+  market: 'Charlotte, North Carolina',
+  // 555-01XX numbers are reserved for fictional use. Never dialed in the demo.
+  phoneDisplay: '(704) 555-0100',
+  phoneNote: 'Demo number — a live site would show the verified business line.',
+  hoursNote: 'Operating and dispatch hours appear here once verified with the owner.',
+  disclosure: 'Fictional portfolio concept by PlumbNexo',
+  footerBlurb: 'A residential plumbing website concept for Charlotte homeowners, built to show how clear services, honest proof, and simple contact options fit together.'
+};
+
+const NAV = [
+  { label: 'Services', path: '/services', dropdown: true },
+  { label: 'Service Areas', path: '/service-areas' },
+  { label: 'About', path: '/about' },
+  { label: 'Reviews & Projects', path: '/reviews-projects' },
+  { label: 'Contact', path: '/contact' }
+];
+
+const IMG = {
+  // Illustrative stock imagery. Each image has an SVG fallback if it fails to load.
+  hero: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=75',
+  drain: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=70',
+  leak: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1000&q=70',
+  heater: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=70',
+  sewer: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1000&q=70',
+  kitchen: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=70',
+  bath: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=70'
+};
+
+const SERVICES = [
+  {
+    slug: 'drain-cleaning',
+    name: 'Drain Cleaning',
+    navLabel: 'Drain Cleaning',
+    icon: 'drain',
+    image: IMG.drain,
+    imageAlt: 'A bathroom sink and drain, used to illustrate drain cleaning work.',
+    problem: 'Water draining slowly, or not at all?',
+    summary: 'Help for slow, blocked, and recurring clogs in sinks, tubs, showers, and floor drains.',
+    directory: {
+      problems: ['Sink or tub draining slowly', 'Standing water after a shower', 'The same clog coming back'],
+      overview: 'A technician looks at how and where the drain is blocked, explains how it could be cleared, and asks before starting any work.'
+    },
+    cta: 'Request Drain Service',
+    meta: { title: 'Drain Cleaning in Charlotte | Oakline Plumbing Co. (Concept)', desc: 'Concept page explaining drain cleaning help for Charlotte homeowners: common symptoms, how a visit works, and what affects cost.' },
+    hero: {
+      h1: 'Drain Cleaning Services in Charlotte, NC',
+      intro: 'A slow drain is easy to live with until it isn’t. Tell us which drains are affected and how long it’s been happening, and we’ll explain what a visit would involve before anything is cleared.'
+    },
+    symptoms: {
+      heading: 'Signs a drain needs attention',
+      intro: 'These are common reasons homeowners reach out. They point to a problem worth checking, not to a specific cause.',
+      items: [
+        { icon: 'clock', t: 'Slow drainage', d: 'Water takes noticeably longer to leave the sink, tub, or shower than it used to.' },
+        { icon: 'water', t: 'Standing water', d: 'Water pools around your feet in the shower or sits in the basin after use.' },
+        { icon: 'repeat', t: 'Clogs that return', d: 'A drain clears for a few days or weeks, then slows down again.' },
+        { icon: 'grid', t: 'More than one fixture', d: 'Several drains are slow at once, which can mean the blockage is further down the line.' }
+      ]
+    },
+    scope: {
+      heading: 'What drain help may involve',
+      intro: 'The right method depends on where the blockage is and what’s causing it. These are examples of what a visit can include, not a fixed package.',
+      items: [
+        { t: 'Looking at the affected drains', d: 'Checking which fixtures are slow and whether the problem is local to one drain or shared.' },
+        { t: 'Mechanical clearing', d: 'Using hand or machine augers suited to the drain size to clear the blockage.' },
+        { t: 'Camera inspection', d: 'Shown here as an example. A live site would list this only if the company offers it.' },
+        { t: 'Hydro-jetting', d: 'High-pressure water cleaning, listed only if offered and suitable for the pipe condition.' }
+      ],
+      note: 'Camera inspection and hydro-jetting are placeholders in this concept. Real capabilities must be confirmed before they’re listed.'
+    },
+    costs: {
+      intro: 'No two drain calls are the same. These are the things that usually change the cost of the work. Real pricing would come from the business, not this page.',
+      items: [
+        { t: 'Access', d: 'How easy it is to reach the drain or cleanout.' },
+        { t: 'Severity', d: 'A simple hair clog versus a buildup further down the line.' },
+        { t: 'Number of drains', d: 'One sink versus several fixtures that need attention.' },
+        { t: 'Equipment needed', d: 'Whether hand tools are enough or larger equipment is required.' },
+        { t: 'Timing', d: 'After-hours charges, only if the business actually applies them.' }
+      ]
+    },
+    proof: { label: 'Drain cleaning project story', review: 'A genuine review that mentions drain service appears here, with source and permission.' },
+    faqs: [
+      { q: 'Does drain clearing include a camera inspection?', a: 'Not automatically. A camera inspection is a separate step that’s useful when clogs keep returning or several drains are affected. A live site would confirm whether it’s offered and how it’s priced.' },
+      { q: 'Why do clogs keep coming back?', a: 'Recurring clogs often mean the blockage wasn’t fully cleared or there’s buildup further along the pipe. The cause can only be confirmed by looking at the drain, which is why we’d ask how often it’s happened.' },
+      { q: 'What if several drains are slow at the same time?', a: 'That can point to a problem in a shared line rather than one fixture. Mention every slow drain in your request so the technician can plan the visit properly. If drains are backing up, call instead.' },
+      { q: 'How do I request drain service?', a: 'Use the request form with your ZIP code and a short description, or call if water is backing up right now. A request is not a booked appointment; someone would follow up to confirm availability.' }
+    ],
+    final: { h: 'Dealing with a slow or blocked drain?', t: 'Send a short request with the drains affected. If water is backing up right now, calling is faster.' }
+  },
+  {
+    slug: 'leak-repair',
+    name: 'Leak Detection & Repair',
+    navLabel: 'Leak Repair',
+    icon: 'leak',
+    image: IMG.leak,
+    imageAlt: 'A plumber working on pipe fittings, used to illustrate leak repair work.',
+    problem: 'Seeing drips, stains, or damp spots?',
+    summary: 'Finding where water is escaping, explaining the repair, and being clear about what’s included.',
+    directory: {
+      problems: ['Dripping under a sink', 'Water stain on a ceiling or wall', 'Water bill higher than usual'],
+      overview: 'We separate finding the leak from fixing it, so you know what each step involves and what may be outside the plumbing scope.'
+    },
+    cta: 'Request Leak Assessment',
+    meta: { title: 'Leak Detection & Repair | Oakline Plumbing Co. (Concept)', desc: 'Concept page on leak detection and repair in Charlotte: possible signs, how leaks are assessed, and how repair and restoration scopes differ.' },
+    hero: {
+      h1: 'Leak Detection & Plumbing Repair in Charlotte',
+      intro: 'Some leaks are easy to see. Others show up as a stain, a damp patch, or a bill that doesn’t make sense. We explain how a leak would be located and what repairing it could involve, step by step.'
+    },
+    symptoms: {
+      heading: 'Possible signs of a leak',
+      intro: 'Any of these can have more than one cause. We won’t diagnose a leak from a description alone, but they’re worth mentioning in your request.',
+      items: [
+        { icon: 'drop', t: 'Visible dripping', d: 'Water dripping from a pipe, joint, valve, or fixture connection.' },
+        { icon: 'stain', t: 'Water stains', d: 'Brown or yellow marks on ceilings or walls, especially below bathrooms.' },
+        { icon: 'water', t: 'Damp spots', d: 'Soft flooring, warped cabinets, or patches that stay damp.' },
+        { icon: 'meter', t: 'Unexpected water use', d: 'A water bill that jumps without a change in how you use water.' }
+      ]
+    },
+    leakTypes: [
+      { t: 'Accessible leaks', d: 'Leaks at fixtures, under sinks, at shut-off valves, or along exposed pipes. These are usually easier to locate and repair.' },
+      { t: 'Hidden leaks', d: 'Leaks inside walls, ceilings, or under floors. Finding these may need specialized detection methods, listed only if the business offers them.' }
+    ],
+    scope: {
+      heading: 'How a leak is assessed',
+      intro: 'Assessment comes before any repair is proposed. In a live site, each step below would reflect the company’s actual process.',
+      items: [
+        { t: 'Observation', d: 'Looking at visible signs, where water appears, and when it happens.' },
+        { t: 'Detection methods', d: 'Moisture readings or other tools, described only if genuinely offered.' },
+        { t: 'Access discussion', d: 'If a pipe is behind a surface, talking through whether an opening is needed before anything is cut.' },
+        { t: 'Repair options', d: 'Explaining what could be done, with your approval required before work starts.' }
+      ]
+    },
+    repairScopes: [
+      { t: 'Finding the leak', d: 'Locating where water is escaping. This can be a separate visit or charge.' },
+      { t: 'Repairing the plumbing', d: 'Fixing or replacing the affected pipe, joint, or fixture.' },
+      { t: 'Opening & restoration', d: 'Cutting into drywall or flooring, and repairing it afterward, may be handled by others.' }
+    ],
+    costs: {
+      intro: 'Leak work varies a lot. These factors usually shape the estimate.',
+      items: [
+        { t: 'Accessibility', d: 'Exposed pipe versus a leak behind a finished wall or floor.' },
+        { t: 'Materials', d: 'The pipe type and parts needed for the repair.' },
+        { t: 'Complexity', d: 'A single joint versus a longer section of damaged pipe.' },
+        { t: 'Scope boundaries', d: 'Whether restoration of walls or floors is part of the job or separate.' }
+      ]
+    },
+    safetyNote: 'If water is actively leaking, call rather than send a form. Any instructions about shutting off water or electricity would be written and reviewed by a qualified professional before a live site publishes them.',
+    proof: { label: 'Leak repair project story', review: 'A genuine review that mentions leak repair appears here, with source and permission.' },
+    faqs: [
+      { q: 'Will you need to open a wall?', a: 'Not always. If a leak is behind a finished surface, the technician would explain why access is needed and agree on it with you before cutting anything.' },
+      { q: 'Is leak detection separate from repair?', a: 'Often, yes. Finding a leak and repairing it are different steps and may be priced separately. A live site would explain the company’s actual policy here.' },
+      { q: 'What if water damage is happening right now?', a: 'Call instead of using the form. A form is meant for planned requests and isn’t monitored like a phone line.' },
+      { q: 'What happens after I request help?', a: 'Someone reviews your details, confirms your area is covered, and follows up about availability. Sending a request doesn’t book an appointment.' }
+    ],
+    final: { h: 'Think you might have a leak?', t: 'Tell us where you’re seeing water or stains. For active leaks, call so someone can talk you through next steps.' }
+  },
+  {
+    slug: 'water-heaters',
+    name: 'Water Heater Services',
+    navLabel: 'Water Heaters',
+    icon: 'heater',
+    image: IMG.heater,
+    imageAlt: 'Plumbing tools and fittings, used to illustrate water heater service.',
+    problem: 'No hot water, or a unit that’s getting old?',
+    summary: 'Repair or replacement guidance, with a clear explanation of what an estimate includes.',
+    directory: {
+      problems: ['No hot water at all', 'Temperature keeps changing', 'Water around the base of the tank'],
+      overview: 'We help you weigh repair against replacement based on what’s found in person, not guesswork, and explain what an installation would include.'
+    },
+    cta: 'Request Water Heater Service',
+    meta: { title: 'Water Heater Repair & Replacement | Oakline (Concept)', desc: 'Concept page on water heater repair and replacement in Charlotte: common problems, repair vs. replacement factors, and what an estimate covers.' },
+    hero: {
+      h1: 'Water Heater Repair & Replacement in Charlotte',
+      intro: 'Whether you’ve lost hot water this morning or you’re planning ahead for an older unit, we explain your options clearly so you can decide what makes sense for your home.'
+    },
+    symptoms: {
+      heading: 'Common water heater problems',
+      intro: 'These are the issues homeowners usually describe. The actual cause is confirmed during an in-person assessment.',
+      items: [
+        { icon: 'flame', t: 'No hot water', d: 'The tap runs cold, or hot water runs out much faster than it used to.' },
+        { icon: 'thermo', t: 'Inconsistent temperature', d: 'Water swings between hot and lukewarm during a single shower.' },
+        { icon: 'drop', t: 'Leaks', d: 'Water around the base of the tank or at the connections.' },
+        { icon: 'sound', t: 'Noises', d: 'Popping, rumbling, or knocking sounds from the unit.' },
+        { icon: 'calendar', t: 'Aging equipment', d: 'The unit is older and you want to plan before it fails.' }
+      ]
+    },
+    compare: {
+      heading: 'Repair or replace? What to talk through',
+      intro: 'These are the factors a technician would discuss with you after seeing the unit. They aren’t an online diagnosis.',
+      a: { t: 'When repair may make sense', icon: 'wrench', items: ['The unit is relatively new and in good overall condition', 'The problem is a single part, such as a thermostat or element', 'There are no signs of tank corrosion or leaking from the tank itself', 'Repair cost is small compared with replacement'] },
+      b: { t: 'When replacement may make sense', icon: 'replace', items: ['The unit is near or past its expected lifespan', 'The tank itself is leaking or visibly corroded', 'Repairs are becoming frequent or costly', 'Your household’s hot water needs have changed'] }
+    },
+    equipment: [
+      { t: 'Tank water heaters', d: 'Storage tank units, listed only if the company services them.' },
+      { t: 'Tankless water heaters', d: 'On-demand units, listed only if genuinely serviced.' },
+      { t: 'Gas and electric', d: 'Fuel types confirmed with the owner before publishing.' },
+      { t: 'Brands serviced', d: 'Brand names appear only when verified. None are claimed here.' }
+    ],
+    scope: {
+      heading: 'How the assessment and estimate work',
+      intro: 'You’ll know what’s being checked and how options are explained before you agree to anything.',
+      items: [
+        { t: 'What you share', d: 'The unit’s age if known, fuel type, location in the home, and what you’ve noticed.' },
+        { t: 'What’s inspected', d: 'The unit, connections, venting where relevant, and signs of leaks or wear.' },
+        { t: 'How options are explained', d: 'Repair and replacement options are laid out with what each would involve.' },
+        { t: 'How costs are shown', d: 'A written estimate that lists what’s included, before you approve any work.' }
+      ]
+    },
+    install: [
+      { t: 'Removal & disposal', d: 'Whether taking away the old unit is included.' },
+      { t: 'Access', d: 'Attics, closets, or tight spaces can affect the work involved.' },
+      { t: 'Permits & inspection', d: 'Who arranges required permits and inspections.' },
+      { t: 'Code upgrades', d: 'Any changes needed to meet current requirements.' },
+      { t: 'Scheduling', d: 'How installation timing is agreed after approval.' }
+    ],
+    installNote: 'What’s included always depends on the written proposal for your home.',
+    warranty: [
+      { t: 'Manufacturer warranty', d: 'Covers the equipment itself, under the manufacturer’s own terms.' },
+      { t: 'Labor warranty', d: 'Covers the installation work, only if the company actually provides one.' },
+      { t: 'Financing', d: 'Shown only if a real, documented financing option exists. None is offered here.' }
+    ],
+    costs: {
+      intro: 'Water heater costs depend on several things. A real estimate would be based on your home and unit.',
+      items: [
+        { t: 'Repair vs. replacement', d: 'Replacing a part usually costs less than a new unit.' },
+        { t: 'Unit type and size', d: 'Tank capacity, tankless, and fuel type all affect price.' },
+        { t: 'Installation conditions', d: 'Location, venting, and code-related changes.' },
+        { t: 'Permits', d: 'Local permit and inspection requirements.' }
+      ]
+    },
+    proof: { label: 'Water heater installation story', review: 'A genuine review that mentions water heater work appears here, with source and permission.' },
+    faqs: [
+      { q: 'Can my water heater be repaired?', a: 'It depends on the unit’s age, condition, and what’s wrong. A technician would need to see it in person before recommending repair or replacement.' },
+      { q: 'What types of water heaters do you service?', a: 'In a live site, this answer would list the exact types and fuel sources the company works on. This concept doesn’t claim any.' },
+      { q: 'What’s included in an estimate?', a: 'A written estimate should show the recommended work, parts, labor, and anything excluded. Details depend on the company’s real estimate policy.' },
+      { q: 'Who handles removal of the old unit?', a: 'This would be stated in your proposal. Removal and disposal may or may not be included.' },
+      { q: 'What warranty applies?', a: 'The manufacturer warranty covers the equipment. Any labor warranty depends on what the company actually offers, which a live site would state plainly.' }
+    ],
+    final: { h: 'Need help with your water heater?', t: 'Send a request with the unit’s age if you know it. If you have no hot water and need it soon, call to check availability.' }
+  },
+  {
+    slug: 'sewer-lines',
+    name: 'Sewer Line Services',
+    navLabel: 'Sewer Lines',
+    icon: 'sewer',
+    image: IMG.sewer,
+    imageAlt: 'A residential home and front yard, used to illustrate sewer line service.',
+    problem: 'Backups that keep coming back?',
+    summary: 'Careful assessment of sewer line problems, with honest explanations of repair options and yard impact.',
+    directory: {
+      problems: ['Several drains backing up', 'Gurgling from toilets or drains', 'Sewage smell indoors or outside'],
+      overview: 'Sewer issues can feel serious. We explain how they’re assessed and what the possible next steps are, without promising a result before the line is inspected.'
+    },
+    cta: 'Request Sewer Assessment',
+    meta: { title: 'Sewer Line Inspection & Repair | Oakline (Concept)', desc: 'Concept page on sewer line assessment in Charlotte: warning signs, inspection options, possible next steps, and trenchless vs. excavation.' },
+    hero: {
+      h1: 'Sewer Line Inspection & Repair in Charlotte',
+      intro: 'Sewer problems are stressful, and they’re hard to judge from inside the house. We explain how a line is assessed, what the options might be, and what could affect your yard, before anything is decided.'
+    },
+    symptoms: {
+      heading: 'Warning signs worth checking',
+      intro: 'These signs suggest the main line may need attention. None of them proves a specific failure on its own.',
+      items: [
+        { icon: 'repeat', t: 'Recurring backups', d: 'Drains back up more than once, especially at the lowest fixtures in the home.' },
+        { icon: 'grid', t: 'Several slow drains', d: 'Multiple fixtures slow down at the same time.' },
+        { icon: 'sound', t: 'Unusual sounds', d: 'Gurgling from toilets or drains when other fixtures are used.' },
+        { icon: 'yard', t: 'Changes outside', d: 'Unusually wet or lush patches in the yard, or odors near the cleanout.' }
+      ]
+    },
+    scope: {
+      heading: 'How sewer problems are assessed',
+      intro: 'Assessment options are listed here only as examples. A live site would show the methods the company genuinely uses.',
+      items: [
+        { t: 'Conversation first', d: 'Understanding which drains are affected, how often, and any history with the line.' },
+        { t: 'Camera inspection', d: 'Viewing the inside of the line, only if this service is actually offered.' },
+        { t: 'Locating the problem', d: 'Identifying where along the line an issue appears, where tools allow.' },
+        { t: 'Reviewing findings', d: 'Walking you through what was seen and what it could mean.' }
+      ]
+    },
+    nextSteps: [
+      { t: 'Clearing the line', d: 'Removing a blockage when the line itself is in workable condition.' },
+      { t: 'Targeted repair', d: 'Fixing a specific damaged section, depending on location and access.' },
+      { t: 'Replacement', d: 'Replacing a longer section when repair isn’t practical. Depends on findings and services offered.' }
+    ],
+    compare: {
+      heading: 'Trenchless vs. excavation',
+      intro: 'Whether trenchless methods are possible depends on the line’s condition, layout, and what the company offers. Neither option is promised here.',
+      a: { t: 'Trenchless methods', icon: 'trenchless', items: ['May reduce digging when the line is suitable', 'Eligibility depends on pipe condition and layout', 'Some access points are still usually needed', 'Offered only if the business performs this work'] },
+      b: { t: 'Traditional excavation', icon: 'shovel', items: ['Digging to reach and repair or replace the line', 'Can be necessary when trenchless isn’t suitable', 'Affects landscaping, driveways, or walkways', 'Restoration responsibilities agreed in advance'] }
+    },
+    costs: {
+      intro: 'Sewer work has more variables than most plumbing jobs. These shape the estimate.',
+      items: [
+        { t: 'Access', d: 'Where the cleanout is and how easy the line is to reach.' },
+        { t: 'Excavation', d: 'Whether digging is needed, and how much.' },
+        { t: 'Restoration', d: 'Who restores landscaping, concrete, or walkways afterward.' },
+        { t: 'Permits', d: 'Local permit and inspection requirements.' },
+        { t: 'Scope', d: 'Clearing, a short repair, or a longer replacement.' }
+      ]
+    },
+    proof: { label: 'Sewer line project story', review: 'A genuine review that mentions sewer work appears here, with source and permission.' },
+    faqs: [
+      { q: 'How is a sewer problem diagnosed?', a: 'By looking at the line itself, often with a camera if the company offers it. Symptoms alone can’t confirm what’s wrong.' },
+      { q: 'Can my yard be preserved?', a: 'Sometimes, if trenchless repair is suitable and offered. It isn’t possible in every case, and any yard impact would be explained before work is approved.' },
+      { q: 'Is a camera inspection included?', a: 'That depends on the company’s actual services and pricing. A live site would state this clearly.' },
+      { q: 'What happens after the assessment?', a: 'You’d get an explanation of what was found and the possible options, then decide whether to approve any work.' }
+    ],
+    final: { h: 'Worried about your sewer line?', t: 'Request an assessment and describe what you’ve noticed. If sewage is backing up into the home, call right away.' }
+  }
+];
+
+const SVC = Object.fromEntries(SERVICES.map(s => [s.slug, s]));
+
+const SYMPTOMS = [
+  { id: 'slow', label: 'Slow or blocked drain', icon: 'drain', service: 'drain-cleaning', note: 'Often a drain cleaning request, especially if one or two fixtures are affected.' },
+  { id: 'drip', label: 'Dripping or hidden leak', icon: 'leak', service: 'leak-repair', note: 'Drips, stains, and damp spots usually start with a leak assessment.' },
+  { id: 'nohot', label: 'No hot water', icon: 'heater', service: 'water-heaters', note: 'Usually a water heater visit, where repair and replacement can be compared.' },
+  { id: 'backup', label: 'Repeated backups', icon: 'sewer', service: 'sewer-lines', note: 'Backups that keep returning, or affect several drains, may involve the sewer line.' },
+  { id: 'stain', label: 'Water stain on ceiling', icon: 'stain', service: 'leak-repair', note: 'A stain below a bathroom or kitchen can be a sign of a leak worth assessing.', extended: true },
+  { id: 'noise', label: 'Gurgling drains', icon: 'sound', service: 'sewer-lines', note: 'Gurgling when other fixtures run can be a sign of a main line issue.', extended: true },
+  { id: 'temp', label: 'Temperature keeps changing', icon: 'thermo', service: 'water-heaters', note: 'Temperature swings are a common reason for a water heater check.', extended: true },
+  { id: 'smell', label: 'Drain odor', icon: 'drain', service: 'drain-cleaning', note: 'Odors from a single drain can come from buildup. Several drains may point further down the line.', extended: true }
+];
+
+const ILLUSTRATIVE_TOWNS = ['Matthews', 'Mint Hill', 'Huntersville', 'Pineville', 'Concord', 'Cornelius'];
+
+const FAQ = {
+  home: [
+    { q: 'How do I request plumbing service?', a: 'Fill in the short form with your name, phone, ZIP code, and the service you need, or call if it’s urgent.', link: { label: 'Go to the contact page', to: '/contact' } },
+    { q: 'Is submitting a form the same as booking an appointment?', a: 'No. A form tells the team what you need. Someone would review it, confirm your area and availability, then follow up to arrange next steps.' },
+    { q: 'How can I check whether my address is covered?', a: 'Enter your ZIP code in the request form or check the service area page. Coverage is always confirmed by staff before a visit.', link: { label: 'Check service area', to: '/service-areas' } },
+    { q: 'What information should I provide about my plumbing issue?', a: 'Where the problem is, what you’ve noticed, how long it’s been happening, and whether it’s getting worse. A sentence or two is plenty.' }
+  ],
+  services: [
+    { q: 'What if I don’t know what the issue is?', a: 'That’s common. Choose “Other / Not sure” in the form and describe what you’re seeing. The team can help figure out which service fits.' },
+    { q: 'Can I request an estimate?', a: 'Yes, you can ask for one in your request. Most estimates need an in-person look first, and a live site would explain the company’s actual estimate policy.' },
+    { q: 'What information is needed?', a: 'Your name, phone number, ZIP code, and the service you think you need. A short description helps but is optional.' },
+    { q: 'How is availability confirmed?', a: 'A team member contacts you after reviewing your request. Availability is never confirmed by the form itself.' }
+  ],
+  areas: [
+    { q: 'Do you cover my ZIP code?', a: 'In this concept, Charlotte is the demonstration focus. A live site would list verified coverage, and staff would always confirm your address.' },
+    { q: 'What if my town isn’t listed?', a: 'Call or send a request anyway with your ZIP code. The team can tell you whether they can help or not.' },
+    { q: 'Does availability depend on the type of service?', a: 'It can. Larger jobs like sewer or water heater replacement may have different coverage or scheduling than smaller repairs.' }
+  ],
+  contact: [
+    { q: 'Is this a confirmed booking?', a: 'No. Sending a request lets the team know what you need. An appointment is only confirmed when someone contacts you and agrees on a time.' },
+    { q: 'What if my issue is urgent?', a: 'Call instead of using the form, especially for active leaks, backups, or no water. The form isn’t monitored like a phone line.' },
+    { q: 'How quickly will someone respond?', a: 'A live site would state the company’s real response policy here. This concept doesn’t promise a response time.' },
+    { q: 'Can I send a photo?', a: 'Photo uploads are turned off in this demo. A live site would enable them only once secure handling and retention are defined.' }
+  ]
+};
+
+const WHY = [
+  { icon: 'chat', t: 'Options you can understand', d: 'Findings and choices explained in plain language, so you can make a decision without needing to know plumbing terms.' },
+  { icon: 'check', t: 'Work scope you approve first', d: 'Nothing beyond the agreed scope goes ahead until you’ve said yes to it.' },
+  { icon: 'home', t: 'Respect for your home', d: 'Care around floors, fixtures, and belongings, and the work area left tidy.' },
+  { icon: 'phone', t: 'Follow-up you can count on', d: 'Clear next steps after each visit, so you’re not left wondering what happens now.' }
+];
+
+const PROCESS = [
+  { t: 'Call or send a request', d: 'Tell us what’s going on. Calling is best for urgent problems.' },
+  { t: 'We confirm the details', d: 'Staff check your area, availability, and the next step with you.' },
+  { t: 'The issue is assessed', d: 'A technician looks at the problem and explains the options.' },
+  { t: 'You approve the work', d: 'Agreed work only goes ahead once you’ve approved it.' }
+];
+
+const SERVICE_OPTIONS = [
+  ...SERVICES.map(s => ({ value: s.slug, label: s.name })),
+  { value: 'other', label: 'Other / Not sure' }
+];
+
+/* ============================== 2. ICONS ================================= */
+const ICON_PATHS = {
+  drain: '<path d="M4 10h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-2Z"/><path d="M12 18v3"/><path d="M9 10V6a3 3 0 0 1 6 0"/><circle cx="12" cy="13" r="1.4"/>',
+  leak: '<path d="M3 7h9a3 3 0 0 1 3 3v1"/><path d="M3 4v6"/><path d="M15 14.5c0 0-2 2.3-2 3.7a2 2 0 0 0 4 0c0-1.4-2-3.7-2-3.7Z"/>',
+  heater: '<rect x="6" y="3" width="12" height="18" rx="3"/><path d="M6 8h12"/><path d="M12 12c-1.2 1.4-1.6 2.3-1.6 3a1.6 1.6 0 0 0 3.2 0c0-.7-.4-1.6-1.6-3Z"/>',
+  sewer: '<path d="M3 9h18"/><path d="M3 15h18"/><path d="M7 9v6"/><path d="M17 9v6"/><path d="M12 4v5"/><path d="M12 15v5"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  water: '<path d="M2 15c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M2 19c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M12 3s-3 3.4-3 5.5a3 3 0 0 0 6 0C15 6.4 12 3 12 3Z"/>',
+  repeat: '<path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/>',
+  grid: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+  drop: '<path d="M12 3s-6 6.5-6 10.5a6 6 0 0 0 12 0C18 9.5 12 3 12 3Z"/>',
+  stain: '<path d="M3 4h18"/><path d="M8 4c0 3 2 3.5 2 6s-2 3-2 5 1.5 3 4 3 4-1 4-3-2-2.5-2-5 2-3 2-6"/>',
+  meter: '<circle cx="12" cy="13" r="8"/><path d="M12 13l3.5-3.5"/><path d="M8 3h8"/>',
+  flame: '<path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.5 1 2.5 2 2.5 0-2.5-.5-5 .5-7.5Z"/>',
+  thermo: '<path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0Z"/><path d="M12 11v6"/>',
+  sound: '<path d="M4 10v4"/><path d="M8 7v10"/><path d="M12 4v16"/><path d="M16 8v8"/><path d="M20 11v2"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/>',
+  wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.3-.4-.4-2.3 2.4-2.4Z"/>',
+  replace: '<rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/><path d="M15 3h2a4 4 0 0 1 4 4v2"/><path d="M19 7l2 2 2-2"/><path d="M9 21H7a4 4 0 0 1-4-4v-2"/><path d="M5 17l-2-2-2 2"/>',
+  trenchless: '<path d="M2 8h20"/><path d="M5 8v3"/><path d="M19 8v3"/><path d="M4 16h16"/><circle cx="12" cy="16" r="2.2"/><path d="M5 11v5"/><path d="M19 11v5"/>',
+  shovel: '<path d="M2 22l6-6"/><path d="M14.5 3.5l6 6-4 4a4.2 4.2 0 0 1-6-6l4-4Z"/><path d="M9.5 14.5L7 12"/>',
+  yard: '<path d="M2 20h20"/><path d="M6 20v-5"/><path d="M6 15c-2 0-3-1.5-3-3s1.5-3 3-3 3 1.5 3 3-1 3-3 3Z"/><path d="M14 20v-3c0-1 1-2 2-2h2c1 0 2 1 2 2v3"/>',
+  chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11h7"/><path d="M8.5 14.5h4"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  checkCircle: '<circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/>',
+  home: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/>',
+  phone: '<path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 5a2 2 0 0 1 2-2Z"/>',
+  menu: '<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>',
+  x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  chevDown: '<path d="m6 9 6 6 6-6"/>',
+  chevRight: '<path d="m9 6 6 6-6 6"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/>',
+  alert: '<path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17h.01"/>',
+  shield: '<path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>',
+  pin: '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/>',
+  clipboard: '<rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1"/><path d="M9 11h6"/><path d="M9 15h4"/>',
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14a6 6 0 0 1 3.5 6"/>',
+  camera: '<path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/>',
+  quote: '<path d="M7 17c-2 0-3-1.5-3-3.5C4 10 6 7.5 9 6.5l.5 1.5C7.5 9 7 10.2 7 11h2v6H7Z"/><path d="M16 17c-2 0-3-1.5-3-3.5 0-3.5 2-6 5-7l.5 1.5c-2 1-2.5 2.2-2.5 3h2v6h-2Z"/>',
+  file: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/>',
+  lock: '<rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  dollar: '<path d="M12 3v18"/><path d="M16.5 7.5c-.6-1.4-2.4-2.5-4.5-2.5-2.5 0-4.5 1.4-4.5 3.3 0 4.4 9 2.4 9 7 0 1.9-2 3.2-4.5 3.2-2.3 0-4.2-1.1-4.8-2.7"/>',
+  tools: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.3-.4-.4-2.3 2.4-2.4Z"/>',
+  layers: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>',
+  arrowUpRight: '<path d="M7 17 17 7"/><path d="M8 7h9v9"/>'
+};
+
+function Icon(name, cls = 'w-5 h-5', label = '') {
+  const a11y = label ? `role="img" aria-label="${label}"` : 'aria-hidden="true" focusable="false"';
+  return `<svg ${a11y} class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">${ICON_PATHS[name] || ''}</svg>`;
+}
+
+/* ============================== 3. UI ==================================== */
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const href = path => `#${path}`;
+const cx = (...c) => c.filter(Boolean).join(' ');
+
+function Logo({ dark = false } = {}) {
+  const word = dark ? '#FFFFFF' : '#153B4A';
+  const sub = dark ? 'rgba(255,255,255,.72)' : '#4A5C63';
+  return `
+  <span class="inline-flex items-center gap-2.5">
+    <svg aria-hidden="true" viewBox="0 0 40 40" class="w-9 h-9 flex-none">
+      <rect width="40" height="40" rx="11" fill="${dark ? '#1C4C5E' : '#153B4A'}"/>
+      <path d="M11 28V17a6 6 0 0 1 6-6h12" fill="none" stroke="#E8A35D" stroke-width="3.6" stroke-linecap="round"/>
+      <circle cx="26" cy="25" r="4.4" fill="none" stroke="#fff" stroke-width="2.8"/>
+    </svg>
+    <span class="leading-none">
+      <span class="block font-display font-extrabold text-[1.15rem] tracking-[-0.02em]" style="color:${word}">Oakline</span>
+      <span class="block text-[0.72rem] font-medium mt-0.5" style="color:${sub}">Plumbing Co.</span>
+    </span>
+  </span>`;
+}
+
+function Button({ label, to, variant = 'primary', icon, size = '', attrs = '', cls = '' }) {
+  const ic = icon ? Icon(icon, 'w-[18px] h-[18px]') : '';
+  const c = cx('btn', `btn-${variant}`, size && `btn-${size}`, cls);
+  if (to) return `<a href="${href(to)}" class="${c}" ${attrs}>${ic}<span>${label}</span></a>`;
+  return `<button type="button" class="${c}" ${attrs}>${ic}<span>${label}</span></button>`;
+}
+
+// Phone CTAs never dial in the demo: they open an explanation dialog.
+function CallButton({ label = 'Call Now', variant = 'secondary', size = '', cls = '', showNumber = false } = {}) {
+  const text = showNumber ? `${label} ${SITE.phoneDisplay}` : label;
+  return Button({ label: text, variant, size, icon: 'phone', cls, attrs: 'data-action="call"' });
+}
+
+function DemoTag(text = 'Demo content') {
+  return `<span class="demo-tag">${Icon('info', 'w-3.5 h-3.5')}${text}</span>`;
+}
+
+function Image({ src, alt, ratio = 'aspect-[4/3]', cls = '', tag = 'Illustrative image', icon = 'tools', eager = false }) {
+  return `
+  <figure class="img-frame ${ratio} ${cls}">
+    <img src="${src}" alt="${esc(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" data-fallback>
+    <div class="img-fallback" hidden>
+      <span class="w-14 h-14 rounded-2xl bg-white/80 grid place-items-center shadow-card">${Icon(icon, 'w-7 h-7')}</span>
+      <span class="text-sm font-semibold max-w-[30ch]">${esc(alt)}</span>
+    </div>
+    ${tag ? `<figcaption class="img-tag">${tag}</figcaption>` : ''}
+  </figure>`;
+}
+
+function SectionHeading({ title, intro = '', align = 'left', id = '', level = 2 }) {
+  const center = align === 'center';
+  return `
+  <div class="${center ? 'text-center mx-auto' : ''} max-w-2xl mb-10 md:mb-12">
+    <h${level} ${id ? `id="${id}"` : ''} class="h2">${title}</h${level}>
+    ${intro ? `<p class="lede mt-4 ${center ? 'mx-auto' : ''}">${intro}</p>` : ''}
+  </div>`;
+}
+
+function Eyebrow(text) {
+  return `<p class="inline-flex items-center gap-2.5 text-[0.95rem] font-semibold text-copper-700 mb-4">
+    <span aria-hidden="true" class="inline-block w-7 h-[3px] rounded-full bg-copper"></span>${text}</p>`;
+}
+
+function Breadcrumbs(items) {
+  return `
+  <nav aria-label="Breadcrumb" class="mb-6">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-charcoal-70">
+      ${items.map((it, i) => {
+        const last = i === items.length - 1;
+        return `<li class="flex items-center gap-1.5">
+          ${last ? `<span aria-current="page" class="font-semibold text-teal">${it.label}</span>`
+                 : `<a href="${href(it.to)}" class="hover:text-teal underline-offset-4 hover:underline">${it.label}</a>
+                    <span aria-hidden="true" class="text-charcoal-50">/</span>`}
+        </li>`;
+      }).join('')}
+    </ol>
+  </nav>`;
+}
+
+let accSeq = 0;
+function Accordion(items, { cls = '' } = {}) {
+  return `<div class="divide-y divide-[#CFE0DD] border-y border-[#CFE0DD] ${cls}" data-accordion>
+    ${items.map(it => {
+      const id = `acc-${++accSeq}`;
+      return `
+      <div class="acc-item" data-open="false">
+        <h3>
+          <button type="button" class="w-full flex items-center justify-between gap-6 text-left py-5 min-h-[64px] font-display font-bold text-[1.07rem] text-teal hover:text-teal-600"
+            aria-expanded="false" aria-controls="${id}" id="${id}-btn" data-acc-trigger>
+            <span>${it.q}</span>
+            <span class="acc-icon flex-none w-9 h-9 rounded-full bg-aqua grid place-items-center text-teal">${Icon('x', 'w-4 h-4 rotate-45')}</span>
+          </button>
+        </h3>
+        <div class="acc-panel" id="${id}" role="region" aria-labelledby="${id}-btn">
+          <div><div class="pb-6 pr-12 text-charcoal-70 measure" data-acc-body>
+            <p>${it.a}</p>
+            ${it.link ? `<p class="mt-3"><a href="${href(it.link.to)}" class="text-link" tabindex="-1">${it.link.label}</a></p>` : ''}
+          </div></div>
+        </div>
+      </div>`;
+    }).join('')}
+  </div>`;
+}
+
+function IconBadge(name, tone = 'aqua') {
+  const tones = { aqua: 'bg-aqua text-teal', copper: 'bg-copper-100 text-copper-700', teal: 'bg-teal text-white', white: 'bg-white text-teal' };
+  return `<span class="inline-grid place-items-center w-12 h-12 rounded-[14px] ${tones[tone]} flex-none">${Icon(name, 'w-6 h-6')}</span>`;
+}
+
+function ProofSlot({ title, body, icon = 'quote', cls = '' }) {
+  return `
+  <div class="proof-slot p-6 md:p-7 ${cls}">
+    <div class="flex items-start gap-4">
+      <span class="w-11 h-11 rounded-xl bg-white grid place-items-center text-teal flex-none border border-[#CFE0DD]">${Icon(icon, 'w-5 h-5')}</span>
+      <div>
+        <p class="font-display font-bold text-teal">${title}</p>
+        <p class="text-[0.95rem] text-charcoal-70 mt-1">${body}</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+function Notice({ tone = 'info', title, body, cls = '', attrs = '' }) {
+  const map = {
+    info: { wrap: 'bg-white border-[#B9D3D0]', ic: 'info', icc: 'text-teal' },
+    warn: { wrap: 'bg-copper-100 border-[#F1CFA8]', ic: 'alert', icc: 'text-copper-700' },
+    error: { wrap: 'bg-[#FEF3F2] border-[#F4B8B1]', ic: 'alert', icc: 'text-danger' },
+    success: { wrap: 'bg-[#ECF7F1] border-[#A8D8C0]', ic: 'checkCircle', icc: 'text-success' }
+  }[tone];
+  return `<div class="flex gap-3 rounded-2xl border p-4 md:p-5 ${map.wrap} ${cls}" ${attrs}>
+    <span class="${map.icc} flex-none mt-0.5">${Icon(map.ic, 'w-5 h-5')}</span>
+    <div class="text-[0.95rem]">${title ? `<p class="font-semibold text-teal">${title}</p>` : ''}<div class="${title ? 'mt-1' : ''} text-charcoal">${body}</div></div>
+  </div>`;
+}
+
+/* ============================ 4. SECTIONS ================================ */
+function ServiceCard(s, { variant = 'compact' } = {}) {
+  if (variant === 'full') {
+    return `
+    <article class="group bg-white rounded-panel border border-[#D6E5E2] shadow-card overflow-hidden flex flex-col card-link">
+      ${Image({ src: s.image, alt: s.imageAlt, ratio: 'aspect-[16/9]', icon: s.icon })}
+      <div class="p-6 md:p-8 flex flex-col flex-1">
+        <div class="flex items-center gap-3 mb-3">${IconBadge(s.icon, 'copper')}<h3 class="h3 text-[1.35rem]">${s.name}</h3></div>
+        <p class="text-charcoal-70">${s.directory.overview}</p>
+        <p class="font-semibold text-teal mt-5 text-[0.95rem]">Common reasons people call</p>
+        <ul class="mt-2 space-y-2">
+          ${s.directory.problems.map(p => `<li class="flex gap-2.5 text-[0.97rem]"><span class="text-copper-600 mt-1">${Icon('check', 'w-4 h-4')}</span>${p}</li>`).join('')}
+        </ul>
+        <div class="mt-auto pt-7 flex flex-wrap gap-3">
+          ${Button({ label: `Explore ${s.navLabel}`, to: `/services/${s.slug}`, variant: 'primary', size: 'sm' })}
+          ${Button({ label: 'Request Service', to: `/contact?service=${s.slug}`, variant: 'secondary', size: 'sm' })}
+        </div>
+      </div>
+    </article>`;
+  }
+  return `
+  <a href="${href(`/services/${s.slug}`)}" class="group bg-white rounded-panel border border-[#D6E5E2] shadow-card overflow-hidden flex flex-col card-link">
+    ${Image({ src: s.image, alt: s.imageAlt, ratio: 'aspect-[3/2]', icon: s.icon, tag: '' })}
+    <div class="p-6 flex flex-col flex-1">
+      <span class="text-copper-700 mb-3">${Icon(s.icon, 'w-6 h-6')}</span>
+      <h3 class="h3">${s.name}</h3>
+      <p class="text-teal font-semibold mt-2 text-[0.97rem]">${s.problem}</p>
+      <p class="text-charcoal-70 mt-2 text-[0.97rem]">${s.summary}</p>
+      <span class="mt-auto pt-5 inline-flex items-center gap-1.5 font-semibold text-teal">
+        <span class="underline decoration-copper decoration-2 underline-offset-4 group-hover:decoration-teal">View service</span>
+        <span class="sr-only">: ${s.name}</span>${Icon('chevRight', 'w-4 h-4 transition-transform group-hover:translate-x-0.5')}
+      </span>
+    </div>
+  </a>`;
+}
+
+// Interactive symptom → service matcher. Suggests, never diagnoses.
+function SymptomFinder({ extended = false, id = 'finder' } = {}) {
+  const list = SYMPTOMS.filter(s => extended || !s.extended);
+  return `
+  <div class="bg-white rounded-panel border border-[#D6E5E2] shadow-card p-6 md:p-10" data-finder="${id}">
+    <p id="${id}-label" class="font-display font-bold text-teal text-lg">What are you noticing?</p>
+    <p class="text-charcoal-70 text-[0.95rem] mt-1">Pick the closest match to see which service page to read first.</p>
+    <div class="flex flex-wrap gap-2.5 mt-5" role="group" aria-labelledby="${id}-label">
+      ${list.map(s => `<button type="button" class="chip" aria-pressed="false" data-symptom="${s.id}">${Icon(s.icon, 'w-[18px] h-[18px]')}${s.label}</button>`).join('')}
+    </div>
+    <div class="mt-6 min-h-[132px]" data-finder-result aria-live="polite">${FinderEmpty()}</div>
+    <p class="mt-5 text-[0.95rem]">Not sure? <a href="${href('/contact?service=other')}" class="text-link">Tell us what’s happening</a> and the team can help sort it out.</p>
+  </div>`;
+}
+
+function FinderEmpty() {
+  return `<div class="h-full rounded-2xl bg-soft border border-[#E1ECEA] p-5 flex items-center gap-4 text-charcoal-70">
+    <span class="text-teal">${Icon('search', 'w-6 h-6')}</span>
+    <p class="text-[0.95rem]">Choose a symptom above. You’ll see a suggested starting point, not a diagnosis.</p>
+  </div>`;
+}
+
+function SymptomResult(sym) {
+  const s = SVC[sym.service];
+  return `
+  <div class="rounded-2xl bg-aqua-50 border border-[#B9D3D0] p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-5 page-enter">
+    ${IconBadge(s.icon, 'teal')}
+    <div class="flex-1">
+      <p class="text-sm font-semibold text-copper-700">Suggested starting point</p>
+      <p class="font-display font-bold text-teal text-lg">${s.name}</p>
+      <p class="text-[0.95rem] text-charcoal-70 mt-1">${sym.note} The cause is confirmed only after an in-person look.</p>
+    </div>
+    <div class="flex flex-wrap gap-2.5">
+      ${Button({ label: 'Read about it', to: `/services/${s.slug}`, variant: 'secondary', size: 'sm' })}
+      ${Button({ label: s.cta, to: `/contact?service=${s.slug}`, variant: 'primary', size: 'sm' })}
+    </div>
+  </div>`;
+}
+
+// Signature element: steps connected by a "pipe" that fills with copper once.
+function ProcessPipe(steps = PROCESS, { note = 'Example process for this concept. A live site would describe the company’s actual workflow.' } = {}) {
+  return `
+  <div data-pipe>
+    <ol class="hidden md:grid relative" style="grid-template-columns: repeat(${steps.length}, minmax(0,1fr)); column-gap: 24px;">
+      <div aria-hidden="true" class="pipe-track" style="left: 34px; right: calc((100% - ${(steps.length - 1) * 24}px) / ${steps.length} - 34px);"><div class="pipe-flow"></div></div>
+      ${steps.map((st, i) => `
+        <li class="pipe-step relative">
+          <span class="pipe-joint" aria-hidden="true">${i + 1}</span>
+          <h3 class="h3 mt-6"><span class="sr-only">Step ${i + 1}: </span>${st.t}</h3>
+          <p class="text-charcoal-70 mt-2 text-[0.97rem] pr-4">${st.d}</p>
+        </li>`).join('')}
+    </ol>
+    <ol class="md:hidden relative space-y-8">
+      <div aria-hidden="true" class="pipe-vert"><div class="pipe-flow"></div></div>
+      ${steps.map((st, i) => `
+        <li class="pipe-step relative flex gap-5">
+          <span class="pipe-joint flex-none" aria-hidden="true">${i + 1}</span>
+          <div class="pt-3"><h3 class="h3"><span class="sr-only">Step ${i + 1}: </span>${st.t}</h3><p class="text-charcoal-70 mt-1.5 text-[0.97rem]">${st.d}</p></div>
+        </li>`).join('')}
+    </ol>
+    ${note ? `<p class="mt-10 text-sm text-charcoal-70 flex items-center gap-2">${Icon('info', 'w-4 h-4 text-teal')}${note}</p>` : ''}
+  </div>`;
+}
+
+function FactorGrid(items, { cols = 'sm:grid-cols-2 lg:grid-cols-3', numbered = false, tone = 'white' } = {}) {
+  const bg = tone === 'white' ? 'bg-white border border-[#D6E5E2]' : 'bg-white/70 border border-white';
+  return `<ul class="grid gap-4 md:gap-5 ${cols}">
+    ${items.map((it, i) => `
+      <li class="${bg} rounded-card p-5 md:p-6">
+        ${numbered ? `<span class="font-display font-extrabold text-copper-600 text-sm">Step ${i + 1}</span>` : ''}
+        <p class="font-display font-bold text-teal text-[1.05rem] ${numbered ? 'mt-1' : ''}">${it.t}</p>
+        <p class="text-charcoal-70 mt-1.5 text-[0.96rem]">${it.d}</p>
+      </li>`).join('')}
+  </ul>`;
+}
+
+function CompareCards(c) {
+  const col = (side, accent) => `
+    <div class="rounded-panel p-6 md:p-8 ${accent ? 'bg-teal text-white on-dark' : 'bg-white border border-[#D6E5E2]'}">
+      <div class="flex items-center gap-3">
+        ${IconBadge(side.icon, accent ? 'white' : 'aqua')}
+        <h3 class="h3 text-[1.25rem] ${accent ? '!text-white' : ''}">${side.t}</h3>
+      </div>
+      <ul class="mt-6 space-y-3.5">
+        ${side.items.map(i => `<li class="flex gap-3 ${accent ? 'text-white/90' : 'text-charcoal'}"><span class="${accent ? 'text-copper' : 'text-copper-600'} mt-1 flex-none">${Icon('check', 'w-4 h-4')}</span><span>${i}</span></li>`).join('')}
+      </ul>
+    </div>`;
+  return `
+    <div class="grid md:grid-cols-2 gap-5 md:gap-6">${col(c.a, false)}${col(c.b, true)}</div>
+    <p class="mt-6 text-sm text-charcoal-70 flex items-start gap-2">${Icon('info', 'w-4 h-4 text-teal mt-0.5 flex-none')}These are discussion points, not a recommendation. A technician makes a recommendation only after seeing your home.</p>`;
+}
+
+function FeaturedProject({ compact = false } = {}) {
+  const rows = [
+    { k: 'Problem', v: 'Homeowner reports the kitchen sink draining slowly for two weeks, with occasional gurgling.' },
+    { k: 'Assessment', v: 'Technician checks nearby fixtures to see whether the blockage is local or further down the line.' },
+    { k: 'Approved work', v: 'Homeowner reviews the options and approves clearing the kitchen branch line.' },
+    { k: 'Outcome', v: 'Space for the verified result, written in plain language with the customer’s permission.' }
+  ];
+  return `
+  <article class="bg-white rounded-panel border border-[#D6E5E2] shadow-card overflow-hidden grid ${compact ? '' : 'lg:grid-cols-[1.05fr_1fr]'}">
+    ${Image({ src: IMG.kitchen, alt: 'A home kitchen with a sink, illustrating where an example drain job would take place.', ratio: compact ? 'aspect-[16/9]' : 'aspect-[16/10] lg:aspect-auto lg:h-full', tag: 'Illustrative image', icon: 'drain' })}
+    <div class="p-6 md:p-10">
+      ${DemoTag('Example project layout — not a completed Oakline job')}
+      <h3 class="h3 text-[1.35rem] mt-4">Kitchen sink that kept slowing down</h3>
+      <dl class="mt-6 space-y-5">
+        ${rows.map(r => `<div class="grid grid-cols-[112px_1fr] gap-4"><dt class="font-semibold text-teal text-[0.95rem]">${r.k}</dt><dd class="text-charcoal-70 text-[0.96rem]">${r.v}</dd></div>`).join('')}
+      </dl>
+    </div>
+  </article>`;
+}
+
+function CoverageMap() {
+  return `
+  <figure class="bg-white rounded-panel border border-[#D6E5E2] p-5 md:p-7 shadow-card">
+    <svg viewBox="0 0 400 300" class="w-full h-auto" role="img" aria-labelledby="mapTitle mapDesc">
+      <title id="mapTitle">Stylized coverage diagram</title>
+      <desc id="mapDesc">A simplified diagram showing Charlotte at the center as the demonstration focus, with an unlabeled dashed ring representing coverage that would be confirmed for a real business.</desc>
+      <rect width="400" height="300" rx="16" fill="#F6F8F7"/>
+      <g stroke="#DCEFEB" stroke-width="1">${Array.from({ length: 9 }, (_, i) => `<path d="M0 ${i * 36 + 6}H400"/>`).join('')}${Array.from({ length: 12 }, (_, i) => `<path d="M${i * 36 + 2} 0V300"/>`).join('')}</g>
+      <path d="M-10 210 C 80 190, 120 240, 200 205 S 330 150, 410 175" fill="none" stroke="#C5E4DE" stroke-width="10" stroke-linecap="round"/>
+      <path d="M150 -10 C 170 70, 140 120, 190 160 S 250 260, 230 310" fill="none" stroke="#E1ECEA" stroke-width="6"/>
+      <circle cx="200" cy="150" r="118" fill="none" stroke="#9DBFBB" stroke-width="2" stroke-dasharray="6 7"/>
+      <circle cx="200" cy="150" r="62" fill="#DCEFEB" stroke="#153B4A" stroke-width="2"/>
+      <circle cx="200" cy="150" r="9" fill="#E8A35D" stroke="#153B4A" stroke-width="2.5"/>
+      <text x="200" y="128" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="800" font-size="17" fill="#153B4A">Charlotte</text>
+      <text x="200" y="182" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5C63">Demonstration focus</text>
+      <text x="200" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5C63">Dashed ring: coverage confirmed per address</text>
+    </svg>
+    <figcaption class="mt-4 text-sm text-charcoal-70">Diagram only. A live site would show verified service boundaries with a matching text list.</figcaption>
+  </figure>`;
+}
+
+function TrustStrip() {
+  const slots = [
+    { icon: 'shield', t: 'Verified license information appears here' },
+    { icon: 'quote', t: 'Rating from a real review source appears here' },
+    { icon: 'clipboard', t: 'Insurance or other verified assurance appears here' }
+  ];
+  return `
+  <section aria-label="Credentials placeholder" class="bg-white border-y border-[#DCE7E5]">
+    <div class="wrap py-5">
+      <ul class="grid sm:grid-cols-3 gap-3 sm:gap-6">
+        ${slots.map(s => `<li class="flex items-center gap-3 text-[0.93rem] text-charcoal-70">
+          <span class="w-10 h-10 rounded-xl border-2 border-dashed border-[#9DBFBB] grid place-items-center text-teal flex-none">${Icon(s.icon, 'w-5 h-5')}</span>${s.t}</li>`).join('')}
+      </ul>
+    </div>
+  </section>`;
+}
+
+function PageHero({ crumbs, h1, intro, primary, secondary = 'call', image, imageAlt, icon = 'tools', note = '' }) {
+  return `
+  <section class="relative overflow-hidden bg-aqua">
+    <svg aria-hidden="true" class="absolute -right-24 -top-24 w-[520px] h-[520px] text-[#C5E4DE] hidden md:block" viewBox="0 0 200 200" fill="none"><path d="M20 200V90a70 70 0 0 1 70-70h110" stroke="currentColor" stroke-width="22"/></svg>
+    <div class="wrap relative py-12 md:py-20 grid ${image ? 'lg:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-14 items-center' : ''}">
+      <div class="${image ? '' : 'max-w-3xl'}">
+        ${crumbs ? Breadcrumbs(crumbs) : ''}
+        <h1 class="h1-page" tabindex="-1" data-page-h1>${h1}</h1>
+        <p class="lede mt-5 measure">${intro}</p>
+        ${(primary || secondary) ? `<div class="mt-8 flex flex-wrap gap-3">
+          ${primary ? Button(primary) : ''}
+          ${secondary === 'call' ? CallButton({ label: 'Call Now' }) : (secondary ? Button(secondary) : '')}
+        </div>` : ''}
+        ${note ? `<p class="mt-5 text-sm text-charcoal-70 flex items-start gap-2 measure">${Icon('info', 'w-4 h-4 mt-0.5 text-teal flex-none')}<span>${note}</span></p>` : ''}
+      </div>
+      ${image ? `<div class="relative">${Image({ src: image, alt: imageAlt, ratio: 'aspect-[4/3]', cls: 'rounded-panel shadow-lift', icon, eager: true })}</div>` : ''}
+    </div>
+  </section>`;
+}
+
+function FinalCTA({ heading, text, primary, secondary = 'call' }) {
+  return `
+  <section class="section pt-0 md:pt-0 lg:pt-0">
+    <div class="wrap">
+      <div class="relative overflow-hidden rounded-[24px] bg-teal on-dark px-6 py-10 md:px-14 md:py-14 grid md:grid-cols-[1fr_auto] gap-8 items-center">
+        <svg aria-hidden="true" class="absolute right-0 bottom-0 w-72 h-72 text-[#1C4C5E]" viewBox="0 0 200 200" fill="none"><path d="M200 40H120a50 50 0 0 0-50 50v110" stroke="currentColor" stroke-width="26"/></svg>
+        <div class="relative">
+          <h2 class="h2 !text-white">${heading}</h2>
+          <p class="mt-3 text-white/80 text-[1.06rem] measure">${text}</p>
+        </div>
+        <div class="relative flex flex-wrap gap-3">
+          ${Button({ ...primary, variant: 'copper' })}
+          ${secondary === 'call' ? CallButton({ variant: 'ghost-light', label: 'Call Now' }) : Button({ ...secondary, variant: 'ghost-light' })}
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+/* ----------------------------- Inquiry form ------------------------------ */
+let formSeq = 0;
+function InquiryForm({ variant = 'short', preset = '', heading = '' } = {}) {
+  const id = `f${++formSeq}`;
+  const full = variant === 'full';
+  const field = (name, label, { required = false, type = 'text', hint = '', ac = '', inputmode = '', placeholder = '', span = '' } = {}) => `
+    <div class="${span}">
+      <label for="${id}-${name}" class="field-label">${label} ${required ? '<span class="req-mark" aria-hidden="true">*</span><span class="sr-only">(required)</span>' : '<span class="font-normal text-charcoal-70 text-sm">(optional)</span>'}</label>
+      <input id="${id}-${name}" name="${name}" type="${type}" class="field-input" ${required ? 'required aria-required="true"' : ''} ${ac ? `autocomplete="${ac}"` : ''} ${inputmode ? `inputmode="${inputmode}"` : ''} ${placeholder ? `placeholder="${placeholder}"` : ''} aria-describedby="${hint ? `${id}-${name}-hint ` : ''}${id}-${name}-err">
+      ${hint ? `<p id="${id}-${name}-hint" class="field-hint">${hint}</p>` : ''}
+      <p id="${id}-${name}-err" class="field-error" hidden></p>
+    </div>`;
+
+  return `
+  <form novalidate class="space-y-5" data-inquiry-form data-variant="${variant}" aria-labelledby="${id}-title">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <h3 id="${id}-title" class="h3 text-[1.3rem]">${heading || 'Service request'}</h3>
+      ${DemoTag('Demo form — nothing is sent')}
+    </div>
+    <p class="text-sm text-charcoal-70">Fields marked <span class="req-mark">*</span> are required.</p>
+    <div data-error-summary hidden tabindex="-1" class="rounded-2xl border border-[#F4B8B1] bg-[#FEF3F2] p-4">
+      <p class="font-semibold text-danger flex items-center gap-2">${Icon('alert', 'w-5 h-5')}<span data-summary-title>Please check the highlighted fields</span></p>
+      <ul class="mt-2 list-disc pl-6 text-[0.95rem] text-charcoal" data-summary-list></ul>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-5">
+      ${field('name', 'Full name', { required: true, ac: 'name', span: 'sm:col-span-2' })}
+      ${field('phone', 'Phone', { required: true, type: 'tel', ac: 'tel', inputmode: 'tel', hint: 'Any format works, such as (704) 555-0123.' })}
+      ${field('zip', 'ZIP code', { required: true, ac: 'postal-code', inputmode: 'numeric', hint: 'Used to check coverage first.' })}
+      <div class="sm:col-span-2">
+        <label for="${id}-service" class="field-label">Service needed <span class="req-mark" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+        <select id="${id}-service" name="service" class="field-input" required aria-required="true" aria-describedby="${id}-service-err">
+          <option value="">Choose a service</option>
+          ${SERVICE_OPTIONS.map(o => `<option value="${o.value}" ${o.value === preset ? 'selected' : ''}>${o.label}</option>`).join('')}
+        </select>
+        <p id="${id}-service-err" class="field-error" hidden></p>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="${id}-desc" class="field-label">What’s happening? <span class="font-normal text-charcoal-70 text-sm">(optional)</span></label>
+        <textarea id="${id}-desc" name="description" class="field-input" maxlength="800" aria-describedby="${id}-desc-hint" placeholder="For example: kitchen sink has been slow for a week, and the dishwasher drains slowly too."></textarea>
+        <p id="${id}-desc-hint" class="field-hint">Where the problem is, what you’ve noticed, and how long it’s been happening.</p>
+      </div>
+      ${full ? `
+      <fieldset class="sm:col-span-2">
+        <legend class="field-label">How urgent is it? <span class="font-normal text-charcoal-70 text-sm">(optional)</span></legend>
+        <div class="grid sm:grid-cols-3 gap-2.5 mt-1">
+          ${[['planned', 'Planning ahead'], ['soon', 'Needs attention soon'], ['urgent', 'Urgent']].map(([v, l]) => `
+            <label class="radio-pill relative"><input type="radio" name="urgency" value="${v}" data-urgency><span><span class="dot"></span>${l}</span></label>`).join('')}
+        </div>
+        <div data-urgent-note hidden class="mt-3">${Notice({ tone: 'warn', title: 'For urgent problems, please call', body: `Active leaks, backups, or no water are best handled by phone. The form isn’t monitored like a phone line. <button type="button" class="text-link" data-action="call">See the number</button>` })}</div>
+      </fieldset>
+      ${field('email', 'Email', { type: 'email', ac: 'email', span: 'sm:col-span-2', hint: 'Only if you’d like a second way to be reached.' })}
+      <div class="sm:col-span-2">
+        <label for="${id}-photo" class="field-label">Photo <span class="font-normal text-charcoal-70 text-sm">(optional, disabled in demo)</span></label>
+        <input id="${id}-photo" type="file" class="field-input pt-3" disabled aria-describedby="${id}-photo-hint">
+        <p id="${id}-photo-hint" class="field-hint">Uploads stay off until secure handling and retention are defined for a real business.</p>
+      </div>` : ''}
+    </div>
+    <div class="rounded-2xl bg-soft border border-[#E1ECEA] p-4">
+      <label class="flex items-start gap-3 text-sm cursor-pointer">
+        <input type="checkbox" name="simulateFailure" class="mt-0.5 w-5 h-5 accent-[#153B4A] flex-none">
+        <span><span class="font-semibold text-teal">Demo control:</span> simulate a failed send to preview the error and retry state.</span>
+      </label>
+    </div>
+    <div data-form-status></div>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
+      <button type="submit" class="btn btn-primary w-full sm:w-auto" data-submit>
+        <span data-submit-label>Send Service Request</span>
+      </button>
+      <p class="text-sm text-charcoal-70">Prefer to talk? <button type="button" class="text-link" data-action="call">Call instead</button></p>
+    </div>
+    <p class="text-sm text-charcoal-70 flex items-start gap-2">${Icon('lock', 'w-4 h-4 mt-0.5 text-teal flex-none')}<span>Sending a request doesn’t book an appointment. In this demo, details stay in your browser and are cleared when you leave. Read the <a href="${href('/privacy')}" class="text-link">privacy notice</a>.</span></p>
+  </form>`;
+}
+
+/* ============================= 5. LAYOUT ================================= */
+function ConceptBanner() {
+  return `<div class="bg-teal-800 text-white/90 text-[0.82rem]">
+    <div class="wrap py-2 flex items-center justify-center gap-2 text-center">
+      ${Icon('info', 'w-4 h-4 text-copper flex-none')}
+      <p><span class="font-semibold text-white">Concept project, fictional business.</span> <span class="sm:hidden">A PlumbNexo portfolio demo.</span><span class="hidden sm:inline">Oakline Plumbing Co. isn’t a real company; this site is a PlumbNexo portfolio demonstration.</span></p>
+    </div>
+  </div>`;
+}
+
+function Header(route) {
+  const isActive = p => route.path === p || (p !== '/' && route.path.startsWith(p + '/'));
+  return `
+  <div class="bg-soft/95 backdrop-blur border-b border-[#DCE7E5]">
+    <div class="wrap h-[72px] flex items-center justify-between gap-4">
+      <a href="${href('/')}" class="flex-none rounded-lg" aria-label="Oakline Plumbing Co. home">${Logo()}</a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          ${NAV.map(n => n.dropdown ? `
+            <li class="relative" data-dropdown>
+              <button type="button" class="nav-link" aria-expanded="false" aria-controls="svc-menu" data-dropdown-trigger ${isActive(n.path) ? 'aria-current="page"' : ''}>
+                ${n.label}${Icon('chevDown', 'w-4 h-4 transition-transform')}
+              </button>
+              <div id="svc-menu" class="dropdown-panel absolute left-0 top-[calc(100%+8px)] w-[340px] bg-white rounded-2xl border border-[#D6E5E2] shadow-lift p-2" data-open="false" data-dropdown-panel>
+                <ul>
+                  <li><a href="${href('/services')}" class="flex items-center gap-3 rounded-xl px-3 py-3 hover:bg-aqua-50 font-semibold text-teal" data-dropdown-item ${route.path === '/services' ? 'aria-current="page"' : ''}>
+                    <span class="w-9 h-9 rounded-lg bg-teal text-white grid place-items-center">${Icon('grid', 'w-[18px] h-[18px]')}</span>All Services</a></li>
+                  ${SERVICES.map(s => `<li><a href="${href(`/services/${s.slug}`)}" class="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-aqua-50" data-dropdown-item ${route.path === `/services/${s.slug}` ? 'aria-current="page"' : ''}>
+                    <span class="w-9 h-9 rounded-lg bg-aqua text-teal grid place-items-center flex-none">${Icon(s.icon, 'w-[18px] h-[18px]')}</span>
+                    <span><span class="block font-semibold text-teal text-[0.95rem]">${s.navLabel}</span><span class="block text-[0.82rem] text-charcoal-70 leading-snug">${s.problem}</span></span></a></li>`).join('')}
+                </ul>
+              </div>
+            </li>` : `
+            <li><a href="${href(n.path)}" class="nav-link" ${isActive(n.path) ? 'aria-current="page"' : ''}>${n.label}</a></li>`).join('')}
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-action="call" class="hidden xl:inline-flex items-center gap-2 h-11 px-3 rounded-xl font-semibold text-teal hover:bg-aqua/60">
+          ${Icon('phone', 'w-[18px] h-[18px] text-copper-600')}<span>${SITE.phoneDisplay}</span>
+        </button>
+        <button type="button" data-action="call" class="hidden lg:inline-flex xl:hidden btn btn-secondary btn-sm">${Icon('phone', 'w-[18px] h-[18px]')}<span>Call</span></button>
+        ${Button({ label: 'Request Service', to: '/contact', variant: 'primary', size: 'sm', cls: 'hidden sm:inline-flex' })}
+        <button type="button" data-action="call" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-[#B9D3D0] bg-white text-teal" aria-label="Call Oakline (demo number)">${Icon('phone', 'w-5 h-5')}</button>
+        <button type="button" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl bg-teal text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>${Icon('menu', 'w-5 h-5')}</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function MobileMenu(route) {
+  const link = (to, label, sub = false) => `<li><a href="${href(to)}" class="flex items-center justify-between min-h-[52px] px-4 rounded-xl ${sub ? 'text-[0.98rem] pl-6' : 'font-semibold text-[1.05rem]'} ${route.path === to ? 'bg-aqua text-teal' : 'text-charcoal hover:bg-aqua-50'}" ${route.path === to ? 'aria-current="page"' : ''}>${label}${Icon('chevRight', 'w-4 h-4 text-charcoal-50')}</a></li>`;
+  return `
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 lg:hidden" data-open="false" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div class="absolute inset-0 bg-teal-800/50" data-menu-close></div>
+    <div class="sheet absolute right-0 top-0 h-full w-full max-w-[400px] bg-soft shadow-2xl flex flex-col">
+      <div class="h-[72px] px-5 flex items-center justify-between border-b border-[#DCE7E5]">
+        ${Logo()}
+        <button type="button" class="inline-flex items-center gap-2 h-11 px-3 rounded-xl border border-[#B9D3D0] bg-white font-semibold text-teal" data-menu-close>${Icon('x', 'w-5 h-5')}<span>Close</span></button>
+      </div>
+      <nav aria-label="Mobile" class="flex-1 overflow-y-auto px-3 py-4">
+        <ul class="space-y-1">
+          ${link('/', 'Home')}
+          ${link('/services', 'Services')}
+          ${SERVICES.map(s => link(`/services/${s.slug}`, s.navLabel, true)).join('')}
+          ${NAV.filter(n => !n.dropdown).map(n => link(n.path, n.label)).join('')}
+        </ul>
+      </nav>
+      <div class="p-5 border-t border-[#DCE7E5] space-y-3 mobile-bar">
+        ${Button({ label: 'Request Service', to: '/contact', variant: 'primary', cls: 'w-full' })}
+        ${CallButton({ label: 'Call', showNumber: true, cls: 'w-full' })}
+      </div>
+    </div>
+  </div>`;
+}
+
+function MobileBar(route) {
+  if (['/contact', '/thank-you'].includes(route.path)) { document.body.classList.remove('has-mobile-bar'); return ''; }
+  document.body.classList.add('has-mobile-bar');
+  const svc = route.path.startsWith('/services/') ? route.path.split('/')[2] : '';
+  return `
+  <div class="mobile-bar lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-[#D6E5E2] px-4 pt-2.5">
+    <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+      ${CallButton({ label: 'Call', size: 'sm' })}
+      ${Button({ label: 'Request Service', to: svc ? `/contact?service=${svc}` : '/contact', size: 'sm' })}
+    </div>
+  </div>`;
+}
+
+function Footer() {
+  const col = (title, links) => `
+    <div>
+      <h2 class="font-display font-bold text-white text-[1rem]">${title}</h2>
+      <ul class="mt-4 space-y-2.5">${links.map(l => `<li><a href="${href(l.to)}" class="text-white/75 hover:text-white hover:underline underline-offset-4 text-[0.95rem]">${l.label}</a></li>`).join('')}</ul>
+    </div>`;
+  return `
+  <div class="bg-teal on-dark text-white">
+    <div class="wrap pt-16 pb-10">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
+        <div>
+          <a href="${href('/')}" class="inline-block rounded-lg" aria-label="Oakline Plumbing Co. home">${Logo({ dark: true })}</a>
+          <p class="mt-5 text-white/75 text-[0.95rem] max-w-sm">${SITE.footerBlurb}</p>
+          <p class="mt-4 font-display font-semibold text-copper">${SITE.tagline}</p>
+        </div>
+        ${col('Services', [{ label: 'All Services', to: '/services' }, ...SERVICES.map(s => ({ label: s.navLabel, to: `/services/${s.slug}` }))])}
+        ${col('Company', [{ label: 'Home', to: '/' }, { label: 'About', to: '/about' }, { label: 'Reviews & Projects', to: '/reviews-projects' }, { label: 'Service Areas', to: '/service-areas' }, { label: 'Contact', to: '/contact' }])}
+        <div>
+          <h2 class="font-display font-bold text-white text-[1rem]">Contact & coverage</h2>
+          <ul class="mt-4 space-y-3 text-[0.95rem] text-white/80">
+            <li class="flex gap-2.5">${Icon('phone', 'w-[18px] h-[18px] text-copper mt-0.5 flex-none')}<span><button type="button" data-action="call" class="font-semibold text-white hover:underline underline-offset-4">${SITE.phoneDisplay}</button><span class="block text-white/60 text-[0.85rem]">Demo number, not in service</span></span></li>
+            <li class="flex gap-2.5">${Icon('clock', 'w-[18px] h-[18px] text-copper mt-0.5 flex-none')}<span>${SITE.hoursNote}</span></li>
+            <li class="flex gap-2.5">${Icon('pin', 'w-[18px] h-[18px] text-copper mt-0.5 flex-none')}<span>Charlotte, NC is the demonstration focus. <a href="${href('/service-areas')}" class="text-link">See service area details</a></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 pt-6 border-t border-white/15 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[0.88rem] text-white/70">
+        <p class="inline-flex items-center gap-2"><span class="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-2.5 py-1 font-semibold text-white">${Icon('info', 'w-4 h-4 text-copper')}${SITE.disclosure}</span><span>No real services, credentials, or reviews are claimed.</span></p>
+        <ul class="flex flex-wrap gap-x-5 gap-y-2">
+          <li><a href="${href('/privacy')}" class="hover:text-white hover:underline underline-offset-4">Privacy</a></li>
+          <li><a href="${href('/terms')}" class="hover:text-white hover:underline underline-offset-4">Terms</a></li>
+          <li><span>Social links appear only if real</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>`;
+}
+
+function CallModal() {
+  return `
+  <div class="modal fixed inset-0 z-[60] grid place-items-center p-4" data-open="false" role="dialog" aria-modal="true" aria-labelledby="callTitle" id="call-modal">
+    <div class="absolute inset-0 bg-teal-800/55" data-modal-close></div>
+    <div class="modal-card relative w-full max-w-md bg-white rounded-[22px] shadow-2xl p-6 md:p-8">
+      <button type="button" class="absolute right-4 top-4 w-11 h-11 grid place-items-center rounded-xl hover:bg-soft text-teal" aria-label="Close" data-modal-close>${Icon('x', 'w-5 h-5')}</button>
+      ${IconBadge('phone', 'copper')}
+      <h2 id="callTitle" class="h3 text-[1.35rem] mt-4">Call the team</h2>
+      <p class="mt-2 text-charcoal-70">Calling is the best option for urgent issues like active leaks, backups, or no water.</p>
+      <div class="mt-5 rounded-2xl bg-aqua-50 border border-[#B9D3D0] p-5">
+        <p class="font-display font-extrabold text-2xl text-teal tracking-tight">${SITE.phoneDisplay}</p>
+        <p class="text-sm text-charcoal-70 mt-1">${SITE.phoneNote}</p>
+        <p class="text-sm text-charcoal-70 mt-3 flex gap-2">${Icon('clock', 'w-4 h-4 mt-0.5 text-teal flex-none')}${SITE.hoursNote}</p>
+      </div>
+      ${Notice({ tone: 'warn', cls: 'mt-4', body: 'This is a fictional business. In a live site, this button would dial the verified number directly instead of opening this panel.' })}
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        ${Button({ label: 'Send a request instead', to: '/contact', variant: 'primary', cls: 'flex-1', attrs: 'data-modal-close' })}
+        <button type="button" class="btn btn-secondary flex-1" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ============================== 6. PAGES ================================= */
+const Pages = {};
+
+/* ---------- Home ---------- */
+Pages.home = () => `
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,#F6F8F7_0%,#EDF7F5_100%)]" aria-hidden="true"></div>
+    <div class="wrap relative pt-10 pb-14 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-[1.05fr_.95fr] gap-10 lg:gap-16 items-center">
+      <div class="hero-in">
+        ${Eyebrow('Residential Plumbing in Charlotte, NC')}
+        <h1 class="h1-hero" tabindex="-1" data-page-h1>Plumbing Problems? Let’s Get Them Sorted.</h1>
+        <p class="lede mt-6 measure">From leaking pipes to water heater trouble, Oakline Plumbing helps Charlotte homeowners understand their options and take the next step.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          ${Button({ label: 'Request Service', variant: 'primary', attrs: 'data-scroll-to="home-request"' })}
+          ${CallButton({ label: 'Call Now' })}
+        </div>
+        <p class="mt-5 text-sm text-charcoal-70 flex items-start gap-2 max-w-md">${Icon('info', 'w-4 h-4 mt-0.5 text-teal flex-none')}<span>A request isn’t a confirmed appointment. For urgent problems, calling is the faster route.</span></p>
+      </div>
+      <div class="relative lg:pl-6">
+        <svg aria-hidden="true" class="absolute -left-2 -top-6 w-40 h-40 text-copper hidden lg:block" viewBox="0 0 100 100" fill="none"><path d="M8 100V44a36 36 0 0 1 36-36h56" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg>
+        ${Image({ src: IMG.hero, alt: 'A plumber working under a kitchen sink in a home. Illustrative stock photo, not an Oakline employee.', ratio: 'aspect-[5/4]', cls: 'rounded-[24px] shadow-lift relative', eager: true })}
+        <div class="relative md:absolute md:-bottom-6 md:-left-4 lg:-left-10 mt-4 md:mt-0 bg-white rounded-2xl shadow-lift border border-[#D6E5E2] p-4 md:max-w-[290px] flex items-start gap-3">
+          <span class="w-10 h-10 rounded-xl bg-aqua text-teal grid place-items-center flex-none">${Icon('pin', 'w-5 h-5')}</span>
+          <p class="text-[0.92rem]"><span class="font-semibold text-teal block">Charlotte homeowners</span><span class="text-charcoal-70">Coverage is confirmed for each address. <a href="${href('/service-areas')}" class="text-link">Check yours</a></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  ${TrustStrip()}
+
+  <section class="section" aria-labelledby="home-services">
+    <div class="wrap">
+      ${SectionHeading({ id: 'home-services', title: 'Plumbing Help for the Problems You Face at Home', intro: 'Start with the problem you’re seeing. Each service page explains what’s involved, what affects cost, and what happens next.' })}
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">${SERVICES.map(s => ServiceCard(s)).join('')}</div>
+      <p class="mt-8 text-[0.95rem] text-charcoal-70">Toilets, faucets, and fixtures would be listed here only if the real company handles them. <a href="${href('/services')}" class="text-link">See all services</a></p>
+    </div>
+  </section>
+
+  <section class="section bg-aqua" aria-labelledby="home-symptoms" id="finder">
+    <div class="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-14 items-start">
+      <div class="lg:sticky lg:top-28">
+        <h2 id="home-symptoms" class="h2">Not Sure What’s Causing the Problem?</h2>
+        <p class="lede mt-4">Most people don’t know the cause, and that’s fine. Tell us what you’re noticing and we’ll point you to the most relevant page.</p>
+        <p class="mt-4 text-[0.95rem] text-charcoal-70">Symptoms can have more than one cause, so a technician confirms what’s going on in person.</p>
+      </div>
+      ${SymptomFinder({ id: 'home-finder' })}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-why">
+    <div class="wrap">
+      <div class="grid lg:grid-cols-[1fr_1.15fr] gap-10 lg:gap-16 items-start">
+        <div>
+          <h2 id="home-why" class="h2">Clear Communication From First Contact to Next Steps</h2>
+          <p class="lede mt-4">Plumbing problems are stressful enough. These are the standards the site is designed to communicate, once a real business confirms them.</p>
+          <div class="mt-6">${DemoTag('Shown as example standards, not verified claims')}</div>
+        </div>
+        <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-9">
+          ${WHY.map(w => `<li>${IconBadge(w.icon, 'copper')}<h3 class="h3 mt-4">${w.t}</h3><p class="text-charcoal-70 mt-2 text-[0.97rem]">${w.d}</p></li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white border-y border-[#DCE7E5]" aria-labelledby="home-process">
+    <div class="wrap">
+      ${SectionHeading({ id: 'home-process', title: 'What Happens After You Reach Out?', intro: 'Four steps, and nothing goes ahead until you’ve approved it.' })}
+      ${ProcessPipe()}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="home-work">
+    <div class="wrap">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div class="max-w-2xl">
+          <h2 id="home-work" class="h2">See How Plumbing Work Can Be Explained Clearly</h2>
+          <p class="lede mt-4">Each project story follows the same pattern: what was wrong, what was found, what was approved, and how it turned out.</p>
+        </div>
+        <a href="${href('/reviews-projects')}" class="text-link flex-none">View reviews & projects</a>
+      </div>
+      ${FeaturedProject()}
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="home-coverage">
+    <div class="wrap">
+      <div class="rounded-[24px] bg-aqua p-6 md:p-12 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 id="home-coverage" class="h2">Serving Charlotte and Surrounding Communities</h2>
+          <p class="lede mt-4">Charlotte is the focus of this concept. Nearby towns would be listed only once real coverage is confirmed.</p>
+          <div class="flex flex-wrap gap-2 mt-6">
+            <span class="chip chip-static !border-teal !bg-teal !text-white">${Icon('pin', 'w-4 h-4')}Charlotte</span>
+            ${ILLUSTRATIVE_TOWNS.slice(0, 4).map(t => `<span class="chip chip-static !bg-white/70 !border-dashed">${t}</span>`).join('')}
+          </div>
+          <p class="text-sm text-charcoal-70 mt-3">Dashed names are illustrative only, not verified coverage.</p>
+          <div class="mt-7">${Button({ label: 'Check Service Area', to: '/service-areas', variant: 'primary' })}</div>
+        </div>
+        ${CoverageMap()}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="home-faq">
+    <div class="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
+      <div>
+        <h2 id="home-faq" class="h2">Questions Before You Reach Out</h2>
+        <p class="lede mt-4">Quick answers about requesting help and what to expect.</p>
+      </div>
+      ${Accordion(FAQ.home)}
+    </div>
+  </section>
+
+  <section class="section bg-teal on-dark" aria-labelledby="home-request" id="home-request">
+    <div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-16 items-start">
+      <div class="text-white">
+        <h2 class="h2 !text-white" tabindex="-1" data-scroll-target="home-request">Tell Us What Plumbing Help You Need</h2>
+        <p class="mt-4 text-white/80 text-[1.08rem] measure">A few details are enough to get started. Someone would review your request, check your area, and follow up about next steps.</p>
+        <div class="mt-8 rounded-2xl bg-white/10 border border-white/15 p-5">
+          <p class="font-semibold text-white flex items-center gap-2">${Icon('alert', 'w-5 h-5 text-copper')}Urgent problem?</p>
+          <p class="text-white/80 mt-1.5 text-[0.95rem]">For active leaks, backups, or no water, call instead of filling in the form.</p>
+          <div class="mt-4">${CallButton({ variant: 'copper', label: 'Call Now' })}</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-[22px] p-6 md:p-9 shadow-lift text-charcoal on-light">${InquiryForm({ variant: 'short', heading: 'Request service' })}</div>
+    </div>
+  </section>
+`;
+
+/* ---------- All Services ---------- */
+Pages.services = () => `
+  ${PageHero({
+    crumbs: [{ label: 'Home', to: '/' }, { label: 'Services' }],
+    h1: 'Plumbing Services for Your Home',
+    intro: 'Residential plumbing help for Charlotte homeowners, landlords, and property managers. This concept covers four core services, each with its own page explaining what’s involved.',
+    primary: { label: 'Request Plumbing Service', to: '/contact' }
+  })}
+
+  <section class="section" aria-labelledby="svc-dir">
+    <div class="wrap">
+      ${SectionHeading({ id: 'svc-dir', title: 'Choose the service that fits your problem', intro: 'Each page goes into symptoms, scope, cost factors, and common questions.' })}
+      <div class="grid md:grid-cols-2 gap-6">${SERVICES.map(s => ServiceCard(s, { variant: 'full' })).join('')}</div>
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="svc-extra">
+    <div class="wrap">
+      <div class="rounded-panel border border-[#D6E5E2] bg-white p-6 md:p-10 grid md:grid-cols-[auto_1fr] gap-6 items-start">
+        ${IconBadge('tools', 'aqua')}
+        <div>
+          <h2 id="svc-extra" class="h3 text-[1.35rem]">Other plumbing work</h2>
+          <p class="text-charcoal-70 mt-2 measure">Fixtures, toilets, faucets, and garbage disposals would appear here as a short list, only if the real company handles them. They don’t get separate pages unless there’s something genuinely useful to say.</p>
+          <div class="flex flex-wrap gap-2 mt-5">${['Toilets', 'Faucets', 'Fixtures', 'Garbage disposals'].map(t => `<span class="chip chip-static !border-dashed">${t}</span>`).join('')}</div>
+          <p class="text-sm text-charcoal-70 mt-3">Placeholder list. Not offered as confirmed services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-aqua" aria-labelledby="svc-sym">
+    <div class="wrap">
+      ${SectionHeading({ id: 'svc-sym', title: 'Find help by symptom', intro: 'Only know what you’re seeing? Pick it here to find the page to start with.' })}
+      ${SymptomFinder({ extended: true, id: 'svc-finder' })}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="svc-urgent">
+    <div class="wrap grid lg:grid-cols-2 gap-6">
+      <div class="rounded-panel bg-copper-100 border border-[#F1CFA8] p-6 md:p-10">
+        ${IconBadge('alert', 'white')}
+        <h2 id="svc-urgent" class="h3 text-[1.4rem] mt-5">Urgent plumbing needs</h2>
+        <p class="mt-3 text-charcoal measure">If water is actively leaking, sewage is backing up, or you have no water, call rather than sending a form. Phone calls reach someone faster than a request queue.</p>
+        <p class="mt-3 text-[0.95rem] text-charcoal-70">${SITE.hoursNote} This concept doesn’t claim 24/7 or emergency availability.</p>
+        <div class="mt-6">${CallButton({ variant: 'primary', label: 'Call Now' })}</div>
+      </div>
+      <div class="rounded-panel bg-white border border-[#D6E5E2] p-6 md:p-10">
+        ${IconBadge('clipboard', 'aqua')}
+        <h2 class="h3 text-[1.4rem] mt-5">How service requests work</h2>
+        <ol class="mt-5 space-y-4">
+          ${[['Request', 'You send the form or call with a few details.'], ['Confirmation', 'Staff confirm your area, availability, and next step.'], ['Assessment', 'The problem is looked at in person.'], ['Proposed next step', 'You get options and decide what to approve.']].map(([t, d], i) => `
+            <li class="flex gap-4"><span class="w-8 h-8 rounded-full bg-teal text-white grid place-items-center font-display font-bold text-sm flex-none">${i + 1}</span><span><span class="font-semibold text-teal block">${t}</span><span class="text-charcoal-70 text-[0.96rem]">${d}</span></span></li>`).join('')}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="svc-cov">
+    <div class="wrap">
+      <div class="rounded-panel bg-white border border-[#D6E5E2] p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="flex items-start gap-4">
+          ${IconBadge('pin', 'aqua')}
+          <div><h2 id="svc-cov" class="h3 text-[1.3rem]">Check coverage before you request</h2><p class="text-charcoal-70 mt-1">Charlotte is the focus of this concept. Coverage is confirmed for every address.</p></div>
+        </div>
+        ${Button({ label: 'See Service Areas', to: '/service-areas', variant: 'secondary' })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="svc-faq">
+    <div class="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
+      <div><h2 id="svc-faq" class="h2">Service questions</h2><p class="lede mt-4">What to know before choosing a service.</p></div>
+      ${Accordion(FAQ.services)}
+    </div>
+  </section>
+
+  ${FinalCTA({ heading: 'Know what you need, or want help figuring it out?', text: 'Send a short request and choose “Other / Not sure” if you’re unsure. For urgent problems, call.', primary: { label: 'Request Plumbing Service', to: '/contact' } })}
+`;
+
+/* ---------- Service detail (shared pattern, unique content) ---------- */
+function SymptomsBlock(s) {
+  return `
+  <section class="section" aria-labelledby="sym-h">
+    <div class="wrap">
+      ${SectionHeading({ id: 'sym-h', title: s.symptoms.heading, intro: s.symptoms.intro })}
+      <ul class="grid sm:grid-cols-2 ${s.symptoms.items.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'} gap-5">
+        ${s.symptoms.items.map(i => `<li class="bg-white rounded-card border border-[#D6E5E2] p-6">${IconBadge(i.icon, 'aqua')}<h3 class="h3 mt-4 text-[1.08rem]">${i.t}</h3><p class="text-charcoal-70 mt-2 text-[0.95rem]">${i.d}</p></li>`).join('')}
+      </ul>
+    </div>
+  </section>`;
+}
+
+function ScopeBlock(s, { numbered = false, bg = 'bg-aqua' } = {}) {
+  return `
+  <section class="section ${bg}" aria-labelledby="scope-h">
+    <div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14">
+      <div>
+        <h2 id="scope-h" class="h2">${s.scope.heading}</h2>
+        <p class="lede mt-4">${s.scope.intro}</p>
+        ${s.scope.note ? `<div class="mt-6">${Notice({ tone: 'info', body: s.scope.note })}</div>` : ''}
+      </div>
+      ${FactorGrid(s.scope.items, { cols: 'sm:grid-cols-2', numbered, tone: 'soft' })}
+    </div>
+  </section>`;
+}
+
+function CostBlock(s, { title = 'What influences the cost', extra = '' } = {}) {
+  return `
+  <section class="section" aria-labelledby="cost-h">
+    <div class="wrap">
+      <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14">
+        <div>
+          <h2 id="cost-h" class="h2">${title}</h2>
+          <p class="lede mt-4">${s.costs.intro}</p>
+          <p class="mt-5 text-[0.95rem] text-charcoal-70 flex items-start gap-2">${Icon('dollar', 'w-4 h-4 mt-1 text-copper-600 flex-none')}No prices are shown in this concept. A live site would explain the company’s real estimate policy.</p>
+        </div>
+        <ul class="divide-y divide-[#D6E5E2] border-y border-[#D6E5E2]">
+          ${s.costs.items.map(c => `<li class="py-5 grid sm:grid-cols-[200px_1fr] gap-1 sm:gap-6"><span class="font-display font-bold text-teal">${c.t}</span><span class="text-charcoal-70">${c.d}</span></li>`).join('')}
+        </ul>
+      </div>
+      ${extra}
+    </div>
+  </section>`;
+}
+
+function ProofBlock(s) {
+  return `
+  <section class="section bg-white border-y border-[#DCE7E5]" aria-labelledby="proof-h">
+    <div class="wrap">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div class="max-w-2xl">
+          <h2 id="proof-h" class="h2">Real work, shown honestly</h2>
+          <p class="lede mt-4">This space is reserved for genuine project photos and reviews related to ${s.name.toLowerCase()}. Nothing here is invented.</p>
+        </div>
+        ${DemoTag('Proof placeholders — fictional demonstration')}
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        ${ProofSlot({ title: s.proof.label, body: 'Problem, approved scope, work completed, and outcome, published with the customer’s permission.', icon: 'clipboard' })}
+        ${ProofSlot({ title: 'Project photos', body: 'Real before and after photos with descriptive captions, used only with permission.', icon: 'camera' })}
+        ${ProofSlot({ title: 'Customer review', body: s.proof.review, icon: 'quote' })}
+      </div>
+      <p class="mt-6"><a href="${href('/reviews-projects')}" class="text-link">See how project stories are laid out</a></p>
+    </div>
+  </section>`;
+}
+
+function FaqBlock(s) {
+  return `
+  <section class="section" aria-labelledby="faq-h">
+    <div class="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
+      <div><h2 id="faq-h" class="h2">${s.name} questions</h2><p class="lede mt-4">Answers to what homeowners usually ask first.</p></div>
+      ${Accordion(s.faqs)}
+    </div>
+  </section>`;
+}
+
+function RelatedServices(current) {
+  return `
+  <section class="pb-14 md:pb-20" aria-labelledby="rel-h">
+    <div class="wrap">
+      <h2 id="rel-h" class="font-display font-bold text-teal text-lg mb-4">Other services</h2>
+      <ul class="grid sm:grid-cols-3 gap-3">
+        ${SERVICES.filter(s => s.slug !== current).map(s => `<li><a href="${href(`/services/${s.slug}`)}" class="card-link flex items-center gap-3 bg-white rounded-2xl border border-[#D6E5E2] p-4 min-h-[64px]"><span class="text-copper-700">${Icon(s.icon, 'w-5 h-5')}</span><span class="font-semibold text-teal">${s.name}</span></a></li>`).join('')}
+      </ul>
+    </div>
+  </section>`;
+}
+
+const SERVICE_EXTRAS = {
+  'drain-cleaning': s => [
+    SymptomsBlock(s),
+    ScopeBlock(s),
+    `<section class="section" aria-labelledby="visit-h"><div class="wrap">
+      ${SectionHeading({ id: 'visit-h', title: 'How a drain visit works', intro: 'From your first message to follow-up, here’s what to expect.' })}
+      ${ProcessPipe([
+        { t: 'Intake', d: 'You tell us which drains are slow and for how long.' },
+        { t: 'Assessment', d: 'The technician checks the affected drains.' },
+        { t: 'Options', d: 'Clearing methods are explained, with costs.' },
+        { t: 'Your approval', d: 'Work starts only after you agree.' },
+        { t: 'Follow-up', d: 'You’ll hear what was done and anything to watch for.' }
+      ])}
+    </div></section>`,
+    `<div class="bg-aqua">${CostBlock(s)}</div>`,
+    ProofBlock(s),
+    FaqBlock(s)
+  ],
+  'leak-repair': s => [
+    SymptomsBlock(s),
+    `<section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="types-h"><div class="wrap">
+      <h2 id="types-h" class="h2 mb-8">Types of leaks</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        ${s.leakTypes.map((t, i) => `<div class="rounded-panel p-6 md:p-8 ${i ? 'bg-white border border-[#D6E5E2]' : 'bg-aqua'}"><h3 class="h3 text-[1.2rem]">${t.t}</h3><p class="text-charcoal-70 mt-2">${t.d}</p></div>`).join('')}
+      </div>
+      <p class="mt-5 text-sm text-charcoal-70">Listed as examples. A live site would show only leak work the business actually performs.</p>
+    </div></section>`,
+    ScopeBlock(s, { numbered: true }),
+    `<section class="section" aria-labelledby="rs-h"><div class="wrap">
+      ${SectionHeading({ id: 'rs-h', title: 'Finding, fixing, and restoring are separate scopes', intro: 'Knowing which step covers what helps avoid surprises. Your estimate would say which of these is included.' })}
+      <ol class="grid md:grid-cols-3 gap-5">
+        ${s.repairScopes.map((r, i) => `<li class="relative bg-white rounded-panel border border-[#D6E5E2] p-6 md:p-7">
+          <span class="font-display font-extrabold text-copper-600">Scope ${i + 1}</span>
+          <h3 class="h3 mt-1">${r.t}</h3><p class="text-charcoal-70 mt-2 text-[0.96rem]">${r.d}</p></li>`).join('')}
+      </ol>
+      <div class="mt-8">${Notice({ tone: 'warn', title: 'Active leak?', body: `${s.safetyNote} <button type="button" class="text-link" data-action="call">Call the team</button>` })}</div>
+    </div></section>`,
+    `<div class="bg-aqua">${CostBlock(s, { title: 'Cost considerations' })}</div>`,
+    ProofBlock(s),
+    FaqBlock(s)
+  ],
+  'water-heaters': s => [
+    SymptomsBlock(s),
+    `<section class="section bg-aqua" aria-labelledby="cmp-h"><div class="wrap">
+      ${SectionHeading({ id: 'cmp-h', title: s.compare.heading, intro: s.compare.intro })}
+      ${CompareCards(s.compare)}
+    </div></section>`,
+    `<section class="section" aria-labelledby="eq-h"><div class="wrap">
+      ${SectionHeading({ id: 'eq-h', title: 'Equipment types', intro: 'Categories are shown as placeholders. A live site would list only what the company services.' })}
+      ${FactorGrid(s.equipment, { cols: 'sm:grid-cols-2 lg:grid-cols-4' })}
+    </div></section>`,
+    ScopeBlock(s, { numbered: true }),
+    `<section class="section" aria-labelledby="inst-h"><div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14">
+      <div><h2 id="inst-h" class="h2">What an installation covers</h2><p class="lede mt-4">These items are worth confirming in any replacement proposal.</p>
+        <div class="mt-6">${Notice({ tone: 'info', body: s.installNote })}</div></div>
+      <ul class="space-y-3">
+        ${s.install.map(i => `<li class="flex gap-4 bg-white rounded-2xl border border-[#D6E5E2] p-5"><span class="w-8 h-8 rounded-lg bg-aqua text-teal grid place-items-center flex-none">${Icon('check', 'w-4 h-4')}</span><span><span class="font-semibold text-teal block">${i.t}</span><span class="text-charcoal-70 text-[0.96rem]">${i.d}</span></span></li>`).join('')}
+      </ul>
+    </div></section>`,
+    `<div class="bg-aqua">${CostBlock(s, { title: 'Pricing and warranties', extra: `
+      <h3 class="h3 text-[1.25rem] mt-14 mb-5">Understanding warranties</h3>
+      ${FactorGrid(s.warranty, { cols: 'md:grid-cols-3', tone: 'soft' })}` })}</div>`,
+    ProofBlock(s),
+    FaqBlock(s)
+  ],
+  'sewer-lines': s => [
+    SymptomsBlock(s),
+    ScopeBlock(s),
+    `<section class="section" aria-labelledby="ns-h"><div class="wrap">
+      ${SectionHeading({ id: 'ns-h', title: 'Possible next steps after assessment', intro: 'What happens next depends on what’s found and on the services the company actually provides.' })}
+      ${FactorGrid(s.nextSteps, { cols: 'md:grid-cols-3' })}
+    </div></section>`,
+    `<section class="section bg-aqua" aria-labelledby="cmp-h"><div class="wrap">
+      ${SectionHeading({ id: 'cmp-h', title: s.compare.heading, intro: s.compare.intro })}
+      ${CompareCards(s.compare)}
+    </div></section>`,
+    CostBlock(s, { title: 'Scope and cost factors' }),
+    ProofBlock(s),
+    FaqBlock(s)
+  ]
+};
+
+function ServicePage(slug) {
+  const s = SVC[slug];
+  return `
+  ${PageHero({
+    crumbs: [{ label: 'Home', to: '/' }, { label: 'Services', to: '/services' }, { label: s.name }],
+    h1: s.hero.h1, intro: s.hero.intro,
+    primary: { label: s.cta, to: `/contact?service=${s.slug}` },
+    image: s.image, imageAlt: s.imageAlt, icon: s.icon,
+    note: 'Requests aren’t confirmed appointments. For urgent problems, call.'
+  })}
+  ${SERVICE_EXTRAS[slug](s).join('')}
+  ${RelatedServices(slug)}
+  ${FinalCTA({ heading: s.final.h, text: s.final.t, primary: { label: s.cta, to: `/contact?service=${s.slug}` } })}`;
+}
+
+/* ---------- About ---------- */
+Pages.about = () => `
+  ${PageHero({
+    crumbs: [{ label: 'Home', to: '/' }, { label: 'About' }],
+    h1: 'Get to Know the People Behind Oakline Plumbing',
+    intro: 'When someone comes into your home, you want to know who they are. This page is where a real plumbing company introduces its owner, its team, and how it works.',
+    primary: { label: 'Request Service', to: '/contact' }, secondary: { label: 'Explore Services', to: '/services', variant: 'secondary' }
+  })}
+
+  <section class="section" aria-labelledby="owner-h">
+    <div class="wrap grid lg:grid-cols-[.9fr_1.1fr] gap-10 lg:gap-16 items-center">
+      <div class="proof-slot aspect-[4/5] max-h-[520px] grid place-items-center text-center p-8">
+        <div><span class="w-16 h-16 mx-auto rounded-2xl bg-white grid place-items-center text-teal border border-[#CFE0DD]">${Icon('user', 'w-8 h-8')}</span>
+        <p class="font-display font-bold text-teal mt-4">Owner portrait</p>
+        <p class="text-sm text-charcoal-70 mt-1 max-w-[26ch] mx-auto">A real photo of the owner appears here. No stock person is used to stand in for them.</p></div>
+      </div>
+      <div>
+        ${DemoTag('Reserved for the real owner’s story')}
+        <h2 id="owner-h" class="h2 mt-4">The owner’s story</h2>
+        <p class="lede mt-4">This is where the founder explains who they are, how they got into plumbing, and why they started the company. It would be written with them, in their own words.</p>
+        <div class="mt-6 space-y-3">
+          ${['Name and role', 'Background and experience, as they describe it', 'Why the company exists and who it serves'].map(t => `<p class="flex gap-3 text-charcoal"><span class="text-copper-600 mt-1">${Icon('check', 'w-4 h-4')}</span>${t}</p>`).join('')}
+        </div>
+        <p class="mt-6 text-[0.95rem] text-charcoal-70">We don’t invent a biography for a fictional company. The structure is here so a real story can be dropped in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white border-y border-[#DCE7E5]" aria-labelledby="team-h">
+    <div class="wrap">
+      ${SectionHeading({ id: 'team-h', title: 'The team you’d meet', intro: 'Genuine portraits, roles, and short introductions would go here, so homeowners know who might arrive.' })}
+      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        ${['Lead technician', 'Service technician', 'Office and scheduling'].map(r => `
+          <li class="rounded-panel border border-[#D6E5E2] bg-soft overflow-hidden">
+            <div class="proof-slot !rounded-none !border-0 !border-b-2 aspect-[4/3] grid place-items-center text-teal">${Icon('user', 'w-10 h-10')}</div>
+            <div class="p-5"><p class="font-display font-bold text-teal">${r}</p><p class="text-sm text-charcoal-70 mt-1">Name, photo, and a short introduction appear here for a real team member.</p></div>
+          </li>`).join('')}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="std-h">
+    <div class="wrap">
+      ${SectionHeading({ id: 'std-h', title: 'How we work', intro: 'These standards describe how the business should operate. Each becomes a public claim only after the owner confirms it.' })}
+      <ul class="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+        ${[
+          ['chat', 'Communication', 'Clear updates before, during, and after a visit.'],
+          ['search', 'Diagnosis', 'Recommendations based on what’s found in person.'],
+          ['dollar', 'Pricing approval', 'Costs explained and approved before work starts.'],
+          ['home', 'Care for your home', 'Floors and fixtures protected, work areas left tidy.'],
+          ['phone', 'Follow-up', 'Clear next steps after the job is done.']
+        ].map(([i, t, d]) => `<li class="bg-white rounded-card border border-[#D6E5E2] p-6">${IconBadge(i, 'copper')}<h3 class="h3 mt-4 text-[1.05rem]">${t}</h3><p class="text-charcoal-70 mt-2 text-[0.95rem]">${d}</p></li>`).join('')}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section bg-aqua" aria-labelledby="cred-h">
+    <div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14">
+      <div>
+        <h2 id="cred-h" class="h2">Credentials</h2>
+        <p class="lede mt-4">Licenses, insurance, and training are listed only when verified. We never use stock badges or logos to suggest credentials that haven’t been confirmed.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        ${ProofSlot({ title: 'License details', body: 'License type and number, with a way to verify it.', icon: 'shield' })}
+        ${ProofSlot({ title: 'Insurance', body: 'Coverage stated only as confirmed by the owner.', icon: 'clipboard' })}
+        ${ProofSlot({ title: 'Training', body: 'Relevant certifications or manufacturer training.', icon: 'file' })}
+        ${ProofSlot({ title: 'Memberships', body: 'Valid trade association memberships, if any.', icon: 'users' })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="comm-h">
+    <div class="wrap grid lg:grid-cols-2 gap-6">
+      <div class="rounded-panel bg-white border border-[#D6E5E2] p-6 md:p-10">
+        ${IconBadge('pin', 'aqua')}
+        <h2 id="comm-h" class="h3 text-[1.35rem] mt-5">Community and service area</h2>
+        <p class="text-charcoal-70 mt-3">A real company’s local history and involvement would be shared here. If there’s nothing genuine to say, this section is left out rather than filled with generic copy.</p>
+        <p class="mt-5"><a href="${href('/service-areas')}" class="text-link">See service area details</a></p>
+      </div>
+      <div class="rounded-panel bg-teal on-dark p-6 md:p-10 text-white">
+        ${IconBadge('clipboard', 'white')}
+        <h2 class="h3 text-[1.35rem] mt-5 !text-white">What to expect</h2>
+        <ol class="mt-5 space-y-3 text-white/85">
+          ${PROCESS.map((p, i) => `<li class="flex gap-3"><span class="font-display font-bold text-copper w-5 flex-none">${i + 1}</span><span>${p.t}</span></li>`).join('')}
+        </ol>
+        <p class="mt-6"><a href="${href('/contact')}" class="text-link">Go to the contact page</a></p>
+      </div>
+    </div>
+  </section>
+
+  ${FinalCTA({ heading: 'Need Plumbing Help?', text: 'Send a short request, or call if the problem is urgent.', primary: { label: 'Request Service', to: '/contact' }, secondary: { label: 'Explore Services', to: '/services' } })}
+`;
+
+/* ---------- Reviews & Projects ---------- */
+Pages.reviews = () => {
+  const stories = [
+    { svc: 'drain-cleaning', title: 'Recurring bathroom clog', problem: 'Shower drain slowing down every few weeks.', scope: 'Clear the branch line after the homeowner reviews options.', done: 'Space for a description of the completed work.', outcome: 'Space for the verified outcome.', where: 'Neighborhood-level location only' },
+    { svc: 'water-heaters', title: 'Aging tank water heater', problem: 'Inconsistent hot water from an older unit.', scope: 'Homeowner chooses replacement after reviewing both options.', done: 'Space for a description of the installation.', outcome: 'Space for the verified outcome.', where: 'Month and year only' },
+    { svc: 'leak-repair', title: 'Ceiling stain below a bathroom', problem: 'A spreading stain on a first-floor ceiling.', scope: 'Assessment, then repair of the accessible supply line.', done: 'Space for a description of the repair.', outcome: 'Space for the verified outcome.', where: 'Location kept general for privacy' }
+  ];
+  return `
+  ${PageHero({
+    crumbs: [{ label: 'Home', to: '/' }, { label: 'Reviews & Projects' }],
+    h1: 'Our Work & Customer Experiences',
+    intro: 'This page is built to show genuine reviews and real project stories. Because Oakline is fictional, every block below is a clearly labeled layout, with no invented customers or ratings.',
+    primary: { label: 'Explore Services', to: '/services' }, secondary: { label: 'Contact', to: '/contact', variant: 'secondary' }
+  })}
+
+  <section class="section" aria-labelledby="src-h">
+    <div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14 items-start">
+      <div>
+        <h2 id="src-h" class="h2">Where reviews come from</h2>
+        <p class="lede mt-4">Each review would show its source, such as a public review platform, and be used with permission. Reviews are kept accurate and up to date.</p>
+      </div>
+      ${Notice({ tone: 'warn', title: 'Example layout — fictional demonstration', body: 'No reviews, star ratings, or customer names appear on this page because none exist. Empty, labeled modules are used instead of made-up testimonials.' })}
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="rev-h">
+    <div class="wrap">
+      <h2 id="rev-h" class="h3 text-[1.35rem] mb-6">Review cards</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        ${SERVICES.slice(0, 3).map(s => `
+          <figure class="proof-slot p-6 flex flex-col">
+            <span class="text-teal">${Icon('quote', 'w-7 h-7')}</span>
+            <blockquote class="mt-4 text-charcoal-70 flex-1">A genuine customer quote about ${s.name.toLowerCase()} appears here, unedited except for length.</blockquote>
+            <figcaption class="mt-5 pt-4 border-t border-dashed border-[#9DBFBB] text-sm">
+              <span class="block font-semibold text-teal">Customer first name or initials</span>
+              <span class="block text-charcoal-70">Review source and date, with service: ${s.navLabel}</span>
+            </figcaption>
+          </figure>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white border-y border-[#DCE7E5]" aria-labelledby="gal-h">
+    <div class="wrap">
+      ${SectionHeading({ id: 'gal-h', title: 'Project gallery', intro: 'Real photos grouped by service, each with a caption explaining what you’re looking at. Use the filters to see how grouping would work.' })}
+      <div class="flex flex-wrap gap-2.5 mb-6" role="group" aria-label="Filter gallery by service" data-gallery-filters>
+        <button type="button" class="chip" aria-pressed="true" data-filter="all">All</button>
+        ${SERVICES.map(s => `<button type="button" class="chip" aria-pressed="false" data-filter="${s.slug}">${s.navLabel}</button>`).join('')}
+      </div>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4" data-gallery>
+        ${SERVICES.flatMap(s => [1, 2].map(n => `
+          <li data-cat="${s.slug}">
+            <div class="proof-slot aspect-square grid place-items-center text-teal">${Icon(n === 1 ? 'camera' : s.icon, 'w-8 h-8')}</div>
+            <p class="text-sm mt-2"><span class="font-semibold text-teal">${s.navLabel}</span> <span class="text-charcoal-70">${n === 1 ? 'before photo' : 'after photo'} placeholder</span></p>
+          </li>`)).join('')}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="st-h">
+    <div class="wrap">
+      ${SectionHeading({ id: 'st-h', title: 'Featured project stories', intro: 'Each story covers the problem, approved scope, work completed, and outcome, with location detail kept appropriate for privacy.' })}
+      <div class="space-y-6">
+        ${stories.map(st => {
+          const s = SVC[st.svc];
+          return `
+          <article class="bg-white rounded-panel border border-[#D6E5E2] shadow-card grid lg:grid-cols-[300px_1fr] overflow-hidden">
+            <div class="proof-slot !rounded-none !border-0 lg:!border-r-2 !border-b-2 lg:!border-b-0 min-h-[180px] grid place-items-center text-teal text-center p-6">
+              <div>${Icon('camera', 'w-8 h-8 mx-auto')}<p class="text-sm mt-2 font-semibold">Photo with permission</p></div>
+            </div>
+            <div class="p-6 md:p-8">
+              <div class="flex flex-wrap items-center gap-3">${DemoTag('Example project layout — fictional demonstration')}<span class="text-sm text-charcoal-70">${st.where}</span></div>
+              <h3 class="h3 text-[1.3rem] mt-3">${st.title}</h3>
+              <dl class="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-4 text-[0.96rem]">
+                ${[['Problem', st.problem], ['Approved scope', st.scope], ['Work completed', st.done], ['Outcome', st.outcome]].map(([k, v]) => `<div><dt class="font-semibold text-teal">${k}</dt><dd class="text-charcoal-70 mt-0.5">${v}</dd></div>`).join('')}
+              </dl>
+              <p class="mt-5"><a href="${href(`/services/${s.slug}`)}" class="text-link">Read about ${s.name.toLowerCase()}</a></p>
+            </div>
+          </article>`;
+        }).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-aqua" aria-labelledby="ws-h">
+    <div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14 items-start">
+      <div>
+        <h2 id="ws-h" class="h2">Work standards and warranties</h2>
+        <p class="lede mt-4">Any warranty or service guarantee is shown here only when it’s real and documented.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        ${ProofSlot({ title: 'Labor warranty', body: 'Terms appear here only if the company provides one in writing.', icon: 'shield' })}
+        ${ProofSlot({ title: 'Service process', body: 'A short description of the approved process, linked to the full details.', icon: 'clipboard' })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="links-h">
+    <div class="wrap">
+      <h2 id="links-h" class="h2 mb-8">Explore services related to this work</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">${SERVICES.map(s => ServiceCard(s)).join('')}</div>
+    </div>
+  </section>
+
+  ${FinalCTA({ heading: 'Discuss Your Plumbing Project', text: 'Tell us what you’re dealing with, and the team can explain what’s involved.', primary: { label: 'Explore Services', to: '/services' }, secondary: { label: 'Contact', to: '/contact' } })}
+  `;
+};
+
+/* ---------- Service Areas ---------- */
+Pages.areas = () => `
+  ${PageHero({
+    crumbs: [{ label: 'Home', to: '/' }, { label: 'Service Areas' }],
+    h1: 'Plumbing Services in Charlotte & Nearby Communities',
+    intro: 'Check whether your address is likely to be covered before you send a request. Coverage is always confirmed by staff, because it can depend on the service and the schedule.',
+    primary: { label: 'Confirm Coverage', attrs: 'data-scroll-to="zip-check"' }
+  })}
+
+  <section class="section" aria-labelledby="primary-h">
+    <div class="wrap grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div>
+        <h2 id="primary-h" class="h2">Charlotte is the focus</h2>
+        <p class="lede mt-4">This concept is designed around Charlotte, North Carolina. It doesn’t claim an office address, a dispatch radius, or a list of verified towns.</p>
+        <h3 class="h3 mt-10">Nearby communities</h3>
+        <p class="text-charcoal-70 mt-2">A real company would list the towns it actually serves. The names below show how that list would look.</p>
+        <ul class="flex flex-wrap gap-2 mt-5" aria-label="Illustrative community names">
+          <li><span class="chip chip-static !border-teal !bg-teal !text-white">${Icon('pin', 'w-4 h-4')}Charlotte</span></li>
+          ${ILLUSTRATIVE_TOWNS.map(t => `<li><span class="chip chip-static !border-dashed">${t}</span></li>`).join('')}
+        </ul>
+        <p class="text-sm text-charcoal-70 mt-3 flex gap-2">${Icon('info', 'w-4 h-4 mt-0.5 text-teal flex-none')}Dashed names are illustrative only and aren’t presented as verified coverage.</p>
+      </div>
+      ${CoverageMap()}
+    </div>
+  </section>
+
+  <section class="section bg-white border-y border-[#DCE7E5]" aria-labelledby="text-list-h">
+    <div class="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14">
+      <div>
+        <h2 id="text-list-h" class="h2">Coverage list</h2>
+        <p class="lede mt-4">A text version of the map, so coverage is clear for everyone, including screen reader users.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-[#D6E5E2]">
+        <table class="w-full text-left text-[0.96rem]">
+          <caption class="sr-only">Coverage list for this concept</caption>
+          <thead class="bg-aqua-50 text-teal"><tr><th scope="col" class="px-5 py-3.5 font-semibold">Area</th><th scope="col" class="px-5 py-3.5 font-semibold">Status in this concept</th></tr></thead>
+          <tbody class="divide-y divide-[#E1ECEA] bg-white">
+            <tr><th scope="row" class="px-5 py-4 font-semibold text-teal">Charlotte</th><td class="px-5 py-4">Demonstration focus</td></tr>
+            <tr><th scope="row" class="px-5 py-4 font-semibold text-teal">Nearby towns</th><td class="px-5 py-4">Illustrative only, pending real coverage</td></tr>
+            <tr><th scope="row" class="px-5 py-4 font-semibold text-teal">Coverage by service</th><td class="px-5 py-4">Would be stated if it differs by service</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="avail-h">
+    <div class="wrap">
+      ${SectionHeading({ id: 'avail-h', title: 'Services available in the area', intro: 'All four core services are part of this concept. A live site would note any that are limited to certain areas.' })}
+      <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        ${SERVICES.map(s => `<li><a href="${href(`/services/${s.slug}`)}" class="card-link flex items-center gap-3 bg-white rounded-2xl border border-[#D6E5E2] p-5 min-h-[72px]">${IconBadge(s.icon, 'aqua')}<span class="font-semibold text-teal">${s.name}</span></a></li>`).join('')}
+      </ul>
+      <div class="mt-10 grid md:grid-cols-2 gap-5">
+        ${Notice({ tone: 'info', title: 'Hours and dispatch limits', body: `${SITE.hoursNote} A live site would also state any after-hours limits.` })}
+        ${Notice({ tone: 'info', title: 'Coverage can vary by service', body: 'Larger jobs, such as sewer work or water heater replacement, may have different coverage than smaller repairs.' })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="cfaq-h">
+    <div class="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
+      <div><h2 id="cfaq-h" class="h2">Coverage questions</h2></div>
+      ${Accordion(FAQ.areas)}
+    </div>
+  </section>
+
+  <section class="section bg-teal on-dark" aria-labelledby="zip-h" id="zip-check">
+    <div class="wrap grid lg:grid-cols-[.9fr_1.1fr] gap-10 lg:gap-14 items-start">
+      <div class="text-white">
+        <h2 id="zip-h" class="h2 !text-white" tabindex="-1" data-scroll-target="zip-check">Confirm your coverage</h2>
+        <p class="mt-4 text-white/80 text-[1.06rem] measure">Enter your ZIP code for a quick check, then send a request or call so staff can confirm your address.</p>
+        <div class="mt-6">${CallButton({ variant: 'ghost-light', label: 'Call to confirm' })}</div>
+      </div>
+      <div class="bg-white rounded-[22px] p-6 md:p-8 shadow-lift text-charcoal on-light">
+        <form novalidate data-zip-form class="space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h3 class="h3">Quick ZIP check</h3>${DemoTag('Demo check')}
+          </div>
+          <div>
+            <label for="zip-input" class="field-label">ZIP code <span class="req-mark" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input id="zip-input" name="zip" class="field-input sm:flex-1" inputmode="numeric" autocomplete="postal-code" maxlength="10" aria-describedby="zip-hint zip-err" required>
+              <button type="submit" class="btn btn-primary">Check ZIP</button>
+            </div>
+            <p id="zip-hint" class="field-hint">Five digits, for example 28202.</p>
+            <p id="zip-err" class="field-error" hidden></p>
+          </div>
+          <div data-zip-result aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+`;
+
+/* ---------- Contact ---------- */
+Pages.contact = (route) => {
+  const preset = SVC[route.query.service] ? route.query.service : (route.query.service === 'other' ? 'other' : '');
+  return `
+  <section class="bg-aqua relative overflow-hidden">
+    <div class="wrap relative py-12 md:py-16">
+      ${Breadcrumbs([{ label: 'Home', to: '/' }, { label: 'Contact' }])}
+      <h1 class="h1-page max-w-3xl" tabindex="-1" data-page-h1>Tell Us What Plumbing Help You Need</h1>
+      <p class="lede mt-5 measure">Call for urgent problems. Send a request for planned repairs, assessments, and estimates. Either way, a request isn’t a confirmed appointment until someone follows up with you.</p>
+      <div class="grid md:grid-cols-2 gap-5 mt-10 max-w-4xl">
+        <div class="bg-white rounded-panel border border-[#D6E5E2] p-6 md:p-7">
+          <div class="flex items-center gap-3">${IconBadge('phone', 'copper')}<h2 class="h3 text-[1.25rem]">Call the team</h2></div>
+          <p class="text-charcoal-70 mt-3 text-[0.97rem]">For urgent concerns and questions about availability.</p>
+          <p class="mt-4 font-display font-extrabold text-xl text-teal">${SITE.phoneDisplay}</p>
+          <p class="text-sm text-charcoal-70">Demo number. ${SITE.hoursNote}</p>
+          <div class="mt-5">${CallButton({ variant: 'secondary', label: 'Call Now' })}</div>
+        </div>
+        <div class="bg-white rounded-panel border border-[#D6E5E2] p-6 md:p-7">
+          <div class="flex items-center gap-3">${IconBadge('clipboard', 'aqua')}<h2 class="h3 text-[1.25rem]">Request service</h2></div>
+          <p class="text-charcoal-70 mt-3 text-[0.97rem]">For planned repairs, assessments, and estimates. Takes about a minute.</p>
+          <div class="mt-5">${Button({ label: 'Start your request', variant: 'primary', attrs: 'data-scroll-to="contact-form" data-focus-first' })}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Service request form">
+    <div class="wrap grid lg:grid-cols-[1.25fr_.75fr] gap-10 lg:gap-14 items-start">
+      <div class="bg-white rounded-[22px] border border-[#D6E5E2] shadow-card p-6 md:p-10" id="contact-form" data-scroll-target="contact-form" tabindex="-1">
+        ${InquiryForm({ variant: 'full', preset, heading: 'Service request' })}
+      </div>
+      <aside class="space-y-6 lg:sticky lg:top-28" aria-label="What happens next and coverage">
+        <div class="rounded-panel bg-soft border border-[#D6E5E2] p-6">
+          <h2 class="h3">What happens next</h2>
+          <ol class="mt-4 space-y-4">
+            ${[
+              'Your request is received, once the form workflow confirms it.',
+              'A team member reviews it and confirms your area and availability.',
+              'They follow up to talk through next steps.',
+              'An appointment is only set when you both agree on a time.'
+            ].map((t, i) => `<li class="flex gap-3 text-[0.96rem]"><span class="w-7 h-7 rounded-full bg-teal text-white grid place-items-center text-sm font-bold flex-none">${i + 1}</span><span class="pt-0.5">${t}</span></li>`).join('')}
+          </ol>
+        </div>
+        <div class="rounded-panel bg-aqua p-6">
+          <h2 class="h3">Coverage and hours</h2>
+          <ul class="mt-4 space-y-3 text-[0.96rem]">
+            <li class="flex gap-3">${Icon('pin', 'w-5 h-5 text-teal flex-none')}<span>Charlotte, NC is the demonstration focus. <a href="${href('/service-areas')}" class="text-link">Coverage details</a></span></li>
+            <li class="flex gap-3">${Icon('clock', 'w-5 h-5 text-teal flex-none')}<span>${SITE.hoursNote}</span></li>
+            <li class="flex gap-3">${Icon('mail', 'w-5 h-5 text-teal flex-none')}<span>Response expectations are stated only once a real policy exists.</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section pt-0 md:pt-0 lg:pt-0" aria-labelledby="ctfaq-h">
+    <div class="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
+      <div><h2 id="ctfaq-h" class="h2">Before you send</h2><p class="lede mt-4">Short answers to common questions.</p></div>
+      ${Accordion(FAQ.contact)}
+    </div>
+  </section>
+  `;
+};
+
+/* ---------- Thank you (only after accepted demo submission) ---------- */
+Pages.thankYou = () => {
+  const sub = State.lastSubmission;
+  if (!sub) {
+    return `
+    <section class="section">
+      <div class="wrap max-w-2xl text-center">
+        <span class="w-16 h-16 mx-auto rounded-2xl bg-aqua grid place-items-center text-teal">${Icon('clipboard', 'w-8 h-8')}</span>
+        <h1 class="h1-page mt-6" tabindex="-1" data-page-h1>No request to confirm</h1>
+        <p class="lede mt-4">This page only appears after a request is accepted. Nothing has been sent in this session.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">${Button({ label: 'Go to the request form', to: '/contact' })}${Button({ label: 'Back to Home', to: '/', variant: 'secondary' })}</div>
+      </div>
+    </section>`;
+  }
+  return `
+  <section class="section">
+    <div class="wrap max-w-3xl">
+      <div class="bg-white rounded-[24px] border border-[#D6E5E2] shadow-card p-7 md:p-12">
+        <span class="w-16 h-16 rounded-2xl bg-[#ECF7F1] grid place-items-center text-success">${Icon('checkCircle', 'w-9 h-9')}</span>
+        <div class="mt-6">${DemoTag('Demo submission completed')}</div>
+        <h1 class="h1-page mt-4" tabindex="-1" data-page-h1>Your Request Has Been Received</h1>
+        <p class="lede mt-4">This was a demo, so no plumber will contact you. In a live site, this is where you’d see the next step for your <strong class="text-teal">${esc(sub.serviceLabel)}</strong> request.</p>
+        ${Notice({ tone: 'info', cls: 'mt-7', title: 'This isn’t a confirmed appointment', body: 'A team member would review the details, confirm coverage and availability, and then follow up to arrange a time.' })}
+        <h2 class="h3 mt-9">What would happen next</h2>
+        <ol class="mt-4 space-y-3">
+          ${['A team member reviews your request.', 'They confirm your area and availability.', 'They follow up to agree on next steps.'].map((t, i) => `<li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-teal text-white grid place-items-center text-sm font-bold flex-none">${i + 1}</span><span class="pt-0.5">${t}</span></li>`).join('')}
+        </ol>
+        <div class="mt-9 pt-7 border-t border-[#E1ECEA] flex flex-wrap gap-3">
+          ${CallButton({ label: 'Urgent? Call Now', variant: 'primary' })}
+          ${Button({ label: 'Back to Home', to: '/', variant: 'secondary' })}
+          ${Button({ label: 'Browse Services', to: '/services', variant: 'secondary' })}
+        </div>
+      </div>
+    </div>
+  </section>`;
+};
+
+/* ---------- Legal ---------- */
+function LegalPage({ title, crumb, intro, body }) {
+  return `
+  ${PageHero({ crumbs: [{ label: 'Home', to: '/' }, { label: crumb }], h1: title, intro, primary: null, secondary: null })}
+  <section class="section">
+    <div class="wrap max-w-3xl prose-legal">
+      ${Notice({ tone: 'warn', title: 'Planning placeholder', body: 'This text describes how this demo behaves. It must be replaced and reviewed before any real business uses the site.' })}
+      ${body}
+    </div>
+  </section>`;
+}
+
+Pages.privacy = () => LegalPage({
+  title: 'Privacy Notice', crumb: 'Privacy',
+  intro: 'What happens to information entered on this concept site, written to match how the demo actually works.',
+  body: `
+    <h2>What this demo collects</h2>
+    <p>The forms ask for your name, phone number, ZIP code, the service you need, and optionally a description, urgency, and email address.</p>
+    <h2>Where it goes</h2>
+    <p>Nowhere. Form entries are checked in your browser and held in memory only long enough to show the confirmation screen. Nothing is sent to a server, a plumber, or PlumbNexo.</p>
+    <h2>How long it’s kept</h2>
+    <p>Until you reload or close the page. The demo doesn’t use cookies, local storage, or analytics.</p>
+    <h2>Photo uploads</h2>
+    <p>Photo uploads are disabled. A live site would enable them only after defining secure storage, access, and retention.</p>
+    <h2>What a real privacy notice must cover</h2>
+    <ul>
+      <li>What data is collected and why it’s needed</li>
+      <li>Who receives requests and who can access them</li>
+      <li>How long information is kept</li>
+      <li>Any analytics, cookies, spam protection, or third-party form processors actually used</li>
+      <li>How visitors can ask for their information to be viewed or deleted</li>
+    </ul>
+    <p class="mt-8"><a href="${href('/contact')}" class="text-link">Back to the contact page</a></p>`
+});
+
+Pages.terms = () => LegalPage({
+  title: 'Website Terms', crumb: 'Terms',
+  intro: 'Terms that apply to using this concept site. A real business would only publish terms that reflect its actual operations.',
+  body: `
+    <h2>A portfolio demonstration</h2>
+    <p>Oakline Plumbing Co. is fictional. This site was created by PlumbNexo to demonstrate website design and doesn’t offer plumbing services.</p>
+    <h2>No service agreement</h2>
+    <p>Using this site, or sending a form, doesn’t create a service agreement, warranty, booking, or fixed price.</p>
+    <h2>Information on this site</h2>
+    <p>Content is illustrative. Process descriptions, standards, and cost factors are examples of how a real company could explain its work, not commitments.</p>
+    <h2>Before a real launch</h2>
+    <p>Any terms for a real plumbing business must be written for its actual operations and reviewed by a qualified professional.</p>`
+});
+
+/* ---------- 404 ---------- */
+Pages.notFound = () => `
+  <section class="section">
+    <div class="wrap max-w-2xl text-center">
+      <svg aria-hidden="true" viewBox="0 0 120 80" class="w-40 mx-auto text-teal" fill="none" stroke-linecap="round">
+        <path d="M6 60h30a10 10 0 0 0 10-10V30a10 10 0 0 1 10-10h14" stroke="currentColor" stroke-width="8"/>
+        <path d="M88 20h26" stroke="#E8A35D" stroke-width="8"/>
+        <path d="M78 14v12M84 30l4 4M84 10l4-4" stroke="#E8A35D" stroke-width="3"/>
+      </svg>
+      <h1 class="h1-page mt-8" tabindex="-1" data-page-h1>We Couldn’t Find That Page</h1>
+      <p class="lede mt-4">The link may be out of date, or the address may have a typo. These pages will get you back on track.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        ${Button({ label: 'View Services', to: '/services' })}
+        ${Button({ label: 'Home', to: '/', variant: 'secondary' })}
+        ${Button({ label: 'Contact', to: '/contact', variant: 'secondary' })}
+      </div>
+    </div>
+  </section>`;
+
+/* ============================== 7. ROUTER ================================ */
+const State = { lastSubmission: null, submitting: false, firstRender: true };
+
+const ROUTES = [
+  { path: '/', page: 'home', title: 'Residential Plumbing in Charlotte | Oakline Plumbing Co. (Concept)', desc: 'Concept homepage for a fictional Charlotte plumbing company: services, how requests work, coverage, and a short request form.' },
+  { path: '/services', page: 'services', title: 'Residential Plumbing Services | Oakline Plumbing Co. (Concept)', desc: 'Concept services directory: drain cleaning, leak repair, water heaters, and sewer lines, with help finding the right service by symptom.' },
+  ...SERVICES.map(s => ({ path: `/services/${s.slug}`, page: 'service', slug: s.slug, title: s.meta.title, desc: s.meta.desc })),
+  { path: '/about', page: 'about', title: 'About Oakline Plumbing Co. | Portfolio Concept', desc: 'Concept About page showing where a real plumbing company’s owner story, team, standards, and verified credentials would appear.' },
+  { path: '/reviews-projects', page: 'reviews', title: 'Example Project & Review Layouts | Oakline Concept', desc: 'Concept layouts for genuine reviews and project stories. No fabricated testimonials or ratings are shown.' },
+  { path: '/service-areas', page: 'areas', title: 'Charlotte Service Area | Oakline Plumbing Co. (Concept)', desc: 'Concept service area page centered on Charlotte, NC, with a demo ZIP check and accessible coverage list.' },
+  { path: '/contact', page: 'contact', title: 'Request Plumbing Service | Oakline Plumbing Co. (Concept)', desc: 'Concept contact page with a call option for urgent issues and a demo service request form.' },
+  { path: '/thank-you', page: 'thankYou', title: 'Request Received | Oakline Plumbing Co. (Concept)', desc: 'Demo request confirmation page.' },
+  { path: '/privacy', page: 'privacy', title: 'Privacy Notice | Oakline Plumbing Co. (Concept)', desc: 'How this concept site handles form information.' },
+  { path: '/terms', page: 'terms', title: 'Website Terms | Oakline Plumbing Co. (Concept)', desc: 'Terms for using this concept site.' }
+];
+
+function parseLocation() {
+  const raw = location.hash.startsWith('#/') ? location.hash.slice(1) : '/';
+  const [pathPart, queryPart = ''] = raw.split('?');
+  let path = pathPart.replace(/\/+$/, '') || '/';
+  const query = Object.fromEntries(new URLSearchParams(queryPart));
+  return { path, query };
+}
+
+function navigate(path) { location.hash = path; }
+
+function render() {
+  const loc = parseLocation();
+  const match = ROUTES.find(r => r.path === loc.path);
+  const route = { ...loc, ...(match || { page: 'notFound', title: 'Page Not Found | Oakline Plumbing Co. (Concept)', desc: 'This page could not be found.' }) };
+
+  closeMenu(false); closeModal(false); closeDropdowns();
+
+  document.getElementById('concept-banner').innerHTML = ConceptBanner();
+  document.getElementById('site-header').innerHTML = Header(route);
+  document.getElementById('mobile-menu-root').innerHTML = MobileMenu(route);
+  document.getElementById('mobile-bar').innerHTML = MobileBar(route);
+  if (!document.getElementById('call-modal')) document.getElementById('modal-root').innerHTML = CallModal();
+  if (!document.getElementById('site-footer').innerHTML) document.getElementById('site-footer').innerHTML = Footer();
+
+  const main = document.getElementById('main');
+  main.innerHTML = `<div class="page-enter">${route.page === 'service' ? ServicePage(route.slug) : Pages[route.page](route)}</div>`;
+
+  document.title = route.title;
+  document.querySelector('meta[name="description"]').setAttribute('content', route.desc);
+
+  const root = document.documentElement;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => { root.style.scrollBehavior = ''; });
+
+  hydrate(main);
+
+  if (!State.firstRender) {
+    const h1 = main.querySelector('[data-page-h1]');
+    if (h1) h1.focus({ preventScroll: true });
+    announce(`${route.title.split('|')[0].trim()} page loaded`);
+  }
+  State.firstRender = false;
+}
+
+function announce(msg) {
+  const lr = document.getElementById('live-region');
+  lr.textContent = '';
+  setTimeout(() => { lr.textContent = msg; }, 60);
+}
+
+/* ============================= 8. BEHAVIOR =============================== */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lastFocus = null;
+
+function focusables(el) {
+  return [...el.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])')]
+    .filter(n => n.offsetParent !== null || n === document.activeElement);
+}
+function trapFocus(container, e) {
+  if (e.key !== 'Tab') return;
+  const f = focusables(container); if (!f.length) return;
+  const first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+}
+
+/* Modal */
+function openModal() {
+  const m = document.getElementById('call-modal'); if (!m) return;
+  lastFocus = document.activeElement;
+  m.dataset.open = 'true'; document.body.style.overflow = 'hidden';
+  setTimeout(() => m.querySelector('[data-modal-close].btn, .modal-card button')?.focus(), 30);
+}
+function closeModal(restore = true) {
+  const m = document.getElementById('call-modal'); if (!m || m.dataset.open !== 'true') return;
+  m.dataset.open = 'false'; document.body.style.overflow = '';
+  if (restore && lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+
+/* Mobile menu */
+function openMenu() {
+  const m = document.getElementById('mobile-menu'); if (!m) return;
+  lastFocus = document.activeElement;
+  m.dataset.open = 'true'; document.body.style.overflow = 'hidden';
+  document.querySelector('[data-menu-open]')?.setAttribute('aria-expanded', 'true');
+  setTimeout(() => m.querySelector('button[data-menu-close]')?.focus(), 40);
+}
+function closeMenu(restore = true) {
+  const m = document.getElementById('mobile-menu'); if (!m || m.dataset.open !== 'true') return;
+  m.dataset.open = 'false'; document.body.style.overflow = '';
+  document.querySelector('[data-menu-open]')?.setAttribute('aria-expanded', 'false');
+  if (restore) document.querySelector('[data-menu-open]')?.focus();
+}
+
+/* Dropdown */
+function setDropdown(dd, open) {
+  const trig = dd.querySelector('[data-dropdown-trigger]'), panel = dd.querySelector('[data-dropdown-panel]');
+  trig.setAttribute('aria-expanded', String(open)); panel.dataset.open = String(open);
+  trig.querySelector('svg')?.classList.toggle('rotate-180', open);
+}
+function closeDropdowns(except) {
+  document.querySelectorAll('[data-dropdown]').forEach(dd => { if (dd !== except) setDropdown(dd, false); });
+}
+
+/* Accordion */
+function toggleAccordion(btn) {
+  const item = btn.closest('.acc-item');
+  const open = item.dataset.open !== 'true';
+  item.dataset.open = String(open);
+  btn.setAttribute('aria-expanded', String(open));
+  item.querySelectorAll('[data-acc-body] a, [data-acc-body] button').forEach(a => open ? a.removeAttribute('tabindex') : a.setAttribute('tabindex', '-1'));
+}
+
+/* Hydration after each render: things delegation can't handle */
+function hydrate(root) {
+  root.querySelectorAll('img[data-fallback]').forEach(img => {
+    const fail = () => { img.hidden = true; img.nextElementSibling.hidden = false; };
+    if (img.complete && img.naturalWidth === 0) fail(); else img.addEventListener('error', fail, { once: true });
+  });
+  const pipes = root.querySelectorAll('[data-pipe]');
+  if (reduceMotion || !('IntersectionObserver' in window)) pipes.forEach(p => p.classList.add('pipe-on'));
+  else {
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('pipe-on'); io.unobserve(en.target); }
+    }), { threshold: 0.35 });
+    pipes.forEach(p => io.observe(p));
+  }
+}
+
+/* ----------------------------- Form logic ------------------------------- */
+const Validators = {
+  name: v => v.trim().length < 2 ? 'Enter your full name so the team knows who to ask for.' : '',
+  phone: v => {
+    if (!v.trim()) return 'Enter a phone number so the team can follow up.';
+    if (!/^[\d\s()+.\-]+$/.test(v)) return 'Use numbers only, with spaces, dashes, or brackets if you like.';
+    const d = v.replace(/\D/g, '');
+    return (d.length === 10 || (d.length === 11 && d[0] === '1')) ? '' : 'Enter a 10-digit US phone number, such as (704) 555-0123.';
+  },
+  zip: v => !v.trim() ? 'Enter your ZIP code so coverage can be checked.' : (/^\d{5}(-\d{4})?$/.test(v.trim()) ? '' : 'Enter a 5-digit ZIP code, such as 28202.'),
+  service: v => v ? '' : 'Choose the service you need, or pick “Other / Not sure”.',
+  email: v => !v.trim() ? '' : (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Check the email address, or leave it blank. It’s optional.')
+};
+const FIELD_LABELS = { name: 'Full name', phone: 'Phone', zip: 'ZIP code', service: 'Service needed', email: 'Email' };
+
+function setFieldError(input, msg) {
+  const err = document.getElementById(`${input.id}-err`);
+  input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+  if (!err) return;
+  err.hidden = !msg;
+  err.innerHTML = msg ? `${Icon('alert', 'w-4 h-4 mt-0.5 flex-none')}<span>${msg}</span>` : '';
+}
+
+function validateForm(form) {
+  const errors = [];
+  Object.keys(Validators).forEach(name => {
+    const input = form.elements[name]; if (!input) return;
+    const msg = Validators[name](input.value);
+    setFieldError(input, msg);
+    if (msg) errors.push({ input, msg, label: FIELD_LABELS[name] });
+  });
+  const summary = form.querySelector('[data-error-summary]');
+  if (errors.length) {
+    summary.hidden = false;
+    summary.querySelector('[data-summary-title]').textContent = errors.length === 1 ? 'One field needs attention' : `${errors.length} fields need attention`;
+    summary.querySelector('[data-summary-list]').innerHTML = errors.map(e => `<li><a href="#" class="text-link" data-jump="${e.input.id}">${e.label}: ${e.msg}</a></li>`).join('');
+  } else summary.hidden = true;
+  return errors;
+}
+
+function setSubmitting(form, on) {
+  const btn = form.querySelector('[data-submit]');
+  State.submitting = on;
+  btn.disabled = on; btn.setAttribute('aria-busy', String(on));
+  btn.innerHTML = on ? `<span class="spinner" aria-hidden="true"></span><span>Sending request…</span>` : `<span data-submit-label>Send Service Request</span>`;
+}
+
+function handleInquirySubmit(form) {
+  if (State.submitting) return;               // prevents duplicate sends
+  form.dataset.attempted = 'true';
+  const status = form.querySelector('[data-form-status]');
+  status.innerHTML = '';
+  const errors = validateForm(form);
+  if (errors.length) {
+    const summary = form.querySelector('[data-error-summary]');
+    summary.focus();
+    return;
+  }
+  setSubmitting(form, true);
+  const failing = form.elements.simulateFailure?.checked;
+  setTimeout(() => {
+    setSubmitting(form, false);
+    if (failing) {
+      status.innerHTML = Notice({ tone: 'error', attrs: 'role="alert"', title: 'Your request wasn’t sent', body: `The connection to the request service failed. Everything you entered is still here. <button type="button" class="text-link" data-retry>Try again</button> or <button type="button" class="text-link" data-action="call">call instead</button>.` });
+      status.querySelector('[data-retry]')?.focus();
+      return;
+    }
+    const opt = SERVICE_OPTIONS.find(o => o.value === form.elements.service.value);
+    // Only non-sensitive context is kept, in memory, for the confirmation screen.
+    State.lastSubmission = { serviceLabel: opt ? opt.label : 'service' };
+    form.reset();
+    navigate('/thank-you');
+  }, 1200);
+}
+
+function handleZipSubmit(form) {
+  const input = form.elements.zip, out = form.querySelector('[data-zip-result]');
+  const v = input.value.trim();
+  const msg = Validators.zip(v);
+  setFieldError(input, msg);
+  if (msg) { out.innerHTML = ''; input.focus(); return; }
+  const z = v.slice(0, 5);
+  let tone, title, body;
+  if (/^282/.test(z)) {
+    tone = 'success'; title = 'This ZIP is in the Charlotte area';
+    body = 'That’s the focus of this concept. Staff would still confirm your exact address before any visit.';
+  } else if (/^2[78]/.test(z)) {
+    tone = 'info'; title = 'Outside the demo focus';
+    body = 'This North Carolina ZIP isn’t in Charlotte. A live site would check it against the verified coverage list. You could still call or send a request to ask.';
+  } else {
+    tone = 'warn'; title = 'Likely outside the area';
+    body = 'This ZIP isn’t in North Carolina. A real Charlotte company would likely not cover it, but you can call to check.';
+  }
+  out.innerHTML = Notice({ tone, title, body: `${body}<div class="mt-4 flex flex-wrap gap-3">${Button({ label: 'Request service', to: '/contact', size: 'sm' })}${CallButton({ size: 'sm', label: 'Call to confirm' })}</div><p class="text-xs text-charcoal-70 mt-3">Demo check based on ZIP prefix only.</p>` });
+}
+
+/* ------------------------- Global event delegation ---------------------- */
+document.addEventListener('click', e => {
+  const t = e.target;
+
+  if (t.closest('#skipLink')) { e.preventDefault(); document.getElementById('main').focus(); return; }
+
+  const call = t.closest('[data-action="call"]');
+  if (call) { e.preventDefault(); closeMenu(false); openModal(); return; }
+
+  if (t.closest('[data-modal-close]')) { closeModal(!t.closest('a')); if (!t.closest('a')) return; }
+
+  if (t.closest('[data-menu-open]')) { openMenu(); return; }
+  if (t.closest('[data-menu-close]')) { closeMenu(); return; }
+
+  const trig = t.closest('[data-dropdown-trigger]');
+  if (trig) { const dd = trig.closest('[data-dropdown]'); const open = trig.getAttribute('aria-expanded') !== 'true'; closeDropdowns(dd); setDropdown(dd, open); return; }
+  if (!t.closest('[data-dropdown]')) closeDropdowns();
+
+  const acc = t.closest('[data-acc-trigger]');
+  if (acc) { toggleAccordion(acc); return; }
+
+  const scrollBtn = t.closest('[data-scroll-to]');
+  if (scrollBtn) {
+    const key = scrollBtn.dataset.scrollTo;
+    const target = document.querySelector(`[data-scroll-target="${key}"]`) || document.getElementById(key);
+    if (target) {
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      setTimeout(() => {
+        if (scrollBtn.hasAttribute('data-focus-first')) target.querySelector('input, select, textarea')?.focus({ preventScroll: true });
+        else target.focus({ preventScroll: true });
+      }, reduceMotion ? 0 : 450);
+    }
+    return;
+  }
+
+  const jump = t.closest('[data-jump]');
+  if (jump) { e.preventDefault(); const el = document.getElementById(jump.dataset.jump); el?.focus(); el?.scrollIntoView({ block: 'center', behavior: reduceMotion ? 'auto' : 'smooth' }); return; }
+
+  const retry = t.closest('[data-retry]');
+  if (retry) { const form = retry.closest('form'); handleInquirySubmit(form); return; }
+
+  const sym = t.closest('[data-symptom]');
+  if (sym) {
+    const finder = sym.closest('[data-finder]');
+    const wasOn = sym.getAttribute('aria-pressed') === 'true';
+    finder.querySelectorAll('[data-symptom]').forEach(b => b.setAttribute('aria-pressed', 'false'));
+    const result = finder.querySelector('[data-finder-result]');
+    if (wasOn) { result.innerHTML = FinderEmpty(); return; }
+    sym.setAttribute('aria-pressed', 'true');
+    result.innerHTML = SymptomResult(SYMPTOMS.find(s => s.id === sym.dataset.symptom));
+    return;
+  }
+
+  const filt = t.closest('[data-filter]');
+  if (filt) {
+    const wrap = filt.closest('[data-gallery-filters]');
+    wrap.querySelectorAll('[data-filter]').forEach(b => b.setAttribute('aria-pressed', String(b === filt)));
+    const cat = filt.dataset.filter;
+    document.querySelectorAll('[data-gallery] [data-cat]').forEach(li => { li.hidden = !(cat === 'all' || li.dataset.cat === cat); });
+    announce(`Showing ${cat === 'all' ? 'all' : SVC[cat].navLabel} placeholders`);
+    return;
+  }
+
+  // Close mobile menu when a link inside it is followed
+  if (t.closest('#mobile-menu a')) closeMenu(false);
+});
+
+document.addEventListener('submit', e => {
+  const form = e.target;
+  if (form.matches('[data-inquiry-form]')) { e.preventDefault(); handleInquirySubmit(form); }
+  else if (form.matches('[data-zip-form]')) { e.preventDefault(); handleZipSubmit(form); }
+});
+
+// Re-validate a field as the person fixes it (only after a first attempt)
+document.addEventListener('input', e => {
+  const input = e.target, form = input.closest('[data-inquiry-form]');
+  if (!form || form.dataset.attempted !== 'true' || !Validators[input.name]) return;
+  if (input.getAttribute('aria-invalid') === 'true') setFieldError(input, Validators[input.name](input.value));
+});
+document.addEventListener('focusout', e => {
+  const input = e.target, form = input.closest && input.closest('[data-inquiry-form]');
+  if (!form || form.dataset.attempted !== 'true' || !Validators[input.name]) return;
+  setFieldError(input, Validators[input.name](input.value));
+});
+document.addEventListener('change', e => {
+  if (e.target.matches('[data-urgency]')) {
+    const note = e.target.closest('fieldset').querySelector('[data-urgent-note]');
+    note.hidden = e.target.value !== 'urgent';
+  }
+});
+
+document.addEventListener('keydown', e => {
+  const modal = document.getElementById('call-modal');
+  const menu = document.getElementById('mobile-menu');
+  if (e.key === 'Escape') {
+    if (modal?.dataset.open === 'true') { closeModal(); return; }
+    if (menu?.dataset.open === 'true') { closeMenu(); return; }
+    const openDd = document.querySelector('[data-dropdown-panel][data-open="true"]');
+    if (openDd) { const dd = openDd.closest('[data-dropdown]'); setDropdown(dd, false); dd.querySelector('[data-dropdown-trigger]').focus(); }
+    return;
+  }
+  if (modal?.dataset.open === 'true') return trapFocus(modal.querySelector('.modal-card'), e);
+  if (menu?.dataset.open === 'true') return trapFocus(menu.querySelector('.sheet'), e);
+
+  // Dropdown arrow-key support
+  const dd = e.target.closest && e.target.closest('[data-dropdown]');
+  if (dd && ['ArrowDown', 'ArrowUp'].includes(e.key)) {
+    e.preventDefault();
+    const items = [...dd.querySelectorAll('[data-dropdown-item]')];
+    if (e.target.matches('[data-dropdown-trigger]')) { setDropdown(dd, true); items[e.key === 'ArrowDown' ? 0 : items.length - 1].focus(); return; }
+    const i = items.indexOf(e.target);
+    if (i > -1) items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length].focus();
+  }
+});
+
+// Close dropdown when focus leaves it
+document.addEventListener('focusin', e => {
+  document.querySelectorAll('[data-dropdown]').forEach(dd => { if (!dd.contains(e.target)) setDropdown(dd, false); });
+});
+
+// Desktop hover intent for the services dropdown
+let ddTimer;
+document.addEventListener('mouseover', e => {
+  const dd = e.target.closest && e.target.closest('[data-dropdown]');
+  if (!dd || !window.matchMedia('(hover: hover) and (min-width: 1024px)').matches) return;
+  clearTimeout(ddTimer); closeDropdowns(dd); setDropdown(dd, true);
+});
+document.addEventListener('mouseout', e => {
+  const dd = e.target.closest && e.target.closest('[data-dropdown]');
+  if (!dd || dd.contains(e.relatedTarget)) return;
+  if (!window.matchMedia('(hover: hover) and (min-width: 1024px)').matches) return;
+  ddTimer = setTimeout(() => { if (!dd.contains(document.activeElement)) setDropdown(dd, false); }, 180);
+});
+
+window.addEventListener('hashchange', render);
+window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMenu(false); });
+render();
+</script>
+</body>
+</html>

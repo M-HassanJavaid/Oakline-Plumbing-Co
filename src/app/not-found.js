@@ -1,5 +1,5 @@
 /**
- * Custom 404 Not Found page for Oakline Plumbing Co.
+ * Custom 404 Not Found page for Pathmaker Plumbing.
  * Server Component matching the prototype's broken pipe motif and navigation links.
  */
 
@@ -7,7 +7,7 @@ import React from 'react';
 import { Button } from '@/components/ui/Button';
 
 export const metadata = {
-  title: 'Page Not Found | Oakline Plumbing Co. (Concept)',
+  title: 'Page Not Found | Pathmaker Plumbing Charlotte',
   description: 'This page could not be found.',
   robots: {
     index: false,

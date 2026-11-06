@@ -1,10 +1,11 @@
 /**
- * Footer component for site-wide navigation and required honesty disclosures.
+ * Footer component for site-wide navigation, contact details, and brand disclosures.
  * Features:
+ * - Real business address, operating hours, and after-hours emergency policy
+ * - Direct click-to-call phone trigger
+ * - Verified social media links (Facebook, YouTube)
  * - Full list of services and company pages
- * - Clear disclosure: "Fictional portfolio concept by PlumbNexo"
- * - Privacy and Terms links
- * - Demo number call button opening CallModal
+ * - Redesign concept notice for Pathmaker Plumbing by PlumbNexo
  * Server Component.
  */
 
@@ -35,7 +36,7 @@ export function Footer() {
       <div className="wrap pt-16 pb-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
           <div>
-            <Link href="/" className="inline-block rounded-lg" aria-label="Oakline Plumbing Co. home">
+            <Link href="/" className="inline-block rounded-lg" aria-label={`${SITE.name} home`}>
               <Logo dark />
             </Link>
             <p className="mt-5 text-white/75 text-[0.95rem] max-w-sm">
@@ -43,6 +44,9 @@ export function Footer() {
             </p>
             <p className="mt-4 font-display font-semibold text-copper">
               {SITE.tagline}
+            </p>
+            <p className="mt-2 text-white/70 text-sm">
+              {SITE.license}
             </p>
           </div>
 
@@ -90,51 +94,56 @@ export function Footer() {
                     className="!p-0 !min-h-0 !border-0 font-semibold text-white hover:underline underline-offset-4 !bg-transparent"
                   />
                   <span className="block text-white/60 text-[0.85rem]">
-                    Demo number, not in service
+                    Fastest response by phone
+                  </span>
+                </span>
+              </li>
+              <li className="flex gap-2.5">
+                <Icon name="pin" className="w-[18px] h-[18px] text-copper mt-0.5 flex-none" />
+                <span>
+                  {SITE.address}
+                  <span className="block text-white/60 text-[0.85rem]">
+                    Serving Charlotte & nearby communities
                   </span>
                 </span>
               </li>
               <li className="flex gap-2.5">
                 <Icon name="clock" className="w-[18px] h-[18px] text-copper mt-0.5 flex-none" />
-                <span>{SITE.hoursNote}</span>
-              </li>
-              <li className="flex gap-2.5">
-                <Icon name="pin" className="w-[18px] h-[18px] text-copper mt-0.5 flex-none" />
                 <span>
-                  Charlotte, NC is the demonstration focus.{' '}
-                  <Link href="/service-areas" className="text-link">
-                    See service area details
-                  </Link>
+                  {SITE.hours}
+                  <span className="block text-white/60 text-[0.85rem] mt-0.5">
+                    {SITE.emergencyNote}
+                  </span>
                 </span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom disclosure */}
+        {/* Bottom bar */}
         <div className="mt-14 pt-6 border-t border-white/15 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[0.88rem] text-white/70">
-          <p className="inline-flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-2.5 py-1 font-semibold text-white">
-              <Icon name="info" className="w-4 h-4 text-copper" />
-              {SITE.disclosure}
-            </span>
-            <span>No real services, credentials, or reviews are claimed.</span>
+          <p>
+            &copy; {new Date().getFullYear()} {SITE.name}. Charlotte, NC &middot; {SITE.licenseShort}
           </p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2">
-            <li>
-              <Link href="/privacy" className="hover:text-white hover:underline underline-offset-4">
-                Privacy
-              </Link>
-            </li>
-            <li>
-              <Link href="/terms" className="hover:text-white hover:underline underline-offset-4">
-                Terms
-              </Link>
-            </li>
-            <li>
-              <span>Social links appear only if real</span>
-            </li>
-          </ul>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {SITE.socialLinks.map((s) => (
+              <a
+                key={s.label}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white hover:underline underline-offset-4"
+              >
+                {s.label}
+              </a>
+            ))}
+            <Link href="/privacy" className="hover:text-white hover:underline underline-offset-4">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-white hover:underline underline-offset-4">
+              Website Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

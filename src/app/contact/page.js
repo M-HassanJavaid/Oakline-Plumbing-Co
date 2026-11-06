@@ -1,5 +1,5 @@
 /**
- * Contact page for Oakline Plumbing Co.
+ * Contact page for Pathmaker Plumbing.
  * Server Component accepting optional service query parameter to preselect service.
  * Renders urgent call option, full inquiry form, next-step sidebar, and contact FAQ.
  */
@@ -18,9 +18,9 @@ import { FAQ } from '@/data/faq';
 import { SITE } from '@/data/site';
 
 export const metadata = {
-  title: 'Request Plumbing Service | Oakline Plumbing Co. (Concept)',
+  title: 'Contact & Service Request | Pathmaker Plumbing Charlotte',
   description:
-    'Concept contact page with a call option for urgent issues and a demo service request form.',
+    'Contact Pathmaker Plumbing in Charlotte, NC. Call (704) 733-7507 for urgent plumbing issues or submit an online request for diagnostics and estimates.',
 };
 
 export default async function ContactPage({ searchParams }) {
@@ -32,10 +32,10 @@ export default async function ContactPage({ searchParams }) {
     rawService && (SVC[rawService] || rawService === 'other') ? rawService : '';
 
   const nextSteps = [
-    'Your request is received, once the form workflow confirms it.',
-    'A team member reviews it and confirms your area and availability.',
-    'They follow up to talk through next steps.',
-    'An appointment is only set when you both agree on a time.',
+    'Your request is received directly by our Charlotte dispatch team.',
+    'A team member reviews the problem, your address, and technician availability.',
+    'We follow up by phone or message to confirm details and schedule your visit.',
+    'Work begins only after our in-person diagnosis and your upfront approval of the estimate.',
   ];
 
   return (
@@ -47,10 +47,10 @@ export default async function ContactPage({ searchParams }) {
             items={[{ label: 'Home', to: '/' }, { label: 'Contact' }]}
           />
           <h1 className="h1-page max-w-3xl" tabIndex={-1} data-page-h1>
-            Tell Us What Plumbing Help You Need
+            Contact Pathmaker Plumbing
           </h1>
           <p className="lede mt-5 measure">
-            Call for urgent problems. Send a request for planned repairs, assessments, and estimates. Either way, a request isn’t a confirmed appointment until someone follows up with you.
+            Call for urgent leaks and water heater outages. Submit an online request for planned repairs, diagnostics, and second opinions on existing quotes.
           </p>
 
           <div className="grid md:grid-cols-2 gap-5 mt-10 max-w-4xl">
@@ -58,19 +58,21 @@ export default async function ContactPage({ searchParams }) {
             <div className="bg-white rounded-panel border border-[#D6E5E2] p-6 md:p-7">
               <div className="flex items-center gap-3">
                 <IconBadge name="phone" tone="copper" />
-                <h2 className="h3 text-[1.25rem]">Call the team</h2>
+                <h2 className="h3 text-[1.25rem]">Call Our Office Directly</h2>
               </div>
               <p className="text-charcoal-70 mt-3 text-[0.97rem]">
-                For urgent concerns and questions about availability.
+                Fastest response for active leaks, sewer backups, and urgent repairs.
               </p>
-              <p className="mt-4 font-display font-extrabold text-xl text-teal">
-                {SITE.phoneDisplay}
+              <p className="mt-4 font-display font-extrabold text-2xl text-teal">
+                <a href={`tel:${SITE.phone.tel}`} className="hover:underline">
+                  {SITE.phone.display}
+                </a>
               </p>
-              <p className="text-sm text-charcoal-70">
-                Demo number. {SITE.hoursNote}
+              <p className="text-sm text-charcoal-70 mt-1">
+                {SITE.hours}
               </p>
               <div className="mt-5">
-                <CallButton variant="secondary" label="Call Now" />
+                <CallButton variant="primary" label={`Call ${SITE.phone.display}`} />
               </div>
             </div>
 
@@ -78,17 +80,17 @@ export default async function ContactPage({ searchParams }) {
             <div className="bg-white rounded-panel border border-[#D6E5E2] p-6 md:p-7">
               <div className="flex items-center gap-3">
                 <IconBadge name="clipboard" tone="aqua" />
-                <h2 className="h3 text-[1.25rem]">Request service</h2>
+                <h2 className="h3 text-[1.25rem]">Send an Online Request</h2>
               </div>
               <p className="text-charcoal-70 mt-3 text-[0.97rem]">
-                For planned repairs, assessments, and estimates. Takes about a minute.
+                For scheduled assessments, tankless upgrades, and second opinions. Takes about a minute.
               </p>
-              <div className="mt-5">
+              <div className="mt-6">
                 <ScrollToButton
                   targetId="contact-form"
                   focusFirstInput
-                  label="Start your request"
-                  variant="primary"
+                  label="Fill Out Service Request"
+                  variant="secondary"
                 />
               </div>
             </div>
@@ -108,51 +110,55 @@ export default async function ContactPage({ searchParams }) {
             <InquiryForm
               variant="full"
               preset={validPreset}
-              heading="Service request"
+              heading="Service Request Form"
             />
           </div>
 
           <aside
             className="space-y-6 lg:sticky lg:top-28"
-            aria-label="What happens next and coverage"
+            aria-label="What happens next and office details"
           >
             <div className="rounded-panel bg-soft border border-[#D6E5E2] p-6">
-              <h2 className="h3">What happens next</h2>
+              <h2 className="h3 text-teal">What Happens Next</h2>
               <ol className="mt-4 space-y-4">
                 {nextSteps.map((t, i) => (
-                  <li key={i} className="flex gap-3 text-[0.96rem]">
-                    <span className="w-7 h-7 rounded-full bg-teal text-white grid place-items-center text-sm font-bold flex-none">
+                  <li key={i} className="flex gap-3 text-[0.95rem]">
+                    <span className="w-7 h-7 rounded-full bg-teal text-white grid place-items-center text-xs font-bold flex-none">
                       {i + 1}
                     </span>
-                    <span className="pt-0.5">{t}</span>
+                    <span className="pt-0.5 text-charcoal-80">{t}</span>
                   </li>
                 ))}
               </ol>
             </div>
 
             <div className="rounded-panel bg-aqua p-6">
-              <h2 className="h3">Coverage and hours</h2>
-              <ul className="mt-4 space-y-3 text-[0.96rem]">
+              <h2 className="h3 text-teal">Office &amp; Service Territory</h2>
+              <ul className="mt-4 space-y-3 text-[0.95rem]">
                 <li className="flex gap-3">
-                  <Icon name="pin" className="w-5 h-5 text-teal flex-none" />
+                  <Icon name="pin" className="w-5 h-5 text-teal flex-none mt-0.5" />
                   <span>
-                    Charlotte, NC is the demonstration focus.{' '}
-                    <Link href="/service-areas" className="text-link">
-                      Coverage details
-                    </Link>
+                    <strong>Shop Address:</strong> {SITE.address} (Charlotte, NC).
                   </span>
                 </li>
                 <li className="flex gap-3">
-                  <Icon name="clock" className="w-5 h-5 text-teal flex-none" />
-                  <span>{SITE.hoursNote}</span>
+                  <Icon name="clock" className="w-5 h-5 text-teal flex-none mt-0.5" />
+                  <span>
+                    <strong>Operating Hours:</strong> {SITE.hours}. Saturday &amp; Sunday closed.
+                  </span>
                 </li>
                 <li className="flex gap-3">
-                  <Icon name="mail" className="w-5 h-5 text-teal flex-none" />
+                  <Icon name="shield" className="w-5 h-5 text-teal flex-none mt-0.5" />
                   <span>
-                    Response expectations are stated only once a real policy exists.
+                    <strong>Licensing:</strong> NC State License #31626 (P-1 Plumbing Unlimited).
                   </span>
                 </li>
               </ul>
+              <div className="mt-5 pt-4 border-t border-[#CFE0DD]">
+                <Link href="/service-areas" className="text-link text-sm">
+                  View complete service areas &amp; towns &rarr;
+                </Link>
+              </div>
             </div>
           </aside>
         </div>
@@ -163,9 +169,9 @@ export default async function ContactPage({ searchParams }) {
         <div className="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
           <div>
             <h2 id="ctfaq-h" className="h2">
-              Before you send
+              Before You Send
             </h2>
-            <p className="lede mt-4">Short answers to common questions.</p>
+            <p className="lede mt-4">Helpful answers about response times and scheduling.</p>
           </div>
           <Accordion items={FAQ.contact} />
         </div>

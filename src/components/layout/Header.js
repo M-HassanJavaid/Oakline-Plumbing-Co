@@ -13,7 +13,6 @@ import { NavDropdown } from './NavDropdown';
 import { MobileMenu } from './MobileMenu';
 import { NAV, SITE } from '@/data/site';
 import { Button } from '@/components/ui/Button';
-import { CallButton } from '@/components/ui/CallButton';
 import { useCallModal } from '@/context/CallModalContext';
 import { Icon } from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
@@ -27,18 +26,18 @@ export function Header() {
   return (
     <>
       <header id="site-header" className="sticky top-0 z-40 bg-soft/95 backdrop-blur border-b border-[#DCE7E5]">
-        <div className="wrap h-[72px] flex items-center justify-between gap-4">
+        <div className="wrap h-[72px] flex items-center justify-between gap-2 lg:gap-4">
           <Link
             href="/"
             className="flex-none rounded-lg focus-visible:outline-offset-2"
-            aria-label="Oakline Plumbing Co. home"
+            aria-label={`${SITE.name} home`}
           >
             <Logo />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav aria-label="Main" className="hidden lg:block">
-            <ul className="flex items-center gap-0.5">
+          <nav aria-label="Main" className="hidden lg:block flex-shrink-0">
+            <ul className="flex items-center gap-0.5 xl:gap-1.5">
               {NAV.map((n) => {
                 if (n.dropdown) {
                   return <NavDropdown key={n.label} />;
@@ -49,11 +48,11 @@ export function Header() {
                   (n.path !== '/' && pathname.startsWith(n.path + '/'));
 
                 return (
-                  <li key={n.path}>
+                  <li key={n.path} className="flex-shrink-0">
                     <Link
                       href={n.path}
                       className={cn(
-                        'nav-link',
+                        'nav-link whitespace-nowrap',
                         isActive && 'font-semibold text-teal'
                       )}
                       aria-current={isActive ? 'page' : undefined}
@@ -67,27 +66,24 @@ export function Header() {
           </nav>
 
           {/* Header Action Buttons */}
-          <div className="flex items-center gap-2">
-            {/* Desktop large: text phone trigger */}
-            <button
-              type="button"
+          <div className="flex items-center gap-2 xl:gap-3 flex-shrink-0">
+            {/* Desktop: single verified phone action */}
+            <a
+              href={`tel:${SITE.phoneTel || SITE.phone.tel}`}
               onClick={(e) => {
-                e.preventDefault();
-                openModal(e.currentTarget);
+                if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+                  e.preventDefault();
+                  openModal(e.currentTarget);
+                }
               }}
-              className="hidden xl:inline-flex items-center gap-2 h-11 px-3 rounded-xl font-semibold text-teal hover:bg-aqua/60 transition-colors"
+              className="hidden lg:inline-flex items-center gap-2 h-11 px-2.5 xl:px-3 rounded-xl font-semibold text-teal hover:bg-aqua/60 transition-colors whitespace-nowrap flex-none"
+              aria-label={`Call ${SITE.name} at ${SITE.phoneDisplay}`}
             >
-              <Icon name="phone" className="w-[18px] h-[18px] text-copper-600" />
-              <span>{SITE.phoneDisplay}</span>
-            </button>
-
-            {/* Desktop medium: compact Call button */}
-            <CallButton
-              label="Call"
-              size="sm"
-              variant="secondary"
-              className="hidden lg:inline-flex xl:hidden"
-            />
+              <Icon name="phone" className="w-[18px] h-[18px] text-copper-600 flex-none" />
+              <span className="whitespace-nowrap font-bold text-sm xl:text-base tracking-tight">
+                {SITE.phoneDisplay}
+              </span>
+            </a>
 
             {/* Primary Request Service button */}
             <Button
@@ -95,7 +91,7 @@ export function Header() {
               href="/contact"
               variant="primary"
               size="sm"
-              className="hidden sm:inline-flex"
+              className="hidden sm:inline-flex whitespace-nowrap flex-none"
             />
 
             {/* Mobile/Tablet phone icon button */}
@@ -105,23 +101,23 @@ export function Header() {
                 e.preventDefault();
                 openModal(e.currentTarget);
               }}
-              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-[#B9D3D0] bg-white text-teal"
-              aria-label="Call Oakline (demo number)"
+              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-[#B9D3D0] bg-white text-teal flex-none"
+              aria-label={`Call ${SITE.name} at ${SITE.phoneDisplay}`}
             >
-              <Icon name="phone" className="w-5 h-5" />
+              <Icon name="phone" className="w-5 h-5 flex-none" />
             </button>
 
             {/* Mobile menu hamburger toggle */}
             <button
               ref={mobileMenuTriggerRef}
               type="button"
-              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl bg-teal text-white"
+              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl bg-teal text-white flex-none"
               aria-label="Open menu"
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
               onClick={() => setIsMobileMenuOpen(true)}
             >
-              <Icon name="menu" className="w-5 h-5" />
+              <Icon name="menu" className="w-5 h-5 flex-none" />
             </button>
           </div>
         </div>

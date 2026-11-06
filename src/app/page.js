@@ -1,5 +1,5 @@
 /**
- * Homepage for Oakline Plumbing Co.
+ * Homepage for Pathmaker Plumbing.
  * Server Component presenting hero value proposition, trust signals, services grid,
  * interactive symptom finder, process walkthrough, featured project, coverage, FAQ,
  * and quick request form.
@@ -13,7 +13,6 @@ import { CallButton } from '@/components/ui/CallButton';
 import { ScrollToButton } from '@/components/ui/ScrollToButton';
 import { ImageWithFallback } from '@/components/ui/ImageWithFallback';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { DemoTag } from '@/components/ui/DemoTag';
 import { IconBadge } from '@/components/ui/IconBadge';
 import { Icon } from '@/components/ui/Icon';
 import { Accordion } from '@/components/ui/Accordion';
@@ -24,15 +23,15 @@ import { ProcessPipe } from '@/components/sections/ProcessPipe';
 import { FeaturedProject } from '@/components/sections/FeaturedProject';
 import { CoverageMap } from '@/components/sections/CoverageMap';
 import { InquiryForm } from '@/components/sections/InquiryForm';
-import { SERVICES, IMG } from '@/data/services';
+import { SERVICES, IMG, EXTRA_SERVICES } from '@/data/services';
 import { WHY } from '@/data/process';
 import { FAQ } from '@/data/faq';
-import { ILLUSTRATIVE_TOWNS } from '@/data/site';
+import { SITE, NEARBY_TOWNS } from '@/data/site';
 
 export const metadata = {
-  title: 'Residential Plumbing in Charlotte | Oakline Plumbing Co. (Concept)',
+  title: 'Pathmaker Plumbing | Charlotte, NC Residential Plumber',
   description:
-    'Concept homepage for a fictional Charlotte plumbing company: services, how requests work, coverage, and a short request form.',
+    'Plumbing advice you can trust, repairs you actually need. Serving Charlotte homeowners since 2013 with 25+ years experience.',
 };
 
 export default function HomePage() {
@@ -48,10 +47,10 @@ export default function HomePage() {
           <div className="hero-in">
             <Eyebrow text="Residential Plumbing in Charlotte, NC" />
             <h1 className="h1-hero" tabIndex={-1} data-page-h1>
-              Plumbing Problems? Let’s Get Them Sorted.
+              {SITE.tagline}
             </h1>
             <p className="lede mt-6 measure">
-              From leaking pipes to water heater trouble, Oakline Plumbing helps Charlotte homeowners understand their options and take the next step.
+              For 25+ years, John Stokes and the Pathmaker team have helped Charlotte homeowners find the real cause of a problem and choose the repair that actually fits — not the biggest one.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <ScrollToButton
@@ -59,12 +58,12 @@ export default function HomePage() {
                 label="Request Service"
                 variant="primary"
               />
-              <CallButton label="Call Now" />
+              <CallButton label={`Call ${SITE.phoneDisplay}`} />
             </div>
             <p className="mt-5 text-sm text-charcoal-70 flex items-start gap-2 max-w-md">
               <Icon name="info" className="w-4 h-4 mt-0.5 text-teal flex-none" />
               <span>
-                A request isn’t a confirmed appointment. For urgent problems, calling is the faster route.
+                Calling gets the fastest response. For active leaks or backups, call right away.
               </span>
             </p>
           </div>
@@ -85,7 +84,7 @@ export default function HomePage() {
             </svg>
             <ImageWithFallback
               src={IMG.hero}
-              alt="A plumber working under a kitchen sink in a home. Illustrative stock photo, not an Oakline employee."
+              alt="Professional residential plumber working under a kitchen sink in Charlotte, NC."
               ratio="aspect-[5/4]"
               className="rounded-[24px] shadow-lift relative"
               priority
@@ -95,11 +94,11 @@ export default function HomePage() {
                 <Icon name="pin" className="w-5 h-5" />
               </span>
               <p className="text-[0.92rem]">
-                <span className="font-semibold text-teal block">Charlotte homeowners</span>
+                <span className="font-semibold text-teal block">Charlotte & Nearby Towns</span>
                 <span className="text-charcoal-70">
-                  Coverage is confirmed for each address.{' '}
+                  Shop located in NE Charlotte.{' '}
                   <Link href="/service-areas" className="text-link">
-                    Check yours
+                    View coverage
                   </Link>
                 </span>
               </p>
@@ -124,12 +123,15 @@ export default function HomePage() {
               <ServiceCard key={s.slug} service={s} variant="compact" />
             ))}
           </div>
-          <p className="mt-8 text-[0.95rem] text-charcoal-70">
-            Toilets, faucets, and fixtures would be listed here only if the real company handles them.{' '}
-            <Link href="/services" className="text-link">
-              See all services
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#DCE7E5]">
+            <p className="text-[0.95rem] text-charcoal-70">
+              <span className="font-semibold text-teal">Also servicing: </span>
+              {EXTRA_SERVICES.join(' · ')}
+            </p>
+            <Link href="/services" className="text-link font-semibold">
+              See all services →
             </Link>
-          </p>
+          </div>
         </div>
       </section>
 
@@ -141,17 +143,17 @@ export default function HomePage() {
               Not Sure What’s Causing the Problem?
             </h2>
             <p className="lede mt-4">
-              Most people don’t know the cause, and that’s fine. Tell us what you’re noticing and we’ll point you to the most relevant page.
+              Most people don’t know the exact cause, and that’s fine. Tell us what you’re noticing and we’ll point you to the most relevant service.
             </p>
             <p className="mt-4 text-[0.95rem] text-charcoal-70">
-              Symptoms can have more than one cause, so a technician confirms what’s going on in person.
+              Symptoms can have more than one cause, so a technician confirms what’s going on in person before proposing repairs.
             </p>
           </div>
           <SymptomFinder id="home-finder" />
         </div>
       </section>
 
-      {/* Why Oakline Standards */}
+      {/* Why Pathmaker Standards */}
       <section className="section" aria-labelledby="home-why">
         <div className="wrap">
           <div className="grid lg:grid-cols-[1fr_1.15fr] gap-10 lg:gap-16 items-start">
@@ -160,11 +162,8 @@ export default function HomePage() {
                 Clear Communication From First Contact to Next Steps
               </h2>
               <p className="lede mt-4">
-                Plumbing problems are stressful enough. These are the standards the site is designed to communicate, once a real business confirms them.
+                Plumbing problems are stressful enough. We focus on education before sales, diagnose before cutting, and never push unnecessary repairs.
               </p>
-              <div className="mt-6">
-                <DemoTag text="Shown as example standards, not verified claims" />
-              </div>
             </div>
             <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-9">
               {WHY.map((w, idx) => (
@@ -197,14 +196,14 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div className="max-w-2xl">
               <h2 id="home-work" className="h2">
-                See How Plumbing Work Can Be Explained Clearly
+                Real Project Stories from Charlotte Homes
               </h2>
               <p className="lede mt-4">
-                Each project story follows the same pattern: what was wrong, what was found, what was approved, and how it turned out.
+                Each project story covers what was wrong, what our diagnosis found, the options presented, and how the repair turned out.
               </p>
             </div>
             <Link href="/reviews-projects" className="text-link flex-none">
-              View reviews & projects
+              View reviews & projects →
             </Link>
           </div>
           <FeaturedProject />
@@ -220,24 +219,28 @@ export default function HomePage() {
                 Serving Charlotte and Surrounding Communities
               </h2>
               <p className="lede mt-4">
-                Charlotte is the focus of this concept. Nearby towns would be listed only once real coverage is confirmed.
+                Pathmaker Plumbing is based in northeast Charlotte. We regularly service homeowners throughout Mecklenburg and adjacent counties.
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
-                <span className="chip chip-static !border-teal !bg-teal !text-white">
-                  <Icon name="pin" className="w-4 h-4" />
-                  Charlotte
-                </span>
-                {ILLUSTRATIVE_TOWNS.slice(0, 4).map((t) => (
-                  <span key={t} className="chip chip-static !bg-white/70 !border-dashed">
+                {NEARBY_TOWNS.slice(0, 8).map((t, idx) => (
+                  <span
+                    key={t}
+                    className={`chip chip-static ${
+                      idx === 0
+                        ? '!border-teal !bg-teal !text-white'
+                        : '!bg-white/80 !border-[#B9D3D0]'
+                    }`}
+                  >
+                    {idx === 0 && <Icon name="pin" className="w-4 h-4 mr-1 inline" />}
                     {t}
                   </span>
                 ))}
               </div>
               <p className="text-sm text-charcoal-70 mt-3">
-                Dashed names are illustrative only, not verified coverage.
+                Not sure if your home is covered? Call {SITE.phoneDisplay} to check dispatch availability.
               </p>
               <div className="mt-7">
-                <Button label="Check Service Area" href="/service-areas" variant="primary" />
+                <Button label="Check Service Areas" href="/service-areas" variant="primary" />
               </div>
             </div>
             <CoverageMap />
@@ -253,7 +256,7 @@ export default function HomePage() {
               Questions Before You Reach Out
             </h2>
             <p className="lede mt-4">
-              Quick answers about requesting help and what to expect.
+              Quick answers about requesting plumbing help, service dispatch, and what to expect.
             </p>
           </div>
           <Accordion items={FAQ.home} />
@@ -277,7 +280,7 @@ export default function HomePage() {
               Tell Us What Plumbing Help You Need
             </h2>
             <p className="mt-4 text-white/80 text-[1.08rem] measure">
-              A few details are enough to get started. Someone would review your request, check your area, and follow up about next steps.
+              A few details are enough to get started. Our team reviews your request, checks your area, and follows up promptly during business hours.
             </p>
             <div className="mt-8 rounded-2xl bg-white/10 border border-white/15 p-5">
               <p className="font-semibold text-white flex items-center gap-2">
@@ -285,10 +288,10 @@ export default function HomePage() {
                 Urgent problem?
               </p>
               <p className="text-white/80 mt-1.5 text-[0.95rem]">
-                For active leaks, backups, or no water, call instead of filling in the form.
+                For active leaks, backups, or no water, call instead of waiting for a form reply.
               </p>
               <div className="mt-4">
-                <CallButton variant="copper" label="Call Now" />
+                <CallButton variant="copper" label={`Call ${SITE.phoneDisplay}`} />
               </div>
             </div>
           </div>

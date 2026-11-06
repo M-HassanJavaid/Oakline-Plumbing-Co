@@ -1,6 +1,6 @@
 /**
- * All business details in this file are fictional placeholders for demonstration
- * purposes and must be verified with a real business owner before reuse.
+ * Residential plumbing symptom catalog for Pathmaker Plumbing.
+ * Maps common homeowner symptoms to diagnostic and repair services.
  */
 
 export const SYMPTOMS = [

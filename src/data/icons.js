@@ -1,8 +1,5 @@
 /**
- * All business details and symbols in this project are placeholders that must be
- * verified with a real business owner before reuse.
- *
- * SVG icon paths extracted from the Oakline Plumbing prototype.
+ * SVG icon paths for Pathmaker Plumbing website.
  * Rendered using the unified Icon component.
  */
 

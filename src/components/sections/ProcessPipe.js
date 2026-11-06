@@ -19,7 +19,7 @@ import { cn } from '@/lib/utils';
  */
 export function ProcessPipe({
   steps = PROCESS,
-  note = 'Example process for this concept. A live site would describe the company’s actual workflow.',
+  note = 'Our technicians evaluate every repair in person and confirm pricing with you before starting work.',
 }) {
   const containerRef = useRef(null);
   const [isActive, setIsActive] = useState(false);

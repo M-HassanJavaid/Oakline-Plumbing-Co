@@ -1,22 +1,15 @@
 'use client';
 
 /**
- * CallModal component renders the accessible explanation modal triggered by all Call actions.
- * Honesty safeguard: Explains that phone buttons in this portfolio concept do not place calls.
- * Requirements:
- * - Traps focus while open
- * - Closes on Escape key or backdrop click
- * - Locks page scrolling while open
- * - Restores focus to the triggering element upon closing
+ * CallModal component displays verified contact numbers, operating hours,
+ * and after-hours emergency policy for Pathmaker Plumbing.
  * Client component because DOM focus trapping, keyboard handlers, and context integration require browser execution.
  */
 
 import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import { useCallModal } from '@/context/CallModalContext';
 import { Icon } from '@/components/ui/Icon';
 import { IconBadge } from '@/components/ui/IconBadge';
-import { Notice } from '@/components/ui/Notice';
 import { Button } from '@/components/ui/Button';
 import { SITE } from '@/data/site';
 
@@ -111,44 +104,53 @@ export function CallModal() {
 
         <IconBadge name="phone" tone="copper" />
         <h2 id="callTitle" className="h3 text-[1.35rem] mt-4">
-          Call the team
+          Call {SITE.name}
         </h2>
-        <p className="mt-2 text-charcoal-70">
-          Calling is the best option for urgent issues like active leaks, backups, or no water.
+        <p className="mt-2 text-charcoal-70 text-[0.95rem]">
+          Calling is the fastest route for urgent issues like active leaks, main sewer backups, or sudden loss of hot water.
         </p>
 
         <div className="mt-5 rounded-2xl bg-aqua-50 border border-[#B9D3D0] p-5">
           <p className="font-display font-extrabold text-2xl text-teal tracking-tight">
-            {SITE.phoneDisplay}
+            <a
+              href={`tel:${SITE.phoneTel || SITE.phone.tel}`}
+              className="hover:underline underline-offset-4"
+            >
+              {SITE.phoneDisplay}
+            </a>
           </p>
-          <p className="text-sm text-charcoal-70 mt-1">{SITE.phoneNote}</p>
-          <p className="text-sm text-charcoal-70 mt-3 flex gap-2">
-            <Icon name="clock" className="w-4 h-4 mt-0.5 text-teal flex-none" />
-            <span>{SITE.hoursNote}</span>
+          <p className="text-sm font-medium text-teal mt-1">
+            {SITE.phoneNote}
           </p>
+          <div className="mt-3 pt-3 border-t border-[#B9D3D0]/60 space-y-1.5 text-xs text-charcoal-70">
+            <p className="flex items-start gap-2">
+              <Icon name="clock" className="w-4 h-4 text-teal flex-none mt-0.5" />
+              <span>{SITE.hours}</span>
+            </p>
+            <p className="flex items-start gap-2">
+              <Icon name="pin" className="w-4 h-4 text-teal flex-none mt-0.5" />
+              <span>{SITE.addressDisplay}</span>
+            </p>
+            <p className="text-charcoal-50 mt-1 italic">
+              {SITE.emergencyNote}
+            </p>
+          </div>
         </div>
 
-        <Notice
-          tone="warn"
-          className="mt-4"
-          body="This is a fictional business. In a live site, this button would dial the verified number directly instead of opening this panel."
-        />
-
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
+          <a
+            href={`tel:${SITE.phoneTel || SITE.phone.tel}`}
+            className="btn btn-primary flex-1 text-center"
+          >
+            Call {SITE.phoneDisplay}
+          </a>
           <Button
-            label="Send a request instead"
+            label="Send online request"
             href="/contact"
-            variant="primary"
+            variant="secondary"
             className="flex-1"
             onClick={() => closeModal(false)}
           />
-          <button
-            type="button"
-            className="btn btn-secondary flex-1"
-            onClick={() => closeModal(true)}
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>

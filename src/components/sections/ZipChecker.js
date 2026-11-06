@@ -6,11 +6,11 @@
  */
 
 import React, { useState } from 'react';
-import { DemoTag } from '@/components/ui/DemoTag';
 import { Notice } from '@/components/ui/Notice';
 import { Button } from '@/components/ui/Button';
 import { CallButton } from '@/components/ui/CallButton';
 import { Icon } from '@/components/ui/Icon';
+import { SITE } from '@/data/site';
 
 /**
  * Validates a 5-digit US ZIP code.
@@ -22,7 +22,7 @@ function validateZip(val) {
     return 'Enter your ZIP code so coverage can be checked.';
   }
   if (!/^\d{5}(-\d{4})?$/.test(val.trim())) {
-    return 'Enter a 5-digit ZIP code, such as 28202.';
+    return 'Enter a 5-digit ZIP code, such as 28213.';
   }
   return '';
 }
@@ -50,19 +50,24 @@ export function ZipChecker() {
 
     if (/^282/.test(prefix)) {
       tone = 'success';
-      title = 'This ZIP is in the Charlotte area';
+      title = 'In our primary Charlotte service area';
       bodyText =
-        'That’s the focus of this concept. Staff would still confirm your exact address before any visit.';
+        `Pathmaker Plumbing regularly dispatches technicians across ${prefix}. Call (704) 733-7507 or submit an online request to schedule service.`;
+    } else if (/^280|^281/.test(prefix)) {
+      tone = 'success';
+      title = 'In our surrounding community service territory';
+      bodyText =
+        `We service Concord, Huntersville, Matthews, Mint Hill, Pineville, Cornelius, and nearby communities in ${prefix}. Call (704) 733-7507 to confirm same-day availability.`;
     } else if (/^2[78]/.test(prefix)) {
       tone = 'info';
-      title = 'Outside the demo focus';
+      title = 'Nearby in North Carolina';
       bodyText =
-        'This North Carolina ZIP isn’t in Charlotte. A live site would check it against the verified coverage list. You could still call or send a request to ask.';
+        'This ZIP is near our standard dispatch boundary. Call (704) 733-7507 to check if a technician can be routed to your address.';
     } else {
       tone = 'warn';
-      title = 'Likely outside the area';
+      title = 'Outside our service territory';
       bodyText =
-        'This ZIP isn’t in North Carolina. A real Charlotte company would likely not cover it, but you can call to check.';
+        'Pathmaker Plumbing operates exclusively in the greater Charlotte, North Carolina metropolitan area (NC License #31626).';
     }
 
     setResult({ tone, title, bodyText });
@@ -71,8 +76,10 @@ export function ZipChecker() {
   return (
     <form noValidate onSubmit={handleSubmit} className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h3 className="h3">Quick ZIP check</h3>
-        <DemoTag text="Demo check" />
+        <h3 className="h3">Check Your ZIP Code</h3>
+        <span className="text-xs font-semibold uppercase tracking-wider text-teal bg-aqua-50 border border-[#B9D3D0] px-2.5 py-1 rounded-md">
+          Coverage Lookup
+        </span>
       </div>
       <div>
         <label htmlFor="zip-input" className="field-label">
@@ -95,16 +102,17 @@ export function ZipChecker() {
             inputMode="numeric"
             autoComplete="postal-code"
             maxLength={10}
+            placeholder="e.g. 28213"
             aria-describedby="zip-hint zip-err"
             aria-invalid={!!errorMsg}
             required
           />
           <button type="submit" className="btn btn-primary">
-            Check ZIP
+            Check Coverage
           </button>
         </div>
         <p id="zip-hint" className="field-hint">
-          Five digits, for example 28202.
+          Check if our Charlotte-area plumbing technicians service your neighborhood.
         </p>
         {errorMsg && (
           <p id="zip-err" className="field-error">
@@ -114,20 +122,17 @@ export function ZipChecker() {
         )}
       </div>
 
-      <div aria-live="polite">
-        {result && (
+      {result && (
+        <div role="status" aria-live="polite" className="mt-4">
           <Notice tone={result.tone} title={result.title}>
             <p>{result.bodyText}</p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <Button label="Request service" href="/contact" size="sm" />
-              <CallButton size="sm" label="Call to confirm" />
+            <div className="mt-4 flex flex-wrap gap-2.5">
+              <Button label="Request Service" href="/contact" size="sm" />
+              <CallButton label="Call (704) 733-7507" size="sm" variant="secondary" />
             </div>
-            <p className="text-xs text-charcoal-70 mt-3">
-              Demo check based on ZIP prefix only.
-            </p>
           </Notice>
-        )}
-      </div>
+        </div>
+      )}
     </form>
   );
 }

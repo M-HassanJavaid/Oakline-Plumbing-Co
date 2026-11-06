@@ -1,6 +1,6 @@
 /**
- * Logo component for Oakline Plumbing Co.
- * Server Component with SVG pipe emblem and wordmark.
+ * Logo component for Pathmaker Plumbing.
+ * Server Component with SVG pipe/compass emblem and wordmark.
  */
 
 import React from 'react';
@@ -11,7 +11,7 @@ import React from 'react';
  */
 export function Logo({ dark = false }) {
   const word = dark ? '#FFFFFF' : '#153B4A';
-  const sub = dark ? 'rgba(255,255,255,.72)' : '#4A5C63';
+  const sub = dark ? 'rgba(255,255,255,.75)' : '#4A5C63';
 
   return (
     <span className="inline-flex items-center gap-2.5">
@@ -43,13 +43,13 @@ export function Logo({ dark = false }) {
           className="block font-display font-extrabold text-[1.15rem] tracking-[-0.02em]"
           style={{ color: word }}
         >
-          Oakline
+          Pathmaker
         </span>
         <span
-          className="block text-[0.72rem] font-medium mt-0.5"
+          className="block text-[0.72rem] font-semibold uppercase tracking-wider mt-0.5"
           style={{ color: sub }}
         >
-          Plumbing Co.
+          Plumbing
         </span>
       </span>
     </span>

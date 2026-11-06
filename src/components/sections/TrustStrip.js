@@ -1,29 +1,44 @@
 /**
- * TrustStrip component showing labeled placeholders for credentials, reviews, and insurance.
- * Preserves honesty safeguards by clearly marking them as placeholders.
+ * TrustStrip component showing verified credentials, Google rating, and licensing.
  * Server Component.
  */
 
 import React from 'react';
 import { Icon } from '@/components/ui/Icon';
+import { SITE } from '@/data/site';
 
-const SLOTS = [
-  { icon: 'shield', t: 'Verified license information appears here' },
-  { icon: 'quote', t: 'Rating from a real review source appears here' },
-  { icon: 'clipboard', t: 'Insurance or other verified assurance appears here' }
+const CREDENTIALS = [
+  {
+    icon: 'shield',
+    title: SITE.license,
+    subtitle: 'Verified with NC State Board'
+  },
+  {
+    icon: 'star',
+    title: SITE.ratingDisplay,
+    subtitle: 'Verified Google Business Reviews'
+  },
+  {
+    icon: 'clipboard',
+    title: SITE.brandCredentials,
+    subtitle: `${SITE.experienceYears} Years Experience · Est. ${SITE.foundedYear}`
+  }
 ];
 
 export function TrustStrip() {
   return (
-    <section aria-label="Credentials placeholder" className="bg-white border-y border-[#DCE7E5]">
+    <section aria-label="Credentials and licensing" className="bg-white border-y border-[#DCE7E5]">
       <div className="wrap py-5">
-        <ul className="grid sm:grid-cols-3 gap-3 sm:gap-6">
-          {SLOTS.map((s, i) => (
-            <li key={i} className="flex items-center gap-3 text-[0.93rem] text-charcoal-70">
-              <span className="w-10 h-10 rounded-xl border-2 border-dashed border-[#9DBFBB] grid place-items-center text-teal flex-none">
-                <Icon name={s.icon} className="w-5 h-5" />
+        <ul className="grid sm:grid-cols-3 gap-4 sm:gap-6">
+          {CREDENTIALS.map((s, i) => (
+            <li key={i} className="flex items-center gap-3.5 text-charcoal">
+              <span className="w-11 h-11 rounded-xl bg-aqua-50 border border-[#B9D3D0] grid place-items-center text-teal flex-none">
+                <Icon name={s.icon} className="w-5 h-5 text-copper-600" />
               </span>
-              <span>{s.t}</span>
+              <div className="leading-tight">
+                <p className="font-semibold text-[0.94rem] text-teal">{s.title}</p>
+                <p className="text-xs text-charcoal-70 mt-0.5">{s.subtitle}</p>
+              </div>
             </li>
           ))}
         </ul>

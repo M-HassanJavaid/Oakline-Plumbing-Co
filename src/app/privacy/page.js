@@ -1,16 +1,16 @@
 /**
- * Privacy Notice page for Oakline Plumbing Co.
- * Server Component explaining data handling in this demo and considerations for real production.
+ * Privacy Policy page for Pathmaker Plumbing.
+ * Server Component presenting authentic customer privacy and data handling practices.
  */
 
 import React from 'react';
 import Link from 'next/link';
 import { PageHero } from '@/components/sections/PageHero';
-import { Notice } from '@/components/ui/Notice';
+import { SITE } from '@/data/site';
 
 export const metadata = {
-  title: 'Privacy Notice | Oakline Plumbing Co. (Concept)',
-  description: 'How this concept site handles form information.',
+  title: 'Privacy Policy | Pathmaker Plumbing Charlotte, NC',
+  description: 'How Pathmaker Plumbing collects, protects, and handles customer information.',
 };
 
 export default function PrivacyPage() {
@@ -18,52 +18,58 @@ export default function PrivacyPage() {
     <div className="page-enter">
       <PageHero
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Privacy' }]}
-        h1="Privacy Notice"
-        intro="What happens to information entered on this concept site, written to match how the demo actually works."
+        h1="Privacy Policy"
+        intro="Pathmaker Plumbing respects your privacy. This policy describes how we collect, use, and protect personal information submitted through our website."
         primary={null}
         secondary={null}
       />
 
       <section className="section">
         <div className="wrap max-w-3xl prose-legal">
-          <Notice
-            tone="warn"
-            title="Planning placeholder"
-            body="This text describes how this demo behaves. It must be replaced and reviewed before any real business uses the site."
-          />
-
-          <h2>What this demo collects</h2>
+          <h2>Information We Collect</h2>
           <p>
-            The forms ask for your name, phone number, ZIP code, the service you need, and optionally a description, urgency, and email address.
+            When you submit a service inquiry, schedule a diagnostic visit, or contact us online, we collect personal details necessary to fulfill your plumbing request, including:
           </p>
-
-          <h2>Where it goes</h2>
-          <p>
-            Nowhere. Form entries are checked in your browser and held in memory only long enough to show the confirmation screen. Nothing is sent to a server, a plumber, or PlumbNexo.
-          </p>
-
-          <h2>How long it’s kept</h2>
-          <p>
-            Until you reload or close the page. The demo doesn’t use cookies, local storage, or analytics.
-          </p>
-
-          <h2>Photo uploads</h2>
-          <p>
-            Photo uploads are disabled. A live site would enable them only after defining secure storage, access, and retention.
-          </p>
-
-          <h2>What a real privacy notice must cover</h2>
           <ul>
-            <li>What data is collected and why it’s needed</li>
-            <li>Who receives requests and who can access them</li>
-            <li>How long information is kept</li>
-            <li>Any analytics, cookies, spam protection, or third-party form processors actually used</li>
-            <li>How visitors can ask for their information to be viewed or deleted</li>
+            <li>Your full name and contact information (phone number, email address)</li>
+            <li>Property address and ZIP code to verify service territory coverage</li>
+            <li>Description of the plumbing symptoms, fixture issues, or equipment involved</li>
           </ul>
+
+          <h2>How We Use Your Information</h2>
+          <p>
+            The information you provide is used strictly to:
+          </p>
+          <ul>
+            <li>Contact you regarding your plumbing service request or estimate</li>
+            <li>Dispatch our licensed plumbing technicians to your home or property</li>
+            <li>Provide clear, itemized repair and installation estimates</li>
+            <li>Communicate follow-up maintenance or warranty service when applicable</li>
+          </ul>
+
+          <h2>We Never Sell Your Data</h2>
+          <p>
+            Pathmaker Plumbing does not sell, rent, trade, or share your personal contact information with outside marketing firms or third-party advertisers under any circumstances.
+          </p>
+
+          <h2>Data Security &amp; Confidentiality</h2>
+          <p>
+            We implement administrative and technical safeguards to protect your personal details from unauthorized access, alteration, or disclosure. Customer records are accessible only to authorized Pathmaker Plumbing dispatch and service personnel.
+          </p>
+
+          <h2>Contact Us Regarding Privacy</h2>
+          <p>
+            If you have questions about this privacy policy or wish to update or delete your contact records, please contact our Charlotte office:
+          </p>
+          <p>
+            <strong>Pathmaker Plumbing</strong><br />
+            {SITE.address}<br />
+            Phone: <a href={`tel:${SITE.phone.tel}`} className="text-link">{SITE.phone.display}</a>
+          </p>
 
           <p className="mt-8">
             <Link href="/contact" className="text-link">
-              Back to the contact page
+              &larr; Return to Service Request Page
             </Link>
           </p>
         </div>

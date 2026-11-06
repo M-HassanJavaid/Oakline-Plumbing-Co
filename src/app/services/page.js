@@ -1,11 +1,10 @@
 /**
- * All Services directory page.
+ * All Services directory page for Pathmaker Plumbing.
  * Server Component presenting all core residential services, extended symptom matcher,
- * urgent guidance, and services FAQ.
+ * extra services, urgent guidance, and services FAQ.
  */
 
 import React from 'react';
-import Link from 'next/link';
 import { PageHero } from '@/components/sections/PageHero';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ServiceCard } from '@/components/sections/ServiceCard';
@@ -15,31 +14,32 @@ import { FinalCta } from '@/components/sections/FinalCta';
 import { Button } from '@/components/ui/Button';
 import { CallButton } from '@/components/ui/CallButton';
 import { IconBadge } from '@/components/ui/IconBadge';
-import { SERVICES } from '@/data/services';
+import { SERVICES, EXTRA_SERVICES } from '@/data/services';
 import { FAQ } from '@/data/faq';
 import { SITE } from '@/data/site';
 
 export const metadata = {
-  title: 'Residential Plumbing Services | Oakline Plumbing Co. (Concept)',
+  title: 'Residential Plumbing Services in Charlotte, NC | Pathmaker Plumbing',
   description:
-    'Concept services directory: drain cleaning, leak repair, water heaters, and sewer lines, with help finding the right service by symptom.',
+    'Expert residential plumbing in Charlotte: drain cleaning, slab leak detection, water heaters, and sewer lines. Straight answers, clear estimates, and 25+ years experience.',
 };
 
 export default function ServicesPage() {
   const steps = [
-    ['Request', 'You send the form or call with a few details.'],
-    ['Confirmation', 'Staff confirm your area, availability, and next step.'],
-    ['Assessment', 'The problem is looked at in person.'],
-    ['Proposed next step', 'You get options and decide what to approve.'],
+    ['Request', 'Send an online inquiry or call our Charlotte office directly.'],
+    ['Confirmation', 'Our dispatch team confirms your address, details, and scheduling window.'],
+    ['In-Person Diagnosis', 'A licensed technician evaluates the root cause with proper tools.'],
+    ['Options & Upfront Approval', 'We explain your repair options and pricing before any work begins.'],
   ];
 
   return (
     <div className="page-enter">
       <PageHero
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Services' }]}
-        h1="Plumbing Services for Your Home"
-        intro="Residential plumbing help for Charlotte homeowners, landlords, and property managers. This concept covers four core services, each with its own page explaining what’s involved."
-        primary={{ label: 'Request Plumbing Service', to: '/contact' }}
+        h1="Residential Plumbing Services in Charlotte, NC"
+        intro="Dependable plumbing solutions for homeowners across Greater Charlotte, Concord, Harrisburg, Huntersville, and Matthews. We diagnose the true root cause first, explain your options clearly, and recommend only the repairs you actually need."
+        primary={{ label: 'Request Service Online', to: '/contact' }}
+        secondary={{ label: `Call ${SITE.phone.display}`, to: `tel:${SITE.phone.tel}`, variant: 'secondary' }}
       />
 
       {/* Directory Grid */}
@@ -47,8 +47,8 @@ export default function ServicesPage() {
         <div className="wrap">
           <SectionHeading
             id="svc-dir"
-            title="Choose the service that fits your problem"
-            intro="Each page goes into symptoms, scope, cost factors, and common questions."
+            title="Core Plumbing Services"
+            intro="Explore our four primary service disciplines. Each service page covers common symptoms, diagnostic methods, pricing factors, and real customer reviews."
           />
           <div className="grid md:grid-cols-2 gap-6">
             {SERVICES.map((s) => (
@@ -65,21 +65,21 @@ export default function ServicesPage() {
             <IconBadge name="tools" tone="aqua" />
             <div>
               <h2 id="svc-extra" className="h3 text-[1.35rem]">
-                Other plumbing work
+                Additional Fixture &amp; Repair Capabilities
               </h2>
-              <p className="text-charcoal-70 mt-2 measure">
-                Fixtures, toilets, faucets, and garbage disposals would appear here as a short list, only if the real company handles them. They don’t get separate pages unless there’s something genuinely useful to say.
+              <p className="text-charcoal-70 mt-2 measure leading-relaxed">
+                In addition to major pipe diagnostics and water heater installations, our licensed plumbers handle routine residential repairs, replacements, and fixture upgrades throughout Mecklenburg and Cabarrus counties.
               </p>
-              <div className="flex flex-wrap gap-2 mt-5">
-                {['Toilets', 'Faucets', 'Fixtures', 'Garbage disposals'].map((t) => (
-                  <span key={t} className="chip chip-static !border-dashed">
+              <div className="flex flex-wrap gap-2.5 mt-5">
+                {EXTRA_SERVICES.map((t) => (
+                  <span
+                    key={t}
+                    className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-soft border border-[#CFE0DD] text-sm font-medium text-teal"
+                  >
                     {t}
                   </span>
                 ))}
               </div>
-              <p className="text-sm text-charcoal-70 mt-3">
-                Placeholder list. Not offered as confirmed services.
-              </p>
             </div>
           </div>
         </div>
@@ -90,8 +90,8 @@ export default function ServicesPage() {
         <div className="wrap">
           <SectionHeading
             id="svc-sym"
-            title="Find help by symptom"
-            intro="Only know what you’re seeing? Pick it here to find the page to start with."
+            title="Find Help by Symptom"
+            intro="Not sure which plumbing service you need? Select the symptom you’re seeing in your home to find the recommended next step."
           />
           <SymptomFinder extended id="svc-finder" />
         </div>
@@ -100,35 +100,40 @@ export default function ServicesPage() {
       {/* Urgent vs Standard workflow */}
       <section className="section" aria-labelledby="svc-urgent">
         <div className="wrap grid lg:grid-cols-2 gap-6">
-          <div className="rounded-panel bg-copper-100 border border-[#F1CFA8] p-6 md:p-10">
-            <IconBadge name="alert" tone="white" />
-            <h2 id="svc-urgent" className="h3 text-[1.4rem] mt-5">
-              Urgent plumbing needs
-            </h2>
-            <p className="mt-3 text-charcoal measure">
-              If water is actively leaking, sewage is backing up, or you have no water, call rather than sending a form. Phone calls reach someone faster than a request queue.
-            </p>
-            <p className="mt-3 text-[0.95rem] text-charcoal-70">
-              {SITE.hoursNote} This concept doesn’t claim 24/7 or emergency availability.
-            </p>
+          <div className="rounded-panel bg-copper-100 border border-[#F1CFA8] p-6 md:p-10 flex flex-col justify-between">
+            <div>
+              <IconBadge name="alert" tone="white" />
+              <h2 id="svc-urgent" className="h3 text-[1.4rem] mt-5 text-charcoal">
+                Active Leaks &amp; Urgent Problems
+              </h2>
+              <p className="mt-3 text-charcoal measure leading-relaxed">
+                If water is spraying, flooding living spaces, or sewage is backing into your home, calling our office directly is the fastest way to get help.
+              </p>
+              <p className="mt-3 text-sm text-charcoal-80">
+                <strong>Hours:</strong> {SITE.hours}
+              </p>
+              <p className="mt-2 text-xs text-charcoal-70">
+                {SITE.emergencyPolicy}
+              </p>
+            </div>
             <div className="mt-6">
-              <CallButton variant="primary" label="Call Now" />
+              <CallButton variant="primary" label={`Call ${SITE.phone.display}`} />
             </div>
           </div>
 
           <div className="rounded-panel bg-white border border-[#D6E5E2] p-6 md:p-10">
             <IconBadge name="clipboard" tone="aqua" />
-            <h2 className="h3 text-[1.4rem] mt-5">How service requests work</h2>
+            <h2 className="h3 text-[1.4rem] mt-5">How We Handle Every Service Call</h2>
             <ol className="mt-5 space-y-4">
               {steps.map(([t, d], i) => (
                 <li key={i} className="flex gap-4">
                   <span className="w-8 h-8 rounded-full bg-teal text-white grid place-items-center font-display font-bold text-sm flex-none">
                     {i + 1}
                   </span>
-                  <span>
+                  <div>
                     <span className="font-semibold text-teal block">{t}</span>
-                    <span className="text-charcoal-70 text-[0.96rem]">{d}</span>
-                  </span>
+                    <span className="text-charcoal-70 text-[0.95rem]">{d}</span>
+                  </div>
                 </li>
               ))}
             </ol>
@@ -144,15 +149,15 @@ export default function ServicesPage() {
               <IconBadge name="pin" tone="aqua" />
               <div>
                 <h2 id="svc-cov" className="h3 text-[1.3rem]">
-                  Check coverage before you request
+                  Serving Greater Charlotte &amp; Nearby Communities
                 </h2>
                 <p className="text-charcoal-70 mt-1">
-                  Charlotte is the focus of this concept. Coverage is confirmed for every address.
+                  Based at 5676 Underwood Ave in Charlotte. Serving Mecklenburg, Cabarrus, and Union counties.
                 </p>
               </div>
             </div>
             <Button
-              label="See Service Areas"
+              label="Check Service Areas &rarr;"
               href="/service-areas"
               variant="secondary"
             />
@@ -165,9 +170,9 @@ export default function ServicesPage() {
         <div className="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
           <div>
             <h2 id="svc-faq" className="h2">
-              Service questions
+              Frequently Asked Questions
             </h2>
-            <p className="lede mt-4">What to know before choosing a service.</p>
+            <p className="lede mt-4">Common questions about scheduling, estimates, and diagnostic visits.</p>
           </div>
           <Accordion items={FAQ.services} />
         </div>
@@ -175,9 +180,10 @@ export default function ServicesPage() {
 
       {/* Final CTA */}
       <FinalCta
-        heading="Know what you need, or want help figuring it out?"
-        text="Send a short request and choose “Other / Not sure” if you’re unsure. For urgent problems, call."
-        primary={{ label: 'Request Plumbing Service', to: '/contact' }}
+        heading="Have a Plumbing Issue in Charlotte?"
+        text="Submit a short service inquiry or call (704) 733-7507 to speak with our team. We diagnose first and explain every option upfront."
+        primary={{ label: 'Request Service Online', to: '/contact' }}
+        secondary={{ label: `Call ${SITE.phone.display}`, to: `tel:${SITE.phone.tel}` }}
       />
     </div>
   );

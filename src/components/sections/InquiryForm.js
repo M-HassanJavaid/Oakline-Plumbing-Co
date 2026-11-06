@@ -20,7 +20,6 @@ import Link from 'next/link';
 import { SERVICE_OPTIONS } from '@/data/services';
 import { useSubmission } from '@/context/SubmissionContext';
 import { useCallModal } from '@/context/CallModalContext';
-import { DemoTag } from '@/components/ui/DemoTag';
 import { Notice } from '@/components/ui/Notice';
 import { Icon } from '@/components/ui/Icon';
 
@@ -212,7 +211,9 @@ export function InquiryForm({
         <h3 id={`${formId}-title`} className="h3 text-[1.3rem]">
           {heading || 'Service request'}
         </h3>
-        <DemoTag text="Demo form — nothing is sent" />
+        <span className="text-xs font-semibold uppercase tracking-wider text-teal bg-aqua-50 border border-[#B9D3D0] px-2.5 py-1 rounded-md">
+          Online Request
+        </span>
       </div>
 
       <p className="text-sm text-charcoal-70">
@@ -450,7 +451,7 @@ export function InquiryForm({
                       onChange={handleInputChange}
                     />
                     <span>
-                      <span className="dot" />
+                      <span className="dot" aria-hidden="true" />
                       {lbl}
                     </span>
                   </label>
@@ -532,51 +533,6 @@ export function InquiryForm({
         )}
       </div>
 
-      {/* Demo simulation control */}
-      <div className="rounded-2xl bg-soft border border-[#E1ECEA] p-4">
-        <label className="flex items-start gap-3 text-sm cursor-pointer">
-          <input
-            type="checkbox"
-            name="simulateFailure"
-            checked={formData.simulateFailure}
-            onChange={handleInputChange}
-            className="mt-0.5 w-5 h-5 accent-[#153B4A] flex-none"
-          />
-          <span>
-            <span className="font-semibold text-teal">Demo control:</span>{' '}
-            simulate a failed send to preview the error and retry state.
-          </span>
-        </label>
-      </div>
-
-      {/* Simulated error notice */}
-      {submissionFailed && (
-        <div role="alert">
-          <Notice tone="error" title="Your request wasn’t sent">
-            The connection to the request service failed. Everything you entered is still here.{' '}
-            <button
-              type="button"
-              className="text-link"
-              onClick={executeSubmit}
-            >
-              Try again
-            </button>{' '}
-            or{' '}
-            <button
-              type="button"
-              className="text-link"
-              onClick={(e) => {
-                e.preventDefault();
-                openModal(e.currentTarget);
-              }}
-            >
-              call instead
-            </button>
-            .
-          </Notice>
-        </div>
-      )}
-
       {/* Action buttons */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-1">
         <button
@@ -612,9 +568,9 @@ export function InquiryForm({
       <p className="text-sm text-charcoal-70 flex items-start gap-2">
         <Icon name="lock" className="w-4 h-4 mt-0.5 text-teal flex-none" />
         <span>
-          Sending a request doesn’t book an appointment. In this demo, details stay in your browser and are cleared when you leave. Read the{' '}
+          Details are stored securely, used only for your plumbing inquiry, and never shared with third-party marketers. The team will respond promptly during business hours. Read our{' '}
           <Link href="/privacy" className="text-link">
-            privacy notice
+            privacy policy
           </Link>
           .
         </span>

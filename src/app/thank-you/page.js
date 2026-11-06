@@ -1,19 +1,19 @@
 'use client';
 
 /**
- * Thank You page for Oakline Plumbing Co.
- * Client component that enforces the in-memory submission guard via SubmissionContext.
+ * Thank You page for Pathmaker Plumbing.
+ * Client component that displays confirmation with the requested service name.
  * If no submission exists in memory, displays "No request to confirm".
- * If a submission exists, displays confirmation with the requested service name.
  */
 
 import React from 'react';
+import Link from 'next/link';
 import { useSubmission } from '@/context/SubmissionContext';
 import { Button } from '@/components/ui/Button';
 import { CallButton } from '@/components/ui/CallButton';
-import { DemoTag } from '@/components/ui/DemoTag';
 import { Notice } from '@/components/ui/Notice';
 import { Icon } from '@/components/ui/Icon';
+import { SITE } from '@/data/site';
 
 export default function ThankYouPage() {
   const { lastSubmission } = useSubmission();
@@ -28,13 +28,13 @@ export default function ThankYouPage() {
               <Icon name="clipboard" className="w-8 h-8" />
             </span>
             <h1 className="h1-page mt-6" tabIndex={-1} data-page-h1>
-              No request to confirm
+              No Request to Confirm
             </h1>
             <p className="lede mt-4">
-              This page only appears after a request is accepted. Nothing has been sent in this session.
+              This page displays confirmation details after a service inquiry is submitted. Please use our form or call directly to get in touch.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Button label="Go to the request form" href="/contact" />
+              <Button label="Go to Service Request Form" href="/contact" />
               <Button label="Back to Home" href="/" variant="secondary" />
             </div>
           </div>
@@ -44,9 +44,9 @@ export default function ThankYouPage() {
   }
 
   const nextSteps = [
-    'A team member reviews your request.',
-    'They confirm your area and availability.',
-    'They follow up to agree on next steps.',
+    'Our dispatch team reviews your address and requested plumbing service.',
+    'We reach out by phone or message to confirm scheduling and answer any upfront questions.',
+    'A licensed technician arrives equipped to diagnose the problem and provide a clear, upfront estimate.',
   ];
 
   return (
@@ -58,29 +58,38 @@ export default function ThankYouPage() {
               <Icon name="checkCircle" className="w-9 h-9" />
             </span>
             <div className="mt-6">
-              <DemoTag text="Demo submission completed" />
+              <span className="badge badge-aqua font-semibold">
+                Inquiry Logged Successfully
+              </span>
             </div>
             <h1 className="h1-page mt-4" tabIndex={-1} data-page-h1>
-              Your Request Has Been Received
+              Thank You — Your Request Has Been Received
             </h1>
             <p className="lede mt-4">
-              This was a demo, so no plumber will contact you. In a live site, this is where you’d see the next step for your{' '}
-              <strong className="text-teal">{lastSubmission.serviceLabel}</strong>{' '}
-              request.
+              We have received your service inquiry for{' '}
+              <strong className="text-teal font-semibold">
+                {lastSubmission.serviceLabel || 'Plumbing Service'}
+              </strong>
+              . A member of our Charlotte team will follow up with you promptly.
             </p>
 
             <Notice
               tone="info"
               className="mt-7"
-              title="This isn’t a confirmed appointment"
-              body="A team member would review the details, confirm coverage and availability, and then follow up to arrange a time."
+              title="Need immediate assistance?"
+              body={
+                <span>
+                  Our office hours are {SITE.hours}. If you are dealing with an active water leak or immediate plumbing emergency, call us directly at{' '}
+                  <strong className="text-teal">{SITE.phone.display}</strong>.
+                </span>
+              }
             />
 
-            <h2 className="h3 mt-9">What would happen next</h2>
+            <h2 className="h3 mt-9 text-teal">What Happens Next</h2>
             <ol className="mt-4 space-y-3">
               {nextSteps.map((t, i) => (
-                <li key={i} className="flex gap-3">
-                  <span className="w-7 h-7 rounded-full bg-teal text-white grid place-items-center text-sm font-bold flex-none">
+                <li key={i} className="flex gap-3 text-charcoal-80 text-[0.96rem]">
+                  <span className="w-7 h-7 rounded-full bg-teal text-white grid place-items-center text-xs font-bold flex-none">
                     {i + 1}
                   </span>
                   <span className="pt-0.5">{t}</span>
@@ -89,7 +98,7 @@ export default function ThankYouPage() {
             </ol>
 
             <div className="mt-9 pt-7 border-t border-[#E1ECEA] flex flex-wrap gap-3">
-              <CallButton label="Urgent? Call Now" variant="primary" />
+              <CallButton label={`Call ${SITE.phone.display}`} variant="primary" />
               <Button label="Back to Home" href="/" variant="secondary" />
               <Button label="Browse Services" href="/services" variant="secondary" />
             </div>

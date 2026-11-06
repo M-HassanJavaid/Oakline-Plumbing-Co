@@ -121,7 +121,7 @@ export function NavDropdown() {
       <button
         ref={triggerRef}
         type="button"
-        className="nav-link"
+        className="nav-link whitespace-nowrap flex-shrink-0"
         aria-expanded={isOpen}
         aria-controls="svc-menu"
         aria-current={isActive ? 'page' : undefined}
@@ -141,17 +141,17 @@ export function NavDropdown() {
       <div
         id="svc-menu"
         className={cn(
-          'dropdown-panel absolute left-0 top-[calc(100%+8px)] w-[340px] bg-white rounded-2xl border border-[#D6E5E2] shadow-lift p-2'
+          'dropdown-panel absolute left-0 top-[calc(100%+8px)] w-[360px] bg-white rounded-2xl border border-[#D6E5E2] shadow-lift p-2 whitespace-normal'
         )}
         data-open={isOpen ? 'true' : 'false'}
         data-dropdown-panel
       >
-        <ul>
+        <ul className="whitespace-normal">
           <li>
             <Link
               href="/services"
               className={cn(
-                'flex items-center gap-3 rounded-xl px-3 py-3 hover:bg-aqua-50 font-semibold text-teal',
+                'flex items-center gap-3 rounded-xl px-3 py-3 hover:bg-aqua-50 font-semibold text-teal whitespace-normal',
                 pathname === '/services' && 'bg-aqua-50'
               )}
               aria-current={pathname === '/services' ? 'page' : undefined}
@@ -172,7 +172,7 @@ export function NavDropdown() {
                 <Link
                   href={`/services/${s.slug}`}
                   className={cn(
-                    'flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-aqua-50',
+                    'flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-aqua-50 whitespace-normal',
                     isSubActive && 'bg-aqua-50'
                   )}
                   aria-current={isSubActive ? 'page' : undefined}
@@ -183,11 +183,11 @@ export function NavDropdown() {
                   <span className="w-9 h-9 rounded-lg bg-aqua text-teal grid place-items-center flex-none">
                     <Icon name={s.icon} className="w-[18px] h-[18px]" />
                   </span>
-                  <span>
+                  <span className="min-w-0 flex-1 whitespace-normal">
                     <span className="block font-semibold text-teal text-[0.95rem]">
                       {s.navLabel}
                     </span>
-                    <span className="block text-[0.82rem] text-charcoal-70 leading-snug">
+                    <span className="block text-[0.82rem] text-charcoal-70 leading-snug whitespace-normal">
                       {s.problem}
                     </span>
                   </span>

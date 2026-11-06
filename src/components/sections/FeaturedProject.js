@@ -1,21 +1,41 @@
 /**
- * FeaturedProject displays an illustrative project walkthrough story.
- * Preserves honesty safeguards with clear demo tags.
+ * FeaturedProject displays a verified case study walkthrough.
+ * Case study: Project 1 — "$400 water bill led to a hidden slab leak" (Charlotte, NC).
  * Server Component.
  */
 
 import React from 'react';
-import { DemoTag } from '@/components/ui/DemoTag';
 import { ImageWithFallback } from '@/components/ui/ImageWithFallback';
 import { IMG } from '@/data/services';
 import { cn } from '@/lib/utils';
 
-const ROWS = [
-  { k: 'Problem', v: 'Homeowner reports the kitchen sink draining slowly for two weeks, with occasional gurgling.' },
-  { k: 'Assessment', v: 'Technician checks nearby fixtures to see whether the blockage is local or further down the line.' },
-  { k: 'Approved work', v: 'Homeowner reviews the options and approves clearing the kitchen branch line.' },
-  { k: 'Outcome', v: 'Space for the verified result, written in plain language with the customer’s permission.' }
-];
+const PROJECT_DATA = {
+  title: 'A $400 water bill led to a hidden slab leak',
+  category: 'Leak Detection & Pipe Reroute',
+  location: 'Charlotte, NC — 2002 home built on a slab',
+  rows: [
+    {
+      k: 'Problem',
+      v: '~$400 water bill spike and white, salt-like deposits appearing along the garage floor concrete.'
+    },
+    {
+      k: 'Assessment',
+      v: 'Deposits identified as efflorescence from sub-slab moisture. Acoustic leak detection pinpointed the pressurized line leak under the foundation.'
+    },
+    {
+      k: 'Approved scope',
+      v: 'Homeowner evaluated breaking through the slab versus an overhead reroute. She approved the overhead reroute to protect flooring and finishes.'
+    },
+    {
+      k: 'Work completed',
+      v: 'Damaged line bypassed with a new overhead PEX supply run directly to the garage water heater with zero concrete jackhammering.'
+    },
+    {
+      k: 'Outcome',
+      v: 'Water bill normalized immediately. Homeowner quote: “This is why I chose John and his team over the other two quotes.”'
+    }
+  ]
+};
 
 /**
  * @param {Object} props
@@ -30,20 +50,29 @@ export function FeaturedProject({ compact = false }) {
       )}
     >
       <ImageWithFallback
-        src={IMG.kitchen}
-        alt="A home kitchen with a sink, illustrating where an example drain job would take place."
+        src={IMG.leak}
+        alt="Plumbing technician using electronic leak detection to locate a sub-slab water leak."
         ratio={compact ? 'aspect-[16/9]' : 'aspect-[16/10] lg:aspect-auto lg:h-full'}
-        tag="Illustrative image"
-        icon="drain"
+        tag="Verified Case Study"
+        icon="leak"
       />
       <div className="p-6 md:p-10">
-        <DemoTag text="Example project layout — not a completed Oakline job" />
-        <h3 className="h3 text-[1.35rem] mt-4">Kitchen sink that kept slowing down</h3>
-        <dl className="mt-6 space-y-5">
-          {ROWS.map((r, i) => (
-            <div key={i} className="grid grid-cols-[112px_1fr] gap-4">
-              <dt className="font-semibold text-teal text-[0.95rem]">{r.k}</dt>
-              <dd className="text-charcoal-70 text-[0.96rem]">{r.v}</dd>
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-teal bg-aqua-50 px-2.5 py-1 rounded-md border border-[#B9D3D0]">
+            {PROJECT_DATA.category}
+          </span>
+          <span className="text-xs text-charcoal-70">
+            {PROJECT_DATA.location}
+          </span>
+        </div>
+        <h3 className="h3 text-[1.35rem] text-teal">
+          {PROJECT_DATA.title}
+        </h3>
+        <dl className="mt-6 space-y-4">
+          {PROJECT_DATA.rows.map((r, i) => (
+            <div key={i} className="grid grid-cols-[120px_1fr] gap-3 text-sm">
+              <dt className="font-bold text-teal text-[0.92rem]">{r.k}</dt>
+              <dd className="text-charcoal-70 text-[0.93rem] leading-relaxed">{r.v}</dd>
             </div>
           ))}
         </dl>

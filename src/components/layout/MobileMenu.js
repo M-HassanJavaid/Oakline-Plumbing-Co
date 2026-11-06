@@ -16,7 +16,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from './Logo';
-import { NAV } from '@/data/site';
+import { NAV, SITE } from '@/data/site';
 import { SERVICES } from '@/data/services';
 import { Button } from '@/components/ui/Button';
 import { CallButton } from '@/components/ui/CallButton';
@@ -152,7 +152,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }) {
         className="sheet absolute right-0 top-0 h-full w-full max-w-[400px] bg-soft shadow-2xl flex flex-col"
       >
         <div className="h-[72px] px-5 flex items-center justify-between border-b border-[#DCE7E5]">
-          <Link href="/" onClick={onClose} aria-label="Oakline Plumbing Co. home">
+          <Link href="/" onClick={onClose} aria-label={`${SITE.name} home`}>
             <Logo />
           </Link>
           <button

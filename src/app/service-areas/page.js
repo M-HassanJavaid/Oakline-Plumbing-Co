@@ -1,15 +1,14 @@
 /**
- * Service Areas page for Oakline Plumbing Co.
- * Server Component presenting Charlotte demonstration focus, illustrative surrounding towns,
- * accessible tabular coverage list, services available, coverage FAQ, and interactive ZipChecker.
+ * Service Areas page for Pathmaker Plumbing.
+ * Server Component presenting Charlotte shop base (5676 Underwood Ave),
+ * surrounding towns, Charlotte neighborhoods, accessible coverage list, and ZIP checker.
  */
 
 import React from 'react';
 import Link from 'next/link';
-import { PageHero } from '@/components/sections/PageHero';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ScrollToButton } from '@/components/ui/ScrollToButton';
 import { CallButton } from '@/components/ui/CallButton';
+import { SectionHeading } from '@/components/ui/SectionHeading';
 import { CoverageMap } from '@/components/sections/CoverageMap';
 import { Icon } from '@/components/ui/Icon';
 import { IconBadge } from '@/components/ui/IconBadge';
@@ -18,15 +17,33 @@ import { Accordion } from '@/components/ui/Accordion';
 import { ZipChecker } from '@/components/sections/ZipChecker';
 import { SERVICES } from '@/data/services';
 import { FAQ } from '@/data/faq';
-import { SITE, ILLUSTRATIVE_TOWNS } from '@/data/site';
+import { SITE, NEARBY_TOWNS, CHARLOTTE_NEIGHBORHOODS } from '@/data/site';
 
 export const metadata = {
-  title: 'Charlotte Service Area | Oakline Plumbing Co. (Concept)',
+  title: 'Service Areas | Pathmaker Plumbing Charlotte, NC',
   description:
-    'Concept service area page centered on Charlotte, NC, with a demo ZIP check and accessible coverage list.',
+    'Pathmaker Plumbing serves homeowners and businesses throughout Charlotte, Concord, Harrisburg, Huntersville, Matthews, Mint Hill, and surrounding areas. Check your ZIP code.',
 };
 
 export default function ServiceAreasPage() {
+  const coverageData = [
+    {
+      county: 'Mecklenburg County',
+      areas: 'Charlotte, Huntersville, Cornelius, Davidson, Matthews, Pineville, Mint Hill, Ballantyne',
+      notes: 'Full residential service coverage including leak detection, water heaters, and sewer lines.',
+    },
+    {
+      county: 'Cabarrus County',
+      areas: 'Concord, Harrisburg, Kannapolis',
+      notes: 'Direct dispatch from our northeast Charlotte shop on Underwood Ave.',
+    },
+    {
+      county: 'Union County',
+      areas: 'Indian Trail, Weddington, Waxhaw, Stallings',
+      notes: 'Standard service coverage for scheduled installations and diagnostics.',
+    },
+  ];
+
   return (
     <div className="page-enter">
       <section className="relative overflow-hidden bg-aqua">
@@ -62,17 +79,24 @@ export default function ServiceAreasPage() {
           </nav>
           <div className="max-w-3xl">
             <h1 className="h1-page" tabIndex={-1} data-page-h1>
-              Plumbing Services in Charlotte & Nearby Communities
+              Plumbing Services in Charlotte &amp; Surrounding Communities
             </h1>
             <p className="lede mt-5 measure">
-              Check whether your address is likely to be covered before you send a request. Coverage is always confirmed by staff, because it can depend on the service and the schedule.
+              Based out of northeast Charlotte, Pathmaker Plumbing provides prompt, honest plumbing service across Mecklenburg, Cabarrus, and Union counties.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-4">
               <ScrollToButton
                 targetId="zip-check"
-                label="Confirm Coverage"
+                label="Check Your ZIP Code"
                 variant="primary"
               />
+              <a
+                href={`tel:${SITE.phone.tel}`}
+                className="btn btn-secondary inline-flex items-center gap-2"
+              >
+                <Icon name="phone" className="w-4 h-4" />
+                <span>Call {SITE.phone.display}</span>
+              </a>
             </div>
           </div>
         </div>
@@ -82,36 +106,38 @@ export default function ServiceAreasPage() {
       <section className="section" aria-labelledby="primary-h">
         <div className="wrap grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
-            <h2 id="primary-h" className="h2">
-              Charlotte is the focus
+            <span className="badge badge-aqua">Dispatch Center</span>
+            <h2 id="primary-h" className="h2 mt-3">
+              Centered in Northeast Charlotte
             </h2>
             <p className="lede mt-4">
-              This concept is designed around Charlotte, North Carolina. It doesn’t claim an office address, a dispatch radius, or a list of verified towns.
+              Our central shop is located at <strong>{SITE.address}</strong>. From this base near I-85 and University City, our service trucks quickly reach homes throughout the Greater Charlotte metro.
             </p>
-            <h3 className="h3 mt-10">Nearby communities</h3>
-            <p className="text-charcoal-70 mt-2">
-              A real company would list the towns it actually serves. The names below show how that list would look.
-            </p>
-            <ul className="flex flex-wrap gap-2 mt-5" aria-label="Illustrative community names">
-              <li>
-                <span className="chip chip-static !border-teal !bg-teal !text-white">
-                  <Icon name="pin" className="w-4 h-4" />
-                  Charlotte
-                </span>
-              </li>
-              {ILLUSTRATIVE_TOWNS.map((t) => (
-                <li key={t}>
-                  <span className="chip chip-static !border-dashed">{t}</span>
+
+            <h3 className="h3 mt-8 text-lg font-bold text-teal">Nearby Towns &amp; Suburbs</h3>
+            <ul className="flex flex-wrap gap-2 mt-3" aria-label="Nearby communities served">
+              {NEARBY_TOWNS.map((town) => (
+                <li key={town}>
+                  <span className="chip chip-static !border-[#CFE0DD] bg-white text-charcoal-80 font-medium">
+                    <Icon name="pin" className="w-3.5 h-3.5 text-copper-600" />
+                    {town}
+                  </span>
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-charcoal-70 mt-3 flex gap-2">
-              <Icon name="info" className="w-4 h-4 mt-0.5 text-teal flex-none" />
-              <span>
-                Dashed names are illustrative only and aren’t presented as verified coverage.
-              </span>
-            </p>
+
+            <h3 className="h3 mt-6 text-lg font-bold text-teal">Charlotte Neighborhoods</h3>
+            <ul className="flex flex-wrap gap-2 mt-3" aria-label="Charlotte neighborhoods served">
+              {CHARLOTTE_NEIGHBORHOODS.map((neighborhood) => (
+                <li key={neighborhood}>
+                  <span className="chip chip-static !border-[#CFE0DD] bg-soft text-charcoal-70 text-xs font-medium">
+                    {neighborhood}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
+
           <CoverageMap />
         </div>
       </section>
@@ -124,44 +150,45 @@ export default function ServiceAreasPage() {
         <div className="wrap grid lg:grid-cols-[.85fr_1.15fr] gap-10 lg:gap-14">
           <div>
             <h2 id="text-list-h" className="h2">
-              Coverage list
+              Coverage by County
             </h2>
             <p className="lede mt-4">
-              A text version of the map, so coverage is clear for everyone, including screen reader users.
+              A comprehensive breakdown of our primary service territory across the Charlotte metropolitan region.
+            </p>
+            <p className="text-sm text-charcoal-70 mt-4 leading-relaxed">
+              If your home is located just outside these counties, call our dispatch office at <strong>{SITE.phone.display}</strong> to verify technician availability for your specific repair.
             </p>
           </div>
           <div className="overflow-x-auto rounded-2xl border border-[#D6E5E2]">
             <table className="w-full text-left text-[0.96rem]">
-              <caption className="sr-only">Coverage list for this concept</caption>
+              <caption className="sr-only">Pathmaker Plumbing coverage by county</caption>
               <thead className="bg-aqua-50 text-teal">
                 <tr>
                   <th scope="col" className="px-5 py-3.5 font-semibold">
-                    Area
+                    County
                   </th>
                   <th scope="col" className="px-5 py-3.5 font-semibold">
-                    Status in this concept
+                    Key Communities
+                  </th>
+                  <th scope="col" className="px-5 py-3.5 font-semibold">
+                    Service Scope
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E1ECEA] bg-white">
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-semibold text-teal">
-                    Charlotte
-                  </th>
-                  <td className="px-5 py-4">Demonstration focus</td>
-                </tr>
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-semibold text-teal">
-                    Nearby towns
-                  </th>
-                  <td className="px-5 py-4">Illustrative only, pending real coverage</td>
-                </tr>
-                <tr>
-                  <th scope="row" className="px-5 py-4 font-semibold text-teal">
-                    Coverage by service
-                  </th>
-                  <td className="px-5 py-4">Would be stated if it differs by service</td>
-                </tr>
+                {coverageData.map((row, i) => (
+                  <tr key={i}>
+                    <th scope="row" className="px-5 py-4 font-semibold text-teal whitespace-nowrap align-top">
+                      {row.county}
+                    </th>
+                    <td className="px-5 py-4 text-charcoal-80 align-top">
+                      {row.areas}
+                    </td>
+                    <td className="px-5 py-4 text-charcoal-70 text-sm align-top">
+                      {row.notes}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -173,15 +200,15 @@ export default function ServiceAreasPage() {
         <div className="wrap">
           <SectionHeading
             id="avail-h"
-            title="Services available in the area"
-            intro="All four core services are part of this concept. A live site would note any that are limited to certain areas."
+            title="Services Available Across Our Territory"
+            intro="All core diagnostics, repairs, and installations are available throughout our Charlotte coverage area."
           />
           <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {SERVICES.map((s) => (
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="card-link flex items-center gap-3 bg-white rounded-2xl border border-[#D6E5E2] p-5 min-h-[72px]"
+                  className="card-link flex items-center gap-3 bg-white rounded-2xl border border-[#D6E5E2] p-5 min-h-[72px] hover:border-teal transition-colors"
                 >
                   <IconBadge name={s.icon} tone="aqua" />
                   <span className="font-semibold text-teal">{s.name}</span>
@@ -192,13 +219,13 @@ export default function ServiceAreasPage() {
           <div className="mt-10 grid md:grid-cols-2 gap-5">
             <Notice
               tone="info"
-              title="Hours and dispatch limits"
-              body={`${SITE.hoursNote} A live site would also state any after-hours limits.`}
+              title="Operating Hours &amp; Scheduling"
+              body={`${SITE.hoursNote} Call ${SITE.phone.display} for scheduling windows and same-day availability.`}
             />
             <Notice
               tone="info"
-              title="Coverage can vary by service"
-              body="Larger jobs, such as sewer work or water heater replacement, may have different coverage than smaller repairs."
+              title="After-Hours &amp; Urgent Calls"
+              body={SITE.emergencyPolicy}
             />
           </div>
         </div>
@@ -209,8 +236,11 @@ export default function ServiceAreasPage() {
         <div className="wrap grid lg:grid-cols-[.8fr_1.2fr] gap-10 lg:gap-16">
           <div>
             <h2 id="cfaq-h" className="h2">
-              Coverage questions
+              Coverage &amp; Service FAQ
             </h2>
+            <p className="text-charcoal-70 mt-3 text-[0.98rem]">
+              Common questions about our Charlotte service area, trip assessments, and technician scheduling.
+            </p>
           </div>
           <Accordion items={FAQ.areas} />
         </div>
@@ -230,13 +260,13 @@ export default function ServiceAreasPage() {
               tabIndex={-1}
               data-scroll-target="zip-check"
             >
-              Confirm your coverage
+              Verify Your ZIP Code
             </h2>
             <p className="mt-4 text-white/80 text-[1.06rem] measure">
-              Enter your ZIP code for a quick check, then send a request or call so staff can confirm your address.
+              Enter your 5-digit postal code below to instantly confirm service coverage for your home or property in the Greater Charlotte area.
             </p>
             <div className="mt-6">
-              <CallButton variant="ghost-light" label="Call to confirm" />
+              <CallButton variant="ghost-light" label={`Call ${SITE.phone.display}`} />
             </div>
           </div>
           <div className="bg-white rounded-[22px] p-6 md:p-8 shadow-lift text-charcoal on-light">

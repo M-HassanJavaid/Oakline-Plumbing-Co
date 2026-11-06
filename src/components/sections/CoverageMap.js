@@ -1,108 +1,31 @@
 /**
- * CoverageMap renders the stylized Charlotte coverage SVG diagram.
- * Server Component with descriptive text and accessible SVG elements.
+ * CoverageMap renders the interactive Charlotte, NC location map.
+ * Points to Pathmaker Plumbing's shop location at 5676 Underwood Ave, Charlotte, NC 28213.
+ * Server Component.
  */
 
 import React from 'react';
+import { SITE } from '@/data/site';
 
 export function CoverageMap() {
-  const horizontalGridLines = Array.from({ length: 9 }, (_, i) => i * 36 + 6);
-  const verticalGridLines = Array.from({ length: 12 }, (_, i) => i * 36 + 2);
+  const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(
+    SITE.address
+  )}&t=&z=12&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <figure className="bg-white rounded-panel border border-[#D6E5E2] p-5 md:p-7 shadow-card">
-      <svg
-        viewBox="0 0 400 300"
-        className="w-full h-auto"
-        role="img"
-        aria-labelledby="mapTitle mapDesc"
-      >
-        <title id="mapTitle">Stylized coverage diagram</title>
-        <desc id="mapDesc">
-          A simplified diagram showing Charlotte at the center as the demonstration focus,
-          with an unlabeled dashed ring representing coverage that would be confirmed for a real business.
-        </desc>
-        <rect width="400" height="300" rx="16" fill="#F6F8F7" />
-        <g stroke="#DCEFEB" strokeWidth="1">
-          {horizontalGridLines.map((y, i) => (
-            <path key={`h-${i}`} d={`M0 ${y}H400`} />
-          ))}
-          {verticalGridLines.map((x, i) => (
-            <path key={`v-${i}`} d={`M${x} 0V300`} />
-          ))}
-        </g>
-        <path
-          d="M-10 210 C 80 190, 120 240, 200 205 S 330 150, 410 175"
-          fill="none"
-          stroke="#C5E4DE"
-          strokeWidth="10"
-          strokeLinecap="round"
+    <figure className="bg-white rounded-panel border border-[#D6E5E2] p-3 md:p-4 shadow-card overflow-hidden">
+      <div className="relative w-full h-[320px] rounded-2xl overflow-hidden bg-[#F6F8F7] border border-[#E1ECEA]">
+        <iframe
+          title={`${SITE.name} Shop Location — ${SITE.address}`}
+          src={mapUrl}
+          className="w-full h-full border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         />
-        <path
-          d="M150 -10 C 170 70, 140 120, 190 160 S 250 260, 230 310"
-          fill="none"
-          stroke="#E1ECEA"
-          strokeWidth="6"
-        />
-        <circle
-          cx="200"
-          cy="150"
-          r="118"
-          fill="none"
-          stroke="#9DBFBB"
-          strokeWidth="2"
-          strokeDasharray="6 7"
-        />
-        <circle
-          cx="200"
-          cy="150"
-          r="62"
-          fill="#DCEFEB"
-          stroke="#153B4A"
-          strokeWidth="2"
-        />
-        <circle
-          cx="200"
-          cy="150"
-          r="9"
-          fill="#E8A35D"
-          stroke="#153B4A"
-          strokeWidth="2.5"
-        />
-        <text
-          x="200"
-          y="128"
-          textAnchor="middle"
-          fontFamily="Manrope, sans-serif"
-          fontWeight="800"
-          fontSize="17"
-          fill="#153B4A"
-        >
-          Charlotte
-        </text>
-        <text
-          x="200"
-          y="182"
-          textAnchor="middle"
-          fontFamily="Inter, sans-serif"
-          fontSize="11"
-          fill="#4A5C63"
-        >
-          Demonstration focus
-        </text>
-        <text
-          x="200"
-          y="285"
-          textAnchor="middle"
-          fontFamily="Inter, sans-serif"
-          fontSize="11"
-          fill="#4A5C63"
-        >
-          Dashed ring: coverage confirmed per address
-        </text>
-      </svg>
-      <figcaption className="mt-4 text-sm text-charcoal-70">
-        Diagram only. A live site would show verified service boundaries with a matching text list.
+      </div>
+      <figcaption className="mt-3 px-1 text-sm text-charcoal-70">
+        <strong className="text-teal font-semibold">Service territory:</strong>{' '}
+        Shop located at {SITE.address} ({SITE.addressNeighborhood}), serving Charlotte and surrounding Mecklenburg/Cabarrus communities.
       </figcaption>
     </figure>
   );

@@ -1,9 +1,7 @@
 'use client';
 
 /**
- * CallButton component that triggers the demo call modal.
- * Fictional demo honesty safeguard: Phone buttons must open an educational dialog
- * rather than attempting to place a phone call to a fictional 555-01XX number.
+ * CallButton component that triggers the call modal or direct phone contact.
  * Client component because it consumes CallModalContext.
  */
 

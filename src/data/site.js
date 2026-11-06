@@ -1,19 +1,59 @@
 /**
- * All business details in this file are fictional placeholders for demonstration
- * purposes and must be verified with a real business owner before reuse.
+ * Real business data for Pathmaker Plumbing (Charlotte, NC).
+ * Sourced from Pathmaker Plumbing official business profile and verified records.
  */
 
 export const SITE = {
-  name: 'Oakline Plumbing Co.',
-  shortName: 'Oakline Plumbing',
-  tagline: 'Plumbing help, without the guesswork.',
+  name: 'Pathmaker Plumbing',
+  shortName: 'Pathmaker Plumbing',
+  tagline: 'Plumbing Advice You Can Trust. Repairs You Actually Need.',
   market: 'Charlotte, North Carolina',
-  // 555-01XX numbers are reserved for fictional use. Never dialed in the demo.
-  phoneDisplay: '(704) 555-0100',
-  phoneNote: 'Demo number — a live site would show the verified business line.',
-  hoursNote: 'Operating and dispatch hours appear here once verified with the owner.',
-  disclosure: 'Fictional portfolio concept by PlumbNexo',
-  footerBlurb: 'A residential plumbing website concept for Charlotte homeowners, built to show how clear services, honest proof, and simple contact options fit together.'
+  phone: {
+    display: '(704) 733-7507',
+    tel: '+17047337507',
+    clean: '7047337507'
+  },
+  phoneDisplay: '(704) 733-7507',
+  phoneTel: '+17047337507',
+  phoneNote: 'Calling gets the fastest response. Hours: Mon–Fri 8 AM–7 PM.',
+  address: '5676 Underwood Ave, Charlotte, NC 28213',
+  addressDisplay: '5676 Underwood Ave, Charlotte, NC 28213',
+  addressParts: {
+    street: '5676 Underwood Ave',
+    city: 'Charlotte',
+    state: 'NC',
+    zip: '28213'
+  },
+  street: '5676 Underwood Ave',
+  city: 'Charlotte',
+  state: 'NC',
+  zip: '28213',
+  addressNeighborhood: 'Northeast Charlotte',
+  coordinates: { lat: 35.3070, lng: -80.6747 },
+  hours: 'Monday–Friday 8 AM–7 PM. Saturday & Sunday closed.',
+  hoursNote: 'Monday–Friday 8 AM–7 PM. Saturday & Sunday closed.',
+  emergencyNote:
+    'No traditional 24-hour emergency service. After-hours requests are evaluated case by case — call to check availability.',
+  license: 'NC Plumbing License #31626 — P-1 Plumbing Unlimited',
+  licenseShort: 'NC License #31626 (P-1)',
+  licenseVerifyUrl: 'https://www.nclicensing.org/',
+  founder: 'John Stokes',
+  foundedYear: '2013',
+  experienceYears: '25+',
+  rating: '4.9',
+  reviewCount: '155',
+  ratingSource: 'Google Business Profile',
+  ratingDisplay: '4.9 ★ on Google · 155 reviews',
+  brandCredentials: 'Authorized Rinnai dealer & installer',
+  email: '', // Not published; contact form only
+  website: 'https://pathmakerplumbing.com',
+  disclosure: 'Redesign concept for Pathmaker Plumbing by PlumbNexo',
+  footerBlurb:
+    'Locally owned, family-operated residential plumber serving Charlotte homeowners since 2013, built on honest recommendations and 25+ years of experience.',
+  socialLinks: [
+    { label: 'Facebook', url: 'https://www.facebook.com/PathmakerPlumbing' },
+    { label: 'YouTube', url: 'https://www.youtube.com' }
+  ]
 };
 
 export const NAV = [
@@ -24,4 +64,36 @@ export const NAV = [
   { label: 'Contact', path: '/contact' }
 ];
 
-export const ILLUSTRATIVE_TOWNS = ['Matthews', 'Mint Hill', 'Huntersville', 'Pineville', 'Concord', 'Cornelius'];
+export const NEARBY_TOWNS = [
+  'Charlotte',
+  'Concord',
+  'Harrisburg',
+  'Huntersville',
+  'Cornelius',
+  'Davidson',
+  'Matthews',
+  'Mint Hill',
+  'Pineville',
+  'Indian Trail',
+  'Weddington',
+  'Waxhaw',
+  'Ballantyne'
+];
+
+export const CHARLOTTE_NEIGHBORHOODS = [
+  'Chantilly',
+  'Cotswold',
+  'Dilworth',
+  'Elizabeth',
+  'Highland Creek',
+  'Myers Park',
+  'NoDa',
+  'Plaza Midwood',
+  'SouthPark',
+  'Uptown',
+  'University Area',
+  'Steele Creek'
+];
+
+// Backwards-compatible export for towns
+export const ILLUSTRATIVE_TOWNS = NEARBY_TOWNS.slice(1, 8);

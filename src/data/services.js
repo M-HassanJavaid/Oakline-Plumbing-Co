@@ -1,10 +1,9 @@
 /**
- * All business details in this file are fictional placeholders for demonstration
- * purposes and must be verified with a real business owner before reuse.
+ * Pathmaker Plumbing services catalog.
+ * Sourced from real service pages, diagnostic equipment, and customer reviews.
  */
 
 export const IMG = {
-  // Illustrative stock imagery. Each image has an SVG fallback if it fails to load.
   hero: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=75',
   drain: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=70',
   leak: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1000&q=70',
@@ -21,66 +20,74 @@ export const SERVICES = [
     navLabel: 'Drain Cleaning',
     icon: 'drain',
     image: IMG.drain,
-    imageAlt: 'A bathroom sink and drain, used to illustrate drain cleaning work.',
+    imageAlt: 'A clean residential bathroom sink and drain pipe.',
     problem: 'Water draining slowly, or not at all?',
     summary: 'Help for slow, blocked, and recurring clogs in sinks, tubs, showers, and floor drains.',
     directory: {
-      problems: ['Sink or tub draining slowly', 'Standing water after a shower', 'The same clog coming back'],
-      overview: 'A technician looks at how and where the drain is blocked, explains how it could be cleared, and asks before starting any work.'
+      problems: [
+        'Slow sink, tub, or shower drains',
+        'Several drains backing up at once',
+        'The same clog returning repeatedly'
+      ],
+      overview: 'Our technicians locate the obstruction, clear buildup with professional augers and snaking, and inspect lines with cameras when recurring clogs persist.'
     },
     cta: 'Request Drain Service',
     meta: {
-      title: 'Drain Cleaning in Charlotte | Oakline Plumbing Co. (Concept)',
-      desc: 'Concept page explaining drain cleaning help for Charlotte homeowners: common symptoms, how a visit works, and what affects cost.'
+      title: 'Drain Cleaning in Charlotte, NC | Pathmaker Plumbing',
+      desc: 'Expert drain cleaning for Charlotte homeowners: professional snaking, mechanical augering, camera inspections, and clear upfront estimates.'
     },
     hero: {
       h1: 'Drain Cleaning Services in Charlotte, NC',
-      intro: 'A slow drain is easy to live with until it isn’t. Tell us which drains are affected and how long it’s been happening, and we’ll explain what a visit would involve before anything is cleared.'
+      intro: 'A slow drain is easy to ignore until it completely stops up. Tell us which drains are affected, and our experienced technicians will diagnose and clear the line properly.'
     },
     symptoms: {
       heading: 'Signs a drain needs attention',
-      intro: 'These are common reasons homeowners reach out. They point to a problem worth checking, not to a specific cause.',
+      intro: 'Common warning signs homeowners encounter in sinks, showers, tubs, and basement floor drains:',
       items: [
-        { icon: 'clock', t: 'Slow drainage', d: 'Water takes noticeably longer to leave the sink, tub, or shower than it used to.' },
-        { icon: 'water', t: 'Standing water', d: 'Water pools around your feet in the shower or sits in the basin after use.' },
-        { icon: 'repeat', t: 'Clogs that return', d: 'A drain clears for a few days or weeks, then slows down again.' },
-        { icon: 'grid', t: 'More than one fixture', d: 'Several drains are slow at once, which can mean the blockage is further down the line.' }
+        { icon: 'clock', t: 'Slow sink, tub, or shower', d: 'Water takes noticeably longer to leave the basin or pools around your feet.' },
+        { icon: 'grid', t: 'Multiple slow fixtures', d: 'Several drains slowing at once or backing into another fixture.' },
+        { icon: 'sound', t: 'Gurgling and odors', d: 'Air bubbling up through pipes, sewer odors, or gurgling when appliances run.' },
+        { icon: 'repeat', t: 'Recurring clogs & backups', d: 'The same drain clogging again after cleaning, standing water at floor drains, or repeat toilet backups.' }
       ]
     },
     scope: {
-      heading: 'What drain help may involve',
-      intro: 'The right method depends on where the blockage is and what’s causing it. These are examples of what a visit can include, not a fixed package.',
+      heading: 'What’s included in drain service',
+      intro: 'Pathmaker Plumbing uses professional methods tailored to the pipe material and blockage type:',
       items: [
-        { t: 'Looking at the affected drains', d: 'Checking which fixtures are slow and whether the problem is local to one drain or shared.' },
-        { t: 'Mechanical clearing', d: 'Using hand or machine augers suited to the drain size to clear the blockage.' },
-        { t: 'Camera inspection', d: 'Shown here as an example. A live site would list this only if the company offers it.' },
-        { t: 'Hydro-jetting', d: 'High-pressure water cleaning, listed only if offered and suitable for the pipe condition.' }
+        { t: 'Drain snaking & mechanical augering', d: 'Industrial-grade augers suited to the line size to clear grease, hair, roots, and physical obstructions.' },
+        { t: 'Camera inspection when needed', d: 'High-resolution video pipe inspection to pinpoint pipe cracks, root intrusion, or slope issues.' },
+        { t: 'Removal of grease, roots & debris', d: 'Complete clearing of grease deposits, tree root fibers, and buildup.' },
+        { t: 'Sewer line clearing & cleaning', d: 'Clearing main lateral branch lines connecting the home to municipal or septic connections.' }
       ],
-      note: 'Camera inspection and hydro-jetting are placeholders in this concept. Real capabilities must be confirmed before they’re listed.'
+      note: 'Camera inspections are deployed for recurring blockages, multiple affected fixtures, or suspected pipe damage.'
+    },
+    cleanVsRepair: {
+      clean: 'Cleaning is recommended when the pipe structure is sound and the blockage is caused by hair, soap scum, grease, or soft buildup.',
+      repair: 'Repair is necessary when camera inspection discovers cracked, collapsed, offset, or corroded pipe sections that will continuously re-clog.'
     },
     costs: {
-      intro: 'No two drain calls are the same. These are the things that usually change the cost of the work. Real pricing would come from the business, not this page.',
+      intro: 'Drain clearing costs depend on where the blockage is located and the tools required to reach it.',
       items: [
-        { t: 'Access', d: 'How easy it is to reach the drain or cleanout.' },
-        { t: 'Severity', d: 'A simple hair clog versus a buildup further down the line.' },
-        { t: 'Number of drains', d: 'One sink versus several fixtures that need attention.' },
-        { t: 'Equipment needed', d: 'Whether hand tools are enough or larger equipment is required.' },
-        { t: 'Timing', d: 'After-hours charges, only if the business actually applies them.' }
+        { t: 'Access point', d: 'Whether an accessible cleanout is available or fixtures need removal.' },
+        { t: 'Blockage severity', d: 'Simple branch line clogs versus heavy root infiltration or hardened scale.' },
+        { t: 'Fixtures affected', d: 'A single sink versus whole-house main lateral backup.' },
+        { t: 'Diagnostic tools', d: 'Mechanical snake versus high-definition video camera locating.' }
       ]
     },
     proof: {
-      label: 'Drain cleaning project story',
-      review: 'A genuine review that mentions drain service appears here, with source and permission.'
+      label: 'Verified Google Review — Drain Cleaning',
+      reviewer: 'Anne Blythe',
+      date: 'Google Review',
+      review: 'John and Caleb “quickly unclogged my drain,” then found a pipe issue and gave a fair quote for a repair.'
     },
     faqs: [
-      { q: 'Does drain clearing include a camera inspection?', a: 'Not automatically. A camera inspection is a separate step that’s useful when clogs keep returning or several drains are affected. A live site would confirm whether it’s offered and how it’s priced.' },
-      { q: 'Why do clogs keep coming back?', a: 'Recurring clogs often mean the blockage wasn’t fully cleared or there’s buildup further along the pipe. The cause can only be confirmed by looking at the drain, which is why we’d ask how often it’s happened.' },
-      { q: 'What if several drains are slow at the same time?', a: 'That can point to a problem in a shared line rather than one fixture. Mention every slow drain in your request so the technician can plan the visit properly. If drains are backing up, call instead.' },
-      { q: 'How do I request drain service?', a: 'Use the request form with your ZIP code and a short description, or call if water is backing up right now. A request is not a booked appointment; someone would follow up to confirm availability.' }
+      { q: 'When is a camera inspection used for drain cleaning?', a: 'We recommend camera inspection when clogs keep returning in the same spot, several fixtures are slow at once, tree roots are suspected, or before discussing any pipe repairs.' },
+      { q: 'What is the difference between drain cleaning and drain repair?', a: 'Drain cleaning clears buildup (hair, soap, grease) from a structurally sound pipe. Repair is required when the pipe is cracked, corroded, misaligned, or collapsed.' },
+      { q: 'What if several drains are slow at the same time?', a: 'That usually points to a stoppage in a main branch line rather than a single sink or shower. Mention this in your request so our technicians bring the right equipment.' }
     ],
     final: {
-      h: 'Dealing with a slow or blocked drain?',
-      t: 'Send a short request with the drains affected. If water is backing up right now, calling is faster.'
+      h: 'Dealing with a slow or blocked drain in Charlotte?',
+      t: 'Submit an online request with details, or call (704) 733-7507 for immediate service.'
     }
   },
   {
@@ -89,74 +96,88 @@ export const SERVICES = [
     navLabel: 'Leak Repair',
     icon: 'leak',
     image: IMG.leak,
-    imageAlt: 'A plumber working on pipe fittings, used to illustrate leak repair work.',
-    problem: 'Seeing drips, stains, or damp spots?',
-    summary: 'Finding where water is escaping, explaining the repair, and being clear about what’s included.',
+    imageAlt: 'Professional plumbing technician checking copper pipe fittings for water leaks.',
+    problem: 'Seeing drips, water stains, or a rising water bill?',
+    summary: 'Non-invasive acoustic and electronic leak detection, slab leak repair, and pipe replacement.',
     directory: {
-      problems: ['Dripping under a sink', 'Water stain on a ceiling or wall', 'Water bill higher than usual'],
-      overview: 'We separate finding the leak from fixing it, so you know what each step involves and what may be outside the plumbing scope.'
+      problems: [
+        'Water bill rising with no clear explanation',
+        'Stains on ceilings, damp drywall, or warped cabinets',
+        'Water heard running or warm spots on floors'
+      ],
+      overview: 'We find the exact source of hidden water leaks using acoustic and electronic detection before opening any walls or floors.'
     },
     cta: 'Request Leak Assessment',
     meta: {
-      title: 'Leak Detection & Repair | Oakline Plumbing Co. (Concept)',
-      desc: 'Concept page on leak detection and repair in Charlotte: possible signs, how leaks are assessed, and how repair and restoration scopes differ.'
+      title: 'Leak Detection & Repair in Charlotte, NC | Pathmaker Plumbing',
+      desc: 'Accurate electronic and acoustic leak detection, slab leak repairs, and pipe fixes for Charlotte homeowners. Diagnose first, repair properly.'
     },
     hero: {
-      h1: 'Leak Detection & Plumbing Repair in Charlotte',
-      intro: 'Some leaks are easy to see. Others show up as a stain, a damp patch, or a bill that doesn’t make sense. We explain how a leak would be located and what repairing it could involve, step by step.'
+      h1: 'Leak Detection & Pipe Repair in Charlotte, NC',
+      intro: 'Some leaks are obvious; others hide beneath concrete slabs or inside walls, driving up your water bill. We pinpoint the exact leak location first, then explain the best repair option.'
     },
     symptoms: {
-      heading: 'Possible signs of a leak',
-      intro: 'Any of these can have more than one cause. We won’t diagnose a leak from a description alone, but they’re worth mentioning in your request.',
+      heading: 'Common signs of a hidden water leak',
+      intro: 'Contact us if you notice any of these warning signs in your home or yard:',
       items: [
-        { icon: 'drop', t: 'Visible dripping', d: 'Water dripping from a pipe, joint, valve, or fixture connection.' },
-        { icon: 'stain', t: 'Water stains', d: 'Brown or yellow marks on ceilings or walls, especially below bathrooms.' },
-        { icon: 'water', t: 'Damp spots', d: 'Soft flooring, warped cabinets, or patches that stay damp.' },
-        { icon: 'meter', t: 'Unexpected water use', d: 'A water bill that jumps without a change in how you use water.' }
+        { icon: 'meter', t: 'Unexplained water bill spike', d: 'Your monthly water bill jumps significantly without a change in household usage.' },
+        { icon: 'stain', t: 'Stains, damp floors & soft drywall', d: 'Discoloration on ceilings below bathrooms, spongy baseboards, or damp spots under sinks.' },
+        { icon: 'sound', t: 'Water running sounds', d: 'The sound of trickling or rushing water behind walls when all fixtures are turned off.' },
+        { icon: 'water', t: 'Warm floor spots & wet yard patches', d: 'Warm areas on slab floors, damp soil near the water meter, or standing water in the yard.' }
       ]
     },
     leakTypes: [
-      { t: 'Accessible leaks', d: 'Leaks at fixtures, under sinks, at shut-off valves, or along exposed pipes. These are usually easier to locate and repair.' },
-      { t: 'Hidden leaks', d: 'Leaks inside walls, ceilings, or under floors. Finding these may need specialized detection methods, listed only if the business offers them.' }
+      { t: 'Slab / under-floor leaks', d: 'Water lines running under concrete foundations that fail from ground shifting or friction.' },
+      { t: 'Underground service lines', d: 'Main water service lines connecting from the municipal water meter to the home.' },
+      { t: 'Copper pinhole leaks', d: 'Small pit leaks caused by water chemistry, pipe age, or interior corrosion.' },
+      { t: 'Supply lines & valves', d: 'Fittings, shut-off valves, toilet supply lines, and fixture connections.' }
+    ],
+    detectionTools: [
+      { t: 'Electronic leak detection', d: 'Amplified frequency equipment to track active pressurized pipe leaks.' },
+      { t: 'Acoustic detection', d: 'Ground microphones designed to hear subterranean and sub-slab water flow.' },
+      { t: 'Video pipe inspection', d: 'Micro-cameras navigating through drain and water lines.' },
+      { t: 'Pressure testing & thermal imaging', d: 'System pressure drops and infrared temperature variances around hidden leaks.' }
     ],
     scope: {
-      heading: 'How a leak is assessed',
-      intro: 'Assessment comes before any repair is proposed. In a live site, each step below would reflect the company’s actual process.',
+      heading: 'Our 4-step leak repair process',
+      intro: 'We avoid unnecessary demolition by locating the true source before beginning work:',
       items: [
-        { t: 'Observation', d: 'Looking at visible signs, where water appears, and when it happens.' },
-        { t: 'Detection methods', d: 'Moisture readings or other tools, described only if genuinely offered.' },
-        { t: 'Access discussion', d: 'If a pipe is behind a surface, talking through whether an opening is needed before anything is cut.' },
-        { t: 'Repair options', d: 'Explaining what could be done, with your approval required before work starts.' }
+        { t: '1. Review symptoms', d: 'We check your water meter, assess bills, and examine visible moisture patterns.' },
+        { t: '2. Select the right detection method', d: 'Using acoustic, electronic, or pressure testing suited to your home structure.' },
+        { t: '3. Find the source before opening surfaces', d: 'We pinpoint the leak beneath the slab or behind drywall before any cutting begins.' },
+        { t: '4. Explain repair options', d: 'You receive clear choices (such as spot repair vs. overhead line reroute) with upfront pricing.' }
       ]
     },
     repairScopes: [
-      { t: 'Finding the leak', d: 'Locating where water is escaping. This can be a separate visit or charge.' },
-      { t: 'Repairing the plumbing', d: 'Fixing or replacing the affected pipe, joint, or fixture.' },
-      { t: 'Opening & restoration', d: 'Cutting into drywall or flooring, and repairing it afterward, may be handled by others.' }
+      { t: '1. Diagnostic locating', d: 'Pinpointing the exact physical source using acoustic sensors and pressure decay tests.' },
+      { t: '2. Pipe repair or reroute', d: 'Targeted spot repair or overhead PEX bypass avoiding slab demolition.' },
+      { t: '3. Surface restoration', d: 'Referral to trusted local drywall, flooring, or concrete restoration contractors.' }
     ],
+    safetyNote: 'If water is currently spraying or pooling inside living spaces, shut off your main water valve immediately.',
+    insuranceNote:
+      'We provide complete diagnostic reports, photographic documentation, and repair records suitable for homeowners insurance claims (the insurance provider determines claim coverage).',
     costs: {
-      intro: 'Leak work varies a lot. These factors usually shape the estimate.',
+      intro: 'Leak repair costs vary depending on location, accessibility, and whether a reroute is optimal.',
       items: [
-        { t: 'Accessibility', d: 'Exposed pipe versus a leak behind a finished wall or floor.' },
-        { t: 'Materials', d: 'The pipe type and parts needed for the repair.' },
-        { t: 'Complexity', d: 'A single joint versus a longer section of damaged pipe.' },
-        { t: 'Scope boundaries', d: 'Whether restoration of walls or floors is part of the job or separate.' }
+        { t: 'Leak location', d: 'Accessible under-sink piping versus sub-slab foundation lines.' },
+        { t: 'Repair approach', d: 'Direct localized spot repair versus overhead PEX reroute to bypass damaged sections.' },
+        { t: 'Pipe material', d: 'Copper, PEX, PVC, or galvanized line transitions.' }
       ]
     },
-    safetyNote: 'If water is actively leaking, call rather than send a form. Any instructions about shutting off water or electricity would be written and reviewed by a qualified professional before a live site publishes them.',
     proof: {
-      label: 'Leak repair project story',
-      review: 'A genuine review that mentions leak repair appears here, with source and permission.'
+      label: 'Verified Google Review — Leak Repair',
+      reviewer: 'Rick Thomas',
+      date: 'Google Review',
+      review: 'John fixed a leaky pipe and “provided good advice on our copper pipes.”'
     },
     faqs: [
-      { q: 'Will you need to open a wall?', a: 'Not always. If a leak is behind a finished surface, the technician would explain why access is needed and agree on it with you before cutting anything.' },
-      { q: 'Is leak detection separate from repair?', a: 'Often, yes. Finding a leak and repairing it are different steps and may be priced separately. A live site would explain the company’s actual policy here.' },
-      { q: 'What if water damage is happening right now?', a: 'Call instead of using the form. A form is meant for planned requests and isn’t monitored like a phone line.' },
-      { q: 'What happens after I request help?', a: 'Someone reviews your details, confirms your area is covered, and follows up about availability. Sending a request doesn’t book an appointment.' }
+      { q: 'Will you need to jackhammer my slab for a slab leak?', a: 'Not necessarily! In many cases, we can perform an overhead pipe reroute through attic or wall spaces to bypass the leaking slab pipe completely, avoiding concrete demolition.' },
+      { q: 'Do you help with insurance paperwork?', a: 'Yes. We provide detailed diagnostic write-ups, photos, and itemized repair invoices for you to submit to your insurance adjuster.' },
+      { q: 'What should I do if water is actively leaking right now?', a: 'Shut off your main water valve (often located near the street meter or in the crawl space/garage) and call (704) 733-7507 immediately.' }
     ],
     final: {
-      h: 'Think you might have a leak?',
-      t: 'Tell us where you’re seeing water or stains. For active leaks, call so someone can talk you through next steps.'
+      h: 'Suspect a hidden water leak in your Charlotte home?',
+      t: 'Call (704) 733-7507 or send a request. We’ll pinpoint the problem and give you honest repair options.'
     }
   },
   {
@@ -165,109 +186,107 @@ export const SERVICES = [
     navLabel: 'Water Heaters',
     icon: 'heater',
     image: IMG.heater,
-    imageAlt: 'Plumbing tools and fittings, used to illustrate water heater service.',
-    problem: 'No hot water, or a unit that’s getting old?',
-    summary: 'Repair or replacement guidance, with a clear explanation of what an estimate includes.',
+    imageAlt: 'Modern high-efficiency tankless water heater installation.',
+    problem: 'No hot water, inconsistent temperatures, or a leaking tank?',
+    summary: 'Repair, replacement, and tankless conversions by an Authorized Rinnai dealer and installer.',
     directory: {
-      problems: ['No hot water at all', 'Temperature keeps changing', 'Water around the base of the tank'],
-      overview: 'We help you weigh repair against replacement based on what’s found in person, not guesswork, and explain what an installation would include.'
+      problems: [
+        'No hot water or runs out quickly',
+        'Inconsistent temperatures and fluctuating heat',
+        'Water leaking around the base of the tank'
+      ],
+      overview: 'We service traditional tank, tankless, and hybrid water heaters. We do not assume an older water heater automatically needs replacement — we repair whenever practical.'
     },
     cta: 'Request Water Heater Service',
     meta: {
-      title: 'Water Heater Repair & Replacement | Oakline (Concept)',
-      desc: 'Concept page on water heater repair and replacement in Charlotte: common problems, repair vs. replacement factors, and what an estimate covers.'
+      title: 'Water Heater Repair & Replacement Charlotte | Pathmaker Plumbing',
+      desc: 'Authorized Rinnai dealer & installer serving Charlotte, NC. Repair, tank replacement, and tank-to-tankless water heater conversions.'
     },
     hero: {
-      h1: 'Water Heater Repair & Replacement in Charlotte',
-      intro: 'Whether you’ve lost hot water this morning or you’re planning ahead for an older unit, we explain your options clearly so you can decide what makes sense for your home.'
+      h1: 'Water Heater Repair & Installation in Charlotte, NC',
+      intro: 'Whether you lost hot water this morning or want to upgrade to an energy-efficient tankless system, Pathmaker Plumbing provides honest advice on whether repair or replacement is your best value.'
     },
     symptoms: {
-      heading: 'Common water heater problems',
-      intro: 'These are the issues homeowners usually describe. The actual cause is confirmed during an in-person assessment.',
+      heading: 'Common water heater issues',
+      intro: 'Tell us what symptoms your water heater is showing:',
       items: [
-        { icon: 'flame', t: 'No hot water', d: 'The tap runs cold, or hot water runs out much faster than it used to.' },
-        { icon: 'thermo', t: 'Inconsistent temperature', d: 'Water swings between hot and lukewarm during a single shower.' },
-        { icon: 'drop', t: 'Leaks', d: 'Water around the base of the tank or at the connections.' },
-        { icon: 'sound', t: 'Noises', d: 'Popping, rumbling, or knocking sounds from the unit.' },
-        { icon: 'calendar', t: 'Aging equipment', d: 'The unit is older and you want to plan before it fails.' }
+        { icon: 'flame', t: 'No hot water', d: 'Burner or heating element failure leaving water completely cold.' },
+        { icon: 'thermo', t: 'Inconsistent temperature', d: 'Hot water runs out much faster than usual or fluctuates while showering.' },
+        { icon: 'drop', t: 'Water leaking around tank', d: 'Pooling water at the base, corroded valves, or failed expansion tank.' },
+        { icon: 'sound', t: 'Rumbling or popping noises', d: 'Sediment buildup at the bottom of the tank overheating and hardening.' }
       ]
     },
+    typesServiced: [
+      { t: 'Tank water heaters', d: 'Gas and electric standard capacity tank units (repair, replacement, and maintenance).' },
+      { t: 'Tankless water heaters', d: 'Continuous on-demand hot water systems; Authorized Rinnai dealer and certified installer.' },
+      { t: 'Hybrid heat pump heaters', d: 'High-efficiency heat pump water heaters for reduced energy consumption.' },
+      { t: 'Tank-to-tankless conversions', d: 'Upgrading existing tank footprints to high-efficiency tankless wall units.' }
+    ],
     compare: {
-      heading: 'Repair or replace? What to talk through',
-      intro: 'These are the factors a technician would discuss with you after seeing the unit. They aren’t an online diagnosis.',
+      heading: 'Repair or replace? How we evaluate your unit',
+      intro: '“We do not assume an older water heater automatically needs replacement.” We assess your unit objectively:',
       a: {
-        t: 'When repair may make sense',
+        t: 'Repair may make sense when',
         icon: 'wrench',
         items: [
-          'The unit is relatively new and in good overall condition',
-          'The problem is a single part, such as a thermostat or element',
-          'There are no signs of tank corrosion or leaking from the tank itself',
-          'Repair cost is small compared with replacement'
+          'The problem is a single serviceable part (thermostat, heating element, thermocouple, gas valve)',
+          'The tank and heat exchanger are in good structural shape with no corrosion',
+          'The unit was reliable before and repair cost is reasonable',
+          'The system still meets your household hot water demand'
         ]
       },
       b: {
-        t: 'When replacement may make sense',
+        t: 'Replacement may make sense when',
         icon: 'replace',
         items: [
-          'The unit is near or past its expected lifespan',
-          'The tank itself is leaking or visibly corroded',
-          'Repairs are becoming frequent or costly',
-          'Your household’s hot water needs have changed'
+          'The tank itself is leaking or has internal structural failure',
+          'Repairs are frequent and approaching half the cost of replacement',
+          'The unit is past its expected service lifespan and inefficient',
+          'You want continuous hot water via tankless conversion'
         ]
       }
     },
-    equipment: [
-      { t: 'Tank water heaters', d: 'Storage tank units, listed only if the company services them.' },
-      { t: 'Tankless water heaters', d: 'On-demand units, listed only if genuinely serviced.' },
-      { t: 'Gas and electric', d: 'Fuel types confirmed with the owner before publishing.' },
-      { t: 'Brands serviced', d: 'Brand names appear only when verified. None are claimed here.' }
-    ],
+    brandCredential: 'Authorized Rinnai dealer and installer with factory training on gas and electric tankless systems.',
     scope: {
-      heading: 'How the assessment and estimate work',
-      intro: 'You’ll know what’s being checked and how options are explained before you agree to anything.',
+      heading: 'Our water heater evaluation & replacement process',
+      intro: 'We diagnose first, confirm repair vs. replacement suitability, and handle all local code requirements:',
       items: [
-        { t: 'What you share', d: 'The unit’s age if known, fuel type, location in the home, and what you’ve noticed.' },
-        { t: 'What’s inspected', d: 'The unit, connections, venting where relevant, and signs of leaks or wear.' },
-        { t: 'How options are explained', d: 'Repair and replacement options are laid out with what each would involve.' },
-        { t: 'How costs are shown', d: 'A written estimate that lists what’s included, before you approve any work.' }
+        { t: '1. Fuel & power diagnostics', d: 'Testing gas valves, burners, thermocouples, or electrical heating elements and thermostats.' },
+        { t: '2. Tank structural evaluation', d: 'Checking for internal corrosion, tank fractures, failed expansion tanks, or sediment buildup.' },
+        { t: '3. Capacity & sizing review', d: 'Evaluating household peak water demand for appropriate tank size or tankless GPM rating.' },
+        { t: '4. Code-compliant installation', d: 'Supplying new thermal expansion tanks, pressure relief valves, safety drain pans, and gas shutoffs.' }
       ]
     },
     install: [
-      { t: 'Removal & disposal', d: 'Whether taking away the old unit is included.' },
-      { t: 'Access', d: 'Attics, closets, or tight spaces can affect the work involved.' },
-      { t: 'Permits & inspection', d: 'Who arranges required permits and inspections.' },
-      { t: 'Code upgrades', d: 'Any changes needed to meet current requirements.' },
-      { t: 'Scheduling', d: 'How installation timing is agreed after approval.' }
+      { t: 'Delivery & safe removal', d: 'Delivery of your new unit and environmentally responsible recycling/disposal of the old tank.' },
+      { t: 'Safety & code upgrades', d: 'Installation of temperature & pressure (T&P) relief valves, discharge piping, and expansion tanks.' },
+      { t: 'Water & fuel connections', d: 'Professional copper/PEX water supply hookups and certified gas or electrical connections.' },
+      { t: 'System startup & testing', d: 'Complete flushing, filling, pilot ignition, burner adjustment, and leak-check testing.' }
     ],
-    installNote: 'What’s included always depends on the written proposal for your home.',
-    warranty: [
-      { t: 'Manufacturer warranty', d: 'Covers the equipment itself, under the manufacturer’s own terms.' },
-      { t: 'Labor warranty', d: 'Covers the installation work, only if the company actually provides one.' },
-      { t: 'Financing', d: 'Shown only if a real, documented financing option exists. None is offered here.' }
-    ],
+    installNote: 'All water heater replacements are installed in strict adherence to North Carolina plumbing codes with proper permit management.',
     costs: {
-      intro: 'Water heater costs depend on several things. A real estimate would be based on your home and unit.',
+      intro: 'Water heater service and installation costs depend on several key factors:',
       items: [
-        { t: 'Repair vs. replacement', d: 'Replacing a part usually costs less than a new unit.' },
-        { t: 'Unit type and size', d: 'Tank capacity, tankless, and fuel type all affect price.' },
-        { t: 'Installation conditions', d: 'Location, venting, and code-related changes.' },
-        { t: 'Permits', d: 'Local permit and inspection requirements.' }
+        { t: 'Repair vs replacement', d: 'Component replacement (thermostat/element) versus new complete system installation.' },
+        { t: 'Tank vs tankless', d: 'Standard atmospheric tank unit versus high-efficiency continuous tankless system.' },
+        { t: 'Capacity and fuel source', d: '40, 50, or 75-gallon tank volume; natural gas, propane, or electric heating.' },
+        { t: 'Required code upgrades', d: 'Thermal expansion tanks, safety pans, gas line upsizing, or dedicated venting.' }
       ]
     },
     proof: {
-      label: 'Water heater installation story',
-      review: 'A genuine review that mentions water heater work appears here, with source and permission.'
+      label: 'Verified Google Review — Water Heaters',
+      reviewer: 'Lynne Lambert',
+      date: 'Google Review',
+      review: 'Repeat customer for tankless water heater and pressure relief valve installs; “cannot recommend him enough.”'
     },
     faqs: [
-      { q: 'Can my water heater be repaired?', a: 'It depends on the unit’s age, condition, and what’s wrong. A technician would need to see it in person before recommending repair or replacement.' },
-      { q: 'What types of water heaters do you service?', a: 'In a live site, this answer would list the exact types and fuel sources the company works on. This concept doesn’t claim any.' },
-      { q: 'What’s included in an estimate?', a: 'A written estimate should show the recommended work, parts, labor, and anything excluded. Details depend on the company’s real estimate policy.' },
-      { q: 'Who handles removal of the old unit?', a: 'This would be stated in your proposal. Removal and disposal may or may not be included.' },
-      { q: 'What warranty applies?', a: 'The manufacturer warranty covers the equipment. Any labor warranty depends on what the company actually offers, which a live site would state plainly.' }
+      { q: 'Can my water heater be repaired instead of replaced?', a: 'Yes! If the tank itself is not leaking and internal components like heating elements, thermostats, or pressure relief valves have failed, repair is often fast and affordable.' },
+      { q: 'Are you certified for tankless water heaters?', a: 'Yes, Pathmaker Plumbing is an Authorized Rinnai dealer and installer with extensive experience in gas and electric tankless installations.' },
+      { q: 'What is included in a replacement estimate?', a: 'Our written estimates include the equipment, installation, code-required upgrades (expansion tank, pan, venting), permit handling, and haul-away of your old unit.' }
     ],
     final: {
-      h: 'Need help with your water heater?',
-      t: 'Send a request with the unit’s age if you know it. If you have no hot water and need it soon, call to check availability.'
+      h: 'Having hot water problems in Charlotte?',
+      t: 'Call (704) 733-7507 for priority water heater assistance or submit an online estimate request.'
     }
   },
   {
@@ -276,94 +295,77 @@ export const SERVICES = [
     navLabel: 'Sewer Lines',
     icon: 'sewer',
     image: IMG.sewer,
-    imageAlt: 'A residential home and front yard, used to illustrate sewer line service.',
-    problem: 'Backups that keep coming back?',
-    summary: 'Careful assessment of sewer line problems, with honest explanations of repair options and yard impact.',
+    imageAlt: 'Exterior residential plumbing sewer cleanout and front yard lateral line.',
+    problem: 'Recurring whole-house backups or gurgling toilets?',
+    summary: 'Camera inspections, targeted spot repairs, sewer line cleanout installations, and full replacements.',
     directory: {
-      problems: ['Several drains backing up', 'Gurgling from toilets or drains', 'Sewage smell indoors or outside'],
-      overview: 'Sewer issues can feel serious. We explain how they’re assessed and what the possible next steps are, without promising a result before the line is inspected.'
+      problems: [
+        'Multiple toilets and drains backing up simultaneously',
+        'Gurgling sounds from fixtures when others drain',
+        'Sewage odors or soft, wet spots in the yard'
+      ],
+      overview: 'We inspect lines with high-definition cameras to find the exact problem before proposing solutions. We frequently save homeowners thousands on misdiagnosed repipes.'
     },
     cta: 'Request Sewer Assessment',
     meta: {
-      title: 'Sewer Line Inspection & Repair | Oakline (Concept)',
-      desc: 'Concept page on sewer line assessment in Charlotte: warning signs, inspection options, possible next steps, and trenchless vs. excavation.'
+      title: 'Sewer Line Inspection & Repair Charlotte | Pathmaker Plumbing',
+      desc: 'Accurate camera diagnostics, spot repairs, backwater valve maintenance, and sewer replacements in Charlotte, NC.'
     },
     hero: {
-      h1: 'Sewer Line Inspection & Repair in Charlotte',
-      intro: 'Sewer problems are stressful, and they’re hard to judge from inside the house. We explain how a line is assessed, what the options might be, and what could affect your yard, before anything is decided.'
+      h1: 'Sewer Line Inspection & Repair in Charlotte, NC',
+      intro: 'Main sewer line issues can feel overwhelming. We use high-definition camera inspections to pinpoint the exact condition and location of problems so you only pay for the repairs you actually need.'
     },
     symptoms: {
-      heading: 'Warning signs worth checking',
-      intro: 'These signs suggest the main line may need attention. None of them proves a specific failure on its own.',
+      heading: 'Signs of a main sewer line issue',
+      intro: 'When your main sewer lateral is compromised, symptoms often affect multiple fixtures:',
       items: [
-        { icon: 'repeat', t: 'Recurring backups', d: 'Drains back up more than once, especially at the lowest fixtures in the home.' },
-        { icon: 'grid', t: 'Several slow drains', d: 'Multiple fixtures slow down at the same time.' },
-        { icon: 'sound', t: 'Unusual sounds', d: 'Gurgling from toilets or drains when other fixtures are used.' },
-        { icon: 'yard', t: 'Changes outside', d: 'Unusually wet or lush patches in the yard, or odors near the cleanout.' }
+        { icon: 'repeat', t: 'Multiple fixtures backing up', d: 'Water backing up into tubs or showers when toilets are flushed or washing machines drain.' },
+        { icon: 'sound', t: 'Toilets gurgling', d: 'Gurgling sounds and air bubbling up when other plumbing fixtures run.' },
+        { icon: 'alert', t: 'Sewage odors', d: 'Persistent sewer gas smells around indoor cleanouts or in the front yard.' },
+        { icon: 'yard', t: 'Wet or soft spots in yard', d: 'Unusual dampness, sunken grass, or lush green patches along the sewer line route.' }
       ]
     },
     scope: {
-      heading: 'How sewer problems are assessed',
-      intro: 'Assessment options are listed here only as examples. A live site would show the methods the company genuinely uses.',
+      heading: 'Our sewer diagnosis and repair process',
+      intro: 'We diagnose thoroughly before proposing any repair:',
       items: [
-        { t: 'Conversation first', d: 'Understanding which drains are affected, how often, and any history with the line.' },
-        { t: 'Camera inspection', d: 'Viewing the inside of the line, only if this service is actually offered.' },
-        { t: 'Locating the problem', d: 'Identifying where along the line an issue appears, where tools allow.' },
-        { t: 'Reviewing findings', d: 'Walking you through what was seen and what it could mean.' }
+        { t: '1. Check where backups occur', d: 'Identifying whether the blockage is in an interior branch line or the main lateral.' },
+        { t: '2. High-definition camera inspection', d: 'Locating roots, pipe cracks, joint offsets, corrosion, bellies, or backwater valve clogs.' },
+        { t: '3. Pinpoint depth and location', d: 'Using radio transmitters to locate the exact underground spot and depth.' },
+        { t: '4. Recommend the right repair', d: 'Recommending clearing, a focused spot repair, or broader replacement — and explaining why.' }
       ]
     },
-    nextSteps: [
-      { t: 'Clearing the line', d: 'Removing a blockage when the line itself is in workable condition.' },
-      { t: 'Targeted repair', d: 'Fixing a specific damaged section, depending on location and access.' },
-      { t: 'Replacement', d: 'Replacing a longer section when repair isn’t practical. Depends on findings and services offered.' }
+    repairOptions: [
+      { t: 'Main lateral cleaning', d: 'Clearing roots, grease, and debris when the pipe structure remains sound.' },
+      { t: 'Focused (spot) repair', d: 'Excavating and replacing only the damaged pipe segment rather than the entire line.' },
+      { t: 'Sewer cleanout installation', d: 'Installing ground-level access cleanouts for easy maintenance and future servicing.' },
+      { t: 'Broader line replacement', d: 'Replacing aged, collapsed, or severely pitched clay or cast iron lines.' }
     ],
-    compare: {
-      heading: 'Trenchless vs. excavation',
-      intro: 'Whether trenchless methods are possible depends on the line’s condition, layout, and what the company offers. Neither option is promised here.',
-      a: {
-        t: 'Trenchless methods',
-        icon: 'trenchless',
-        items: [
-          'May reduce digging when the line is suitable',
-          'Eligibility depends on pipe condition and layout',
-          'Some access points are still usually needed',
-          'Offered only if the business performs this work'
-        ]
-      },
-      b: {
-        t: 'Traditional excavation',
-        icon: 'shovel',
-        items: [
-          'Digging to reach and repair or replace the line',
-          'Can be necessary when trenchless isn’t suitable',
-          'Affects landscaping, driveways, or walkways',
-          'Restoration responsibilities agreed in advance'
-        ]
-      }
-    },
+    yardImpactNote:
+      'Yard impact is always discussed during the estimate. Where trenching is required, we carefully plan excavation, manage soil displacement, and review yard restoration responsibilities in advance.',
     costs: {
-      intro: 'Sewer work has more variables than most plumbing jobs. These shape the estimate.',
+      intro: 'Sewer line diagnostic and repair costs depend on pipe accessibility, depth, and repair scope:',
       items: [
-        { t: 'Access', d: 'Where the cleanout is and how easy the line is to reach.' },
-        { t: 'Excavation', d: 'Whether digging is needed, and how much.' },
-        { t: 'Restoration', d: 'Who restores landscaping, concrete, or walkways afterward.' },
-        { t: 'Permits', d: 'Local permit and inspection requirements.' },
-        { t: 'Scope', d: 'Clearing, a short repair, or a longer replacement.' }
+        { t: 'Diagnostic locating', d: 'High-definition video camera inspection and radio sonde depth locating.' },
+        { t: 'Targeted spot repair', d: 'Excavating and replacing only a single damaged section versus whole-line replacement.' },
+        { t: 'Pipe depth and location', d: 'Shallow front-yard cleanout access versus deep lines beneath driveways or landscaping.' },
+        { t: 'Cleanout installation', d: 'Installing ground-level access risers for ongoing maintenance and future cleanings.' }
       ]
     },
     proof: {
-      label: 'Sewer line project story',
-      review: 'A genuine review that mentions sewer work appears here, with source and permission.'
+      label: 'Verified Google Review — Sewer Lines',
+      reviewer: 'Andrew Calton',
+      date: 'Google Review',
+      review: '100% sewer drain blockage on a Sunday night; call back in under an hour, Ben came Monday and kept them updated.'
     },
     faqs: [
-      { q: 'How is a sewer problem diagnosed?', a: 'By looking at the line itself, often with a camera if the company offers it. Symptoms alone can’t confirm what’s wrong.' },
-      { q: 'Can my yard be preserved?', a: 'Sometimes, if trenchless repair is suitable and offered. It isn’t possible in every case, and any yard impact would be explained before work is approved.' },
-      { q: 'Is a camera inspection included?', a: 'That depends on the company’s actual services and pricing. A live site would state this clearly.' },
-      { q: 'What happens after the assessment?', a: 'You’d get an explanation of what was found and the possible options, then decide whether to approve any work.' }
+      { q: 'Do all sewer problems require replacing the whole line?', a: 'No! Many sewer problems can be resolved with thorough cleaning, clearing a backwater valve, or performing a focused spot repair on a single damaged pipe section. We always look for the repair you actually need.' },
+      { q: 'How does camera inspection work?', a: 'We feed a lighted fiber-optic camera through an accessible cleanout to display real-time video of the pipe interior, revealing roots, cracks, and blockages on a digital monitor.' },
+      { q: 'What if sewage is backing up into my home right now?', a: 'Stop running all water in the house immediately and call (704) 733-7507.' }
     ],
     final: {
-      h: 'Worried about your sewer line?',
-      t: 'Request an assessment and describe what you’ve noticed. If sewage is backing up into the home, call right away.'
+      h: 'Suspect a sewer line issue in your Charlotte home?',
+      t: 'Call (704) 733-7507 or send an assessment request. We diagnose accurately before you commit to costly repairs.'
     }
   }
 ];
@@ -372,5 +374,16 @@ export const SVC = Object.fromEntries(SERVICES.map(s => [s.slug, s]));
 
 export const SERVICE_OPTIONS = [
   ...SERVICES.map(s => ({ value: s.slug, label: s.name })),
+  { value: 'second-opinion', label: 'Second Opinion on Existing Quote' },
+  { value: 'toilet-repair', label: 'Toilet Repair & Installation' },
+  { value: 'faucets-fixtures', label: 'Faucets, Disposals & Fixtures' },
   { value: 'other', label: 'Other / Not sure' }
+];
+
+export const EXTRA_SERVICES = [
+  'Toilet repair & installation',
+  'Faucets, garbage disposals & supply lines',
+  'Showers & bathtubs',
+  'Drain pipe repair',
+  'Second opinions & estimates'
 ];

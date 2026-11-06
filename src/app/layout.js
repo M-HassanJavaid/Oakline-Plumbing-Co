@@ -1,5 +1,5 @@
 /**
- * RootLayout component wrapping the Oakline Plumbing application.
+ * RootLayout component wrapping the Pathmaker Plumbing application.
  * Configures self-hosted Google fonts (Manrope and Inter), global metadata,
  * accessibility skip link, application state providers, and standard layout chrome.
  */
@@ -33,14 +33,10 @@ const inter = Inter({
 export const metadata = {
   title: {
     template: `%s`,
-    default: 'Residential Plumbing in Charlotte | Oakline Plumbing Co. (Concept)',
+    default: 'Pathmaker Plumbing | Charlotte, NC Residential Plumber',
   },
   description:
-    'Oakline Plumbing Co. is a fictional residential plumbing website concept for Charlotte, NC, created by PlumbNexo as a portfolio demonstration.',
-  robots: {
-    index: false,
-    follow: false,
-  },
+    'Pathmaker Plumbing provides trusted residential plumbing in Charlotte, Concord, Harrisburg, Huntersville, and Matthews. NC License #31626, 4.9 ★ Google rating.',
   icons: {
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23153B4A'/%3E%3Cpath d='M9 22V14a5 5 0 0 1 5-5h9' fill='none' stroke='%23E8A35D' stroke-width='3.2' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='3.4' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E",
   },
@@ -61,7 +57,6 @@ export default function RootLayout({ children }) {
               Skip to main content
             </a>
 
-            <ConceptBanner />
             <Header />
 
             <main id="main" tabIndex={-1} className="outline-none">

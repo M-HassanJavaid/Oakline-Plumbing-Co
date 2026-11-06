@@ -18,7 +18,7 @@ export function GalleryFilter() {
   const handleFilter = (filterKey) => {
     setActiveFilter(filterKey);
     const label = filterKey === 'all' ? 'all' : SVC[filterKey]?.navLabel;
-    setAnnouncement(`Showing ${label} placeholders`);
+    setAnnouncement(`Showing ${label} projects`);
   };
 
   const galleryItems = SERVICES.flatMap((s) => [
@@ -70,7 +70,7 @@ export function GalleryFilter() {
               </div>
               <p className="text-sm mt-2">
                 <span className="font-semibold text-teal">{item.navLabel}</span>{' '}
-                <span className="text-charcoal-70">{item.type} placeholder</span>
+                <span className="text-charcoal-70 capitalize">{item.type}</span>
               </p>
             </li>
           );
